@@ -1,0 +1,26 @@
+body
+{
+	margin: 0;
+	padding: 0;
+}
+.parallax
+{
+	width: 100%;
+	height: 100vh;
+	overflow: hidden;
+    background-image: url(../img/teste/background.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+.mixBlnd
+{
+	background-blend-mode: screen;
+}
+
+.tamImg{
+	background-blend-mode: screen;
+}
+
+
+
