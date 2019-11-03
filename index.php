@@ -19,19 +19,19 @@
 			<li class="layer" data-depth="-1"><img class="img-fluid" src="img/teste/margin1.png"></li>
 			<li class="layer" data-depth=".1"><img class="img-fluid" src="img/teste/margin.png"></li>
 			
-			<li class="layer" data-depth="1"><img src="img/teste/planet1.png"></li>
-			<li class="layer" data-depth="-1"><img src="img/teste/planet2.png"></li>
-			<li class="layer" data-depth="2"><img src="img/teste/astronaut.png"></li>
-			<li class="layer" data-depth="0.5"><img src="img/teste/rocket.png"></li>
+			<li class="layer" data-depth="1"><img class="img-fluid" src="img/teste/planet1.png"></li>
+			<li class="layer" data-depth="-1"><img class="img-fluid" src="img/teste/planet2.png"></li>
+			<li class="layer" data-depth="2"><img class="img-fluid" src="img/teste/astronaut.png"></li>
+			<li class="layer" data-depth="0.5"><img class="img-fluid" src="img/teste/rocket.png"></li>
 
 			<li class="layer" data-depth=".0"><img class="img-fluid" class="tamImg" src="img/teste/light.png"></li>
 			
 		</ul>
     </div>
     
-    <section>
+    <div>
         Lorem ipsum dolor sit, amet consectetur adipisicing elit. Optio exercitationem velit similique maxime debitis laudantium sint magnam aut molestiae explicabo aspernatur in iste ab vel, dolores illo laborum quos porro?
-    </section>
+    </div>
 	<script>
 		var scene = document.getElementById('scene');
 		var parallax = new Parallax(scene);
