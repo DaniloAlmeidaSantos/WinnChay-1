@@ -1,26 +1,93 @@
-body
-{
+body{
 	margin: 0;
 	padding: 0;
 }
-.parallax
-{
+/* Header/Parallax */
+.parallax{
 	width: 100%;
 	height: 100vh;
 	overflow: hidden;
-    background-image: url(../img/teste/background.jpg);
+	background-image: url(../img/Src/background.png);
     background-repeat: no-repeat;
     background-attachment: fixed;
-    background-size: cover;
+	background-size: cover;
 }
-.mixBlnd
-{
+
+.mixBlnd{
 	background-blend-mode: screen;
 }
 
 .tamImg{
 	background-blend-mode: screen;
 }
+/* Sections */
+.maxAlt{
+	margin-top: 20px;
+}
+.maxAlt h1{
+	text-align: center;
+	font-family: 'Staatliches', cursive;
+	font-size: 65px;
+	font-kerning: auto;
+}
 
+.Fading::after{
+	content  : "";
+	position : absolute;
+	z-index  : 1;
+	bottom   : 0;
+	left     : 0;
+	pointer-events   : none;
+	background-image : linear-gradient(to bottom, rgba(255,255,255, 0), rgba(255,255,255, 1) 70%); 
+	width    : 100%;
+	height   : 4em;
+}
+.imgFade::after{
+	content  : "";
+	position : absolute;
+	z-index  : 1;
+
+	bottom   : 0;
+	left     : 0;
+	width: 100%;
+	height: 100%;
+
+	box-sizing: border-box;
+	box-shadow: inset 40px 0 20px 20px #FFF;
+}
+
+.sizeText{
+	font-family: 'Dosis' bold;
+}
+
+.sizeText h1{
+	font-size: 35px;
+	transform: translateY(50%);
+}
+
+.sizeText_S2{
+	font-size: 40px;
+}
+
+.p{
+	font-size: 20px;
+}
+
+.sizeImagem img{
+	width: 70%;
+}
+
+/* Footer */
+.CorBack{
+	background-color:#1a1327; 
+}
+
+.CorText{
+	color:white;
+}
+
+.CorBack1{
+	background-color:#37164a;
+}
 
 
