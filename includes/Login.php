@@ -25,8 +25,9 @@
 
 			if ($stmt->rowCount() > 0):
 				while($row = $stmt->fetch(PDO::FETCH_ASSOC)){ 
-					setcookie("user", $row["EMAIL"]);											
-					header('location:index.php'); 
+					setcookie('user', $row["EMAIL"]);	
+					setcookie('id', $row["IDPLAYER"])										
+					header('location:homepage.php'); 
 				}
 			else:
 				// Caso o E-Mail e a Senha forem digitados incorretamente, essa estrutura retorna um aviso de erro
