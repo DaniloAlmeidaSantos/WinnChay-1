@@ -93,5 +93,12 @@
 			<div class="slide Right"></div>
 		</div>
 	</div>
+	<?php 
+		include 'includes/Carousel.php';
+
+		$conn = new Carousel();
+
+		$conn->picture();
+	?>
 </body>
 </html>
