@@ -27,35 +27,16 @@
 			
 			<li class="layer" data-depth=".0"><img class="img-fluid" class="tamImg" src="img/Src/light.png"></li>
 			<li class="layer" data-depth=".0">
-				<button class="button" data-toggle="modal" data-target="#myModal">
+				<button class="button" data-toggle="modal" data-target="sitemodal">
 					<center>
 						<img width=70%" height="70%" src="open-iconic-master/svg/account-login.svg">
 					</center>
 				</button>
-
-				<div class="modal" id="myModal">
-					<div class="modal-dialog">
-						<div class="modal-content">
-							<!--Cabeçalho do modal-->
-							<div class="modal-header">
-								<h4 class="modal-title">Modal</h4>
-								<button type="button" class="close">&times;</button>
-							</div>
-							<!-- corpo -->
-							<div class="modal-body">
-								<p>dsa</p>
-							</div>
-							<!-- footer -->
-							<div class="modal-footer">
-								<button type="button" class="btn btn-danger">Close</button>
-							</div>
-						</div>
-					</div>
-				</div>
 			</li>
 		</ul>
 	</div>
 	</center>
+	
 	
 	<script>
 		var scene = document.getElementById('scene');

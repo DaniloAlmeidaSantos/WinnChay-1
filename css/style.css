@@ -2,6 +2,8 @@ body{
 	margin: 0;
 	padding: 0;
 }
+/*================================================= INDEX.php =====================================================*/
+
 /* Header/Parallax */
 .parallax{
 	width: 100%;
@@ -97,3 +99,118 @@ body{
 	height: 75px;
 	border-radius: 50%;
 }
+/*=============================================== INDEX.php END ====================================================*/
+
+/*=============================================== HOMEPAGE.php ======================================================*/
+
+.html{
+	scroll-behavior: smooth;
+}
+
+.slide{
+	width: 100vw;
+	height: 100vh;
+}
+
+.Wrapper{
+	display: flex;
+	flex-direction: row;
+	width: 300vw;
+	transform: rotate(90deg) translateY(-100vh);
+	transform-origin: top left;
+}
+
+.Home{
+	background: #37164a;
+}
+
+.Center{
+	background: #8f34ad;
+}
+
+.Right{
+	background: #b543d1;
+}
+
+.outerWrapper{
+	width: 100vh;
+	height: 100vw;
+	transform: rotate(-90deg) translateX(-100vh);
+	transform-origin: top left;
+	overflow-y: scroll;
+	overflow-x: scroll;
+	position: absolute;
+	scrollbar-width: none;
+	-ms-overflow-style: none;
+}
+::-webkit-scrollbar{
+	display: none;	
+}
+
+/* Page Home */
+
+.sidenav {
+	height: 100%;
+	width: 4vw;
+	position: fixed;
+	z-index: 1;
+	top: 0;
+	left: 0;
+	background-color: #912291;
+	overflow-x: hidden;
+	padding-top: 20px;
+}
+  
+.sidenav a {
+	padding: 5px 6px 5px 9px;
+	text-decoration: none;
+	color: #818181;
+	display: block;
+}
+  
+.sidenav a:hover {
+	background-color: #fbd7fb;
+}
+  
+.main {
+	margin-left: 160px; /* Same as the width of the sidenav */
+	font-size: 28px; /* Increased text to enable scrolling */
+	padding: 0px 10px;
+}
+
+.perfilHome{
+	margin-top: 3vw;
+}
+
+.perfilHist{
+	margin-top: 2vw;
+}
+
+.perfilIco{
+	margin-top: 23vw;
+}
+
+#Home {
+	background-color: red;
+	width: 95.99vw;
+	height: 100vh;
+	margin-left: 4vw;
+}
+#Hist {
+	background-color: green;
+	width: 95.99vw;
+	height: 100vh;
+	margin-left: 4vw;
+}
+
+#Perfil {
+	background-color: blue;
+	width: 95.99vw;
+	height: 100vh;
+	margin-left: 4vw;
+}
+
+
+
+
+/*============================================= HOMEPAGE.php END ====================================================*/
