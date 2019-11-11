@@ -6,7 +6,11 @@
 </head>
 <body>
 	<?php 
-		
+		include 'includes/Carousel.php';
+
+		$conn = new Carousel();
+
+		$conn->picture();
 	?>
 </body>
 </html>

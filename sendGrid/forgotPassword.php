@@ -78,7 +78,7 @@
                 elseif (isset($_POST['btnRecover'])):
                     // Verificando se o código digitado é o mesmo que o enviado para o email
                     if ($_SESSION['cod'] == $_POST['txtCodigo']):
-                        header('location:../login.php');
+                        header('location:../includes/forgotPassword.php');
                     endif;
                 endif;
             ?>

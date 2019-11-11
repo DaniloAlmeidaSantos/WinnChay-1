@@ -1,16 +1,14 @@
 <?php 
 	class Register
 	{
-		
-		function __construct()
+		private $conn;	
+
+		public function __construct()
 		{
 			require_once 'config/DbConnect.php';
 
 			// Chamando o método connect da classe Database e inicializando um link de conexão
 			$this->conn = connect();
-
-			// Definindo o nome do campeonato
-			$_SESSION["nChamp"] = 'Championship_'. time() . '_WinnChay';
 		}
 
 		public function createUser($fn, $ln, $u, $e, $p, $c, $p){
