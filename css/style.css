@@ -235,7 +235,7 @@ windowHome{
 .bodyLogin{
 	margin: 0;
 	padding: 0;
-	background: url();
+	background: url(../img/Src/background.png);
 	background-size: cover;
 }
 
@@ -247,7 +247,7 @@ windowHome{
 	width: 400px;
 	height: 500px;
 	padding: 40px;
-	background: rgba(0, 0, 0, .8);
+	background: rgba(0, 0, 0, .6);
 	box-sizing: border-box;
 	box-shadow: 0 15px 25px rgba(0, 0, 0, .5);
 	border-radius: 10px;
@@ -292,7 +292,7 @@ windowHome{
 {
 	top: -20px;
 	left: 0;
-	color: teal;
+	color: #8f34ad;
 	font-size: 12px;
 }
 
