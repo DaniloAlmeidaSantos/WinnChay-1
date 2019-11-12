@@ -67,38 +67,15 @@
 							tablinks[i].style.backgroundColor = "";
 						}
 						document.getElementById(pageName).style.display = "block";
-						elmnt.style.backgroundColor = color;
+							elmnt.style.backgroundColor = color;
 						}
 						// Get the element with id="defaultOpen" and click on it
 						document.getElementById("defaultOpen").click();
 					</script>
 				</div>
-				
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 			<div class="slide Center"></div>
-
 			<div class="slide Right"></div>
 		</div>
 	</div>
-	<?php 
-		include 'includes/Carousel.php';
-
-		$conn = new Carousel();
-
-		$conn->picture();
-	?>
 </body>
 </html>

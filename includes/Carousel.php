@@ -42,7 +42,10 @@
 			}
 
 			if ($stmt->rowCount() > 0):
-				return true
+				$_SESSION['picture'] = $row['PICTURE'];
+				return true;
+			else:
+				$img = 'uploads/up_pictures/default.png';
 			endif;
 		}
 
@@ -50,7 +53,7 @@
 		public function championship(){
 			for ($i=0; $i <= 2; $i++) { 
 				$stmt = $this->conn->prepare('SELECT * FROM CHAMPIONSHIPS WHERE IDCHAMP = ?');
-				$stmt->bindParam(1, $_SESSION["name"][$i], PDO::PARAM_INT);
+				$stmt->bindValue(1, $_SESSION["name"][$i], PDO::PARAM_INT);
 				$stmt->execute();
 			}
 
