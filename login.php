@@ -13,14 +13,28 @@
 		<form action="" method="POST">
 			<div class="inputBox">
 				<input type="text" name="txtEmail" required="">
-				<label>Username ou Email</label>
+				<label>E-Mail</label>
 			</div>
 			<div class="inputBox">
 				<input type="password" name="txtPwd" required="">
 				<label>Senha</label>
 			</div>
-			<button class="buttonLogin"><a href="#">Esqueceu a Senha?</a>&nbsp; ou</button><button class="buttonLogin"><a href="#">Não tem cadastro?</a></button><br><br><br>
-			<center><input type="submit" name=""></center>
+			<center><input type="submit" name="btnSubmit"></center>
 		</form>
+		<br>
+		<form action="SendGrid/forgotPassword.php" method="POST" style="text-align: center;">
+			<button class="buttonLogin" name="btnForgot" style="">Esqueceu a Senha?</button>
+			<label style="color: white;">ou</label>
+			<button class="buttonLogin"><a href="#" class="textDec">Cadastrar-se</a></button>
+		</form>
+
+		<?php
+			if (isset($_POST['btnSubmit'])):
+				include 'includes/Login.php';
+
+				$conn = new Login();
+				$conn->select($_POST['txtEmail'], $_POST['txtPwd']);
+			endif;
+		?>
 </body>
 </html>
