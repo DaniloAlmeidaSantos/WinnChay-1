@@ -1,6 +1,7 @@
 body{
 	margin: 0;
 	padding: 0;
+	height:50% ;
 }
 /*================================================= INDEX.php =====================================================*/
 
@@ -30,6 +31,11 @@ body{
 	text-align: center;
 	font-family: 'Staatliches', cursive;
 	font-size: 65px;
+	font-kerning: auto;
+}
+.maxAlt h5{
+	text-align: center;
+	font-family: 'Staatliches', cursive;
 	font-kerning: auto;
 }
 
@@ -142,6 +148,8 @@ body{
 	position: absolute;
 	scrollbar-width: none;
 	-ms-overflow-style: none;
+	overflow: -moz-scrollbars-none;
+	
 }
 ::-webkit-scrollbar{
 	display: none;	
@@ -190,12 +198,19 @@ body{
 	margin-top: 23vw;
 }
 
+/* Home and home Itens */
 #Home {
 	background-color: red;
 	width: 95.99vw;
 	height: 100vh;
 	margin-left: 4vw;
 }
+
+windowHome{
+	
+}
+
+
 #Hist {
 	background-color: green;
 	width: 95.99vw;
@@ -214,3 +229,79 @@ body{
 
 
 /*============================================= HOMEPAGE.php END ====================================================*/
+
+/*================================================== LOGIN.php ======================================================*/
+
+.bodyLogin{
+	margin: 0;
+	padding: 0;
+	background: url();
+	background-size: cover;
+}
+
+.box{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	width: 400px;
+	height: 500px;
+	padding: 40px;
+	background: rgba(0, 0, 0, .8);
+	box-sizing: border-box;
+	box-shadow: 0 15px 25px rgba(0, 0, 0, .5);
+	border-radius: 10px;
+}
+
+.box h2{
+	margin: 0 0 30px;
+	padding: 0;
+	color: #fff;
+	text-align: center;
+}
+
+.box .inputBox{
+	position: relative;
+}
+
+.box .inputBox input{
+	width: 100%;
+	padding: 10px 0;
+	font-size: 16px;
+	color: #FFF;
+	margin-bottom: 30px;
+	border: none;
+	border-bottom: 1px solid #fff;
+	outline: none;
+	background: transparent;
+}
+
+.box .inputBox label{
+	position: absolute;
+	top: 0;
+	left: 0;
+	padding: 10px 0;
+	font-size: 16px;
+	color: #fff;
+	pointer-events: none;
+	transition: .5s;
+}
+
+.box .inputBox input:focus ~ label,
+.box .inputBox input:valid ~ label
+{
+	top: -20px;
+	left: 0;
+	color: teal;
+	font-size: 12px;
+}
+
+.buttonLogin{
+	background: transparent; 
+	border: none; 
+	color:white;
+}
+
+
+
+/*================================================= LOGIN.php END ===================================================*/

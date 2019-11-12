@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="smooth">
+<html>
 <head>
 	<title>WinnChay - Página Inicial</title>
 	<meta charset="utf-8">
@@ -37,8 +37,14 @@
 				</div>
 
 				<div id="Home" class="tabcontent">
-					<h3>Home</h3>
-					<p>Home is where the heart is..</p>
+					<div>
+						<ul class="windowHome">
+							<li class="carrossel carrosselPrimeiro"></li>
+							<li class="propaganda propagandaSegundo"></li>
+							<li class="criarCampeonato criarCampeonatoTerceiro"></li>
+							<li class="amistoso amistosoQuarto"></li>
+						</ul>
+					</div>
 				</div>
 
 				<div id="Hist" class="tabcontent">
@@ -93,12 +99,5 @@
 			<div class="slide Right"></div>
 		</div>
 	</div>
-	<?php 
-		include 'includes/Carousel.php';
-
-		$conn = new Carousel();
-
-		$conn->picture();
-	?>
 </body>
 </html>

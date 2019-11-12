@@ -26,13 +26,6 @@
 
 			
 			<li class="layer" data-depth=".0"><img class="img-fluid" class="tamImg" src="img/Src/light.png"></li>
-			<li class="layer" data-depth=".0">
-				<button class="button" data-toggle="modal" data-target="sitemodal">
-					<center>
-						<img width=70%" height="70%" src="open-iconic-master/svg/account-login.svg">
-					</center>
-				</button>
-			</li>
 		</ul>
 	</div>
 	</center>
@@ -47,6 +40,7 @@
 		<section>
 			<div class="maxAlt">
 				<h1>Gerador de Campeonatos E-Sports:</h1>
+				<h5>Já possui cadastro? não!? então <a href="login.php">cadastre-se</a></h5>
 				<hr>
 			</div>
 		</section>
