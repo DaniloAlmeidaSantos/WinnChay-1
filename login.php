@@ -12,14 +12,14 @@
 		<h2>Login</h2>
 		<form action="" method="POST">
 			<div class="inputBox">
-				<input type="text" name="" required="">
+				<input type="text" name="txtEmail" required="">
 				<label>Username ou Email</label>
 			</div>
 			<div class="inputBox">
-				<input type="password" name="" required="">
+				<input type="password" name="txtPwd" required="">
 				<label>Senha</label>
 			</div>
-			<button class="buttonLogin"><a href="#">Esqueceu a Senha?</a>&nbsp; ou</button><button class="buttonLogin"><a href="#">Cadastre-se</a></button><br><br><br>
+			<button class="buttonLogin"><a href="#">Esqueceu a Senha?</a>&nbsp; ou</button><button class="buttonLogin"><a href="#">Não tem cadastro?</a></button><br><br><br>
 			<center><input type="submit" name=""></center>
 		</form>
 </body>

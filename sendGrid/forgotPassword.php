@@ -6,7 +6,7 @@
     </head>
     <body>
         <div class="container">
-            <?php if (isset($_POST['txtForgot'])): ?>
+            <?php if (isset($_POST['btnForgot'])): ?>
                 <form action='' method='POST'>
                     <label>Digite seu E-Mail: </label>
                     <input type="text" name="txtEmail">
@@ -30,14 +30,14 @@
                     <button name="btnRepeat">Reenviar código</button>
                 </form>
             <?php endif; ?>
-            
-            
+
+
             <?php
                 session_start();
                 if (isset($_POST["btnSend"])):
                     $_SESSION['cod'] = rand(1000, 9999);
                     $_SESSION['email'] = $_POST['txtEmail'];
-                    
+
                     // Requisitando o composer
                     require 'vendor/autoload.php';
 
@@ -47,17 +47,17 @@
                     $to = new SendGrid\Email(null, "{$_SESSION['email']}");
                     $content = new SendGrid\Content("text/html", "Olá, <br><br>ative seu código de recuperação da sua senha: <br><br><b> Código: </b>{$_SESSION['cod']}.<br><br> Atenciosamente,<br><b> Equipe WinnChay. </b>");
                     $mail = new SendGrid\Mail($from, $subject, $to, $content);
-                    
+
                     // Ativando a chave da API no SednGrid
                     $apiKey = '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';
                     $sg = new \SendGrid($apiKey);
-                    
-                    //Finalizando o processo        
+
+                    //Finalizando o processo
                     $response = $sg->client->mail()->send()->post($mail);
                     echo "Mensagem enviada com sucesso";
                 elseif (isset($_POST['btnRepeat'])):
                     $_SESSION['cod'] = rand(1000, 9999);
-                    
+
                     // Requisitando o composer
                     require 'vendor/autoload.php';
 
@@ -67,12 +67,12 @@
                     $to = new SendGrid\Email(null, "{$_SESSION['email']}");
                     $content = new SendGrid\Content("text/html", "Olá, <br><br>ative seu código de recuperação da sua senha: <br><br><b> Código: </b>{$_SESSION['cod']}.<br><br> Atenciosamente,<br><b> Equipe WinnChay. </b>");
                     $mail = new SendGrid\Mail($from, $subject, $to, $content);
-                    
+
                     // Ativando a chave da API no SednGrid
                     $apiKey = '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';
                     $sg = new \SendGrid($apiKey);
-                    
-                    //Finalizando o processo        
+
+                    //Finalizando o processo
                     $response = $sg->client->mail()->send()->post($mail);
                     echo "Mensagem enviada com sucesso";
                 elseif (isset($_POST['btnRecover'])):
