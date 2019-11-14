@@ -1,8 +1,4 @@
-body{
-	margin: 0;
-	padding: 0;
-	height:50% ;
-}
+
 /*================================================= INDEX.php =====================================================*/
 
 /* Header/Parallax */
@@ -46,7 +42,7 @@ body{
 	bottom   : 0;
 	left     : 0;
 	pointer-events   : none;
-	background-image : linear-gradient(to bottom, rgba(255,255,255, 0), rgba(255,255,255, 1) 70%); 
+	background-image : linear-gradient(to bottom, rgba(255,255,255, 0), rgba(255,255,255, 1) 70%);
 	width    : 100%;
 	height   : 4em;
 }
@@ -87,7 +83,7 @@ body{
 
 /* Footer */
 .CorBack{
-	background-color:#1a1327; 
+	background-color:#1a1327;
 }
 
 .CorText{
@@ -144,15 +140,15 @@ body{
 	transform: rotate(-90deg) translateX(-100vh);
 	transform-origin: top left;
 	overflow-y: scroll;
-	overflow-x: scroll;
+	overflow-x: hidden;
 	position: absolute;
 	scrollbar-width: none;
 	-ms-overflow-style: none;
 	overflow: -moz-scrollbars-none;
-	
+
 }
 ::-webkit-scrollbar{
-	display: none;	
+	display: none;
 }
 
 /* Page Home */
@@ -168,18 +164,18 @@ body{
 	overflow-x: hidden;
 	padding-top: 20px;
 }
-  
+
 .sidenav a {
 	padding: 5px 6px 5px 9px;
 	text-decoration: none;
 	color: #818181;
 	display: block;
 }
-  
+
 .sidenav a:hover {
 	background-color: #fbd7fb;
 }
-  
+
 .main {
 	margin-left: 160px; /* Same as the width of the sidenav */
 	font-size: 28px; /* Increased text to enable scrolling */
@@ -200,14 +196,82 @@ body{
 
 /* Home and home Itens */
 #Home {
-	background-color: red;
+	background-color: #1a1327;
 	width: 95.99vw;
 	height: 100vh;
 	margin-left: 4vw;
 }
 
-windowHome{
-	
+.elementExample_second{
+    background-color: #1a1327;
+    position: absolute;
+    transform: translate(-50% , -50%); /*Primeiro parâmetro é o X e o segundo é o Y*/
+    left: 9.0%;
+	top: 50%;
+	width: 90vh;
+    height: 87vh;
+    line-height: 200px; /*deixa a altura do texto centralizado */
+    color: #fff;
+    text-transform: uppercase;
+    text-align: center;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+.carousel{
+	position: absolute;
+	width: 90vh;
+	height: 87vh;
+	left: -14px;
+	margin: 0;
+}
+
+.elementExample_first{
+	background-color: #818181;
+	position: absolute;
+	transform: translate(-50% , -50%);
+	left: 24.5%;
+	top: 20.1%;
+	width: 97vh;
+    height: 27vh;
+    line-height: 200px; /*deixa a altura do texto centralizado */
+    color: #fff;
+    text-transform: uppercase;
+    text-align: center;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+.elementExample_third{
+	background-color: #818181;
+	position: absolute;
+	transform: translate(-50% , -50%);
+	left: 24.5%;
+	top: 50%;
+	width: 97vh;
+    height: 27vh;
+    line-height: 200px; /*deixa a altura do texto centralizado */
+    color: #fff;
+    text-transform: uppercase;
+    text-align: center;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+.elementExample_forth{
+	background-color: #818181;
+	position: absolute;
+	transform: translate(-50% , -50%);
+	left: 24.5%;
+	top: 80%;
+	width: 97vh;
+    height: 27vh;
+    line-height: 200px; /*deixa a altura do texto centralizado */
+    color: #fff;
+    text-transform: uppercase;
+    text-align: center;
+    cursor: pointer;
+    font-size: 15px;
 }
 
 
@@ -297,9 +361,24 @@ windowHome{
 }
 
 .buttonLogin{
-	background: transparent; 
-	border: none; 
+	background: transparent;
+	border: none;
+	text-align: center;
 	color:white;
 }
+.textDec {
+	text-decoration: none;
+	color: white;
+}
+.textDec:hover {
+	text-decoration: none;
+	color: #925EFF;
+}
+.buttonLogin:hover{
+	color: #925EFF;
+}
+
+/*================================================= LOGIN.php END ===================================================*/
+
 
 /*================================================= LOGIN.php END ===================================================*/

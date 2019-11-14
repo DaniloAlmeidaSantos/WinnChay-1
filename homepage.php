@@ -1,13 +1,16 @@
 <!DOCTYPE html>
-<html>
+<html class="formatpage">
 <head>
 	<title>WinnChay - Página Inicial</title>
 	<meta charset="utf-8">
 	<link rel="stylesheet" href="css/style.css">
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+	
 	<link href="https://fonts.googleapis.com/css?family=Dosis|Staatliches&display=swap" rel="stylesheet">
 </head>
-<body>
+<body >
 	<div class="outerWrapper">
 		<div class="Wrapper">
 			<div class="slide Home">
@@ -19,7 +22,7 @@
 							</a>
 						</div>
 						<div class="perfilHome">
-							<a href="#home" class="tablink" id="defaultOpen" onclick="openPage('Home', this, 'red')">
+							<a href="#home" class="tablink" id="defaultOpen" onclick="openPage('Home')">
 								<img width="90%" src="open-iconic-master/svg/home.svg">
 							</a>
 						</div>
@@ -37,13 +40,49 @@
 				</div>
 
 				<div id="Home" class="tabcontent">
-					<div>
-						<ul class="windowHome">
-							<li class="carrossel carrosselPrimeiro"></li>
-							<li class="propaganda propagandaSegundo"></li>
-							<li class="criarCampeonato criarCampeonatoTerceiro"></li>
-							<li class="amistoso amistosoQuarto"></li>
-						</ul>
+					
+
+					<div class="elementExample_second">
+						<div class="container"> 
+							<div id="myCarousel" class="carousel slide" data-ride="carousel">
+								<div class="carousel-inner">
+									<div class="item active">
+										<img src="" alt="Los Angeles" style="">
+									</div>
+
+									<div class="item">
+										<img src="img/Carrossel/Update1/fundo1.jpg" alt="Chicago">
+									</div>
+									
+									<div class="item">
+										<img src="img/Carrossel/Update1/fundo1.jpg" alt="New york" style="">
+									</div>
+								</div>
+
+								<!-- Left and right controls -->
+								<a class="left carousel-control" href="#myCarousel" data-slide="prev">
+									<span class="glyphicon glyphicon-chevron-left"></span>
+									<span class="sr-only">Previous</span>
+								</a>
+									
+								<a class="right carousel-control" href="#myCarousel" data-slide="next">
+									<span class="glyphicon glyphicon-chevron-right"></span>
+									<span class="sr-only">Next</span>
+								</a>
+							</div>
+						</div>
+					</div>
+
+					<div class="elementExample_first">
+						primeiro
+					</div>
+
+					<div class="elementExample_third">
+						terceiro
+					</div>
+
+					<div class="elementExample_forth">
+						quarto
 					</div>
 				</div>
 
@@ -79,7 +118,9 @@
 						document.getElementById("defaultOpen").click();
 					</script>
 				</div>
-			<div class="slide Center"></div>
+			<div class="slide Center">
+				Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore corporis saepe quasi ipsa, minima qui suscipit magni. Obcaecati, ad. Ea, libero ex? Repellat vero accusantium nostrum, beatae alias quis odio. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reiciendis illum veniam suscipit corporis vero sapiente quae tempore nesciunt, sed quis aspernatur enim maxime, doloremque eius aut dolores molestiae officiis nihil?
+			</div>
 			<div class="slide Right"></div>
 		</div>
 	</div>

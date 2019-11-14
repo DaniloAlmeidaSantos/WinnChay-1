@@ -1,7 +1,7 @@
-<?php 
+<?php
 	class Register
 	{
-		private $conn;	
+		private $conn;
 
 		public function __construct()
 		{
@@ -11,15 +11,14 @@
 			$this->conn = connect();
 		}
 
-		public function createUser($fn, $ln, $u, $e, $p, $c, $p){
-			$stmt = $this->conn->prepare('INSERT INTO PLAYERS (FIRST_NAME, LAST_NAME, USERNAME, EMAIL, PASSWORD, CPF, PHONE) VALUES (?,?,?,?,?,?,?)');
+		public function createUser($fn, $ln, $u, $e, $pwd, $p){
+			$stmt = $this->conn->prepare('INSERT INTO PLAYERS (FIRST_NAME, LAST_NAME, USERNAME, EMAIL, PASSWORD, PHONE) VALUES (?,?,?,?,?,?)');
 			$stmt->bindParam( 1, $fn, PDO::PARAM_STR);
 			$stmt->bindParam( 2, $ln, PDO::PARAM_STR);
 			$stmt->bindParam( 3, $u, PDO::PARAM_STR);
 			$stmt->bindParam( 4, $e, PDO::PARAM_STR);
-			$stmt->bindParam( 5, $p, PDO::PARAM_STR);
-			$stmt->bindParam( 6, $c, PDO::PARAM_STR);
-			$stmt->bindParam( 7, $p, PDO::PARAM_STR);
+			$stmt->bindParam( 5, $pwd, PDO::PARAM_STR);
+			$stmt->bindParam( 6, $p, PDO::PARAM_STR);
 			$stmt->execute();
 
 			if ($stmt->rowCount() > 0):
