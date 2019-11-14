@@ -39,8 +39,7 @@
 					</center>
 				</div>
 
-				<div id="Home" class="tabcontent">
-
+			<div id="Home" class="tabcontent">
 				<div class="elementExample_second">
 					<div class="container">
 						<div id="myCarousel" class="carousel slide" data-ride="carousel">
@@ -68,7 +67,7 @@
 						</div>
 					</div>
 				</div>
-
+			</div>
 					<div class="elementExample_first">
 						primeiro
 					</div>
