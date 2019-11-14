@@ -202,7 +202,7 @@
 	margin-left: 4vw;
 }
 
-.elementExample_second{
+.elementHome_second{
     background-color: #1a1327;
     position: absolute;
     transform: translate(-50% , -50%); /*Primeiro parâmetro é o X e o segundo é o Y*/
@@ -226,7 +226,7 @@
 	margin: 0;
 }
 
-.elementExample_first{
+.elementHome_first{
 	background-color: #818181;
 	position: absolute;
 	transform: translate(-50% , -50%);
@@ -242,7 +242,7 @@
     font-size: 15px;
 }
 
-.elementExample_third{
+.elementHome_third{
 	background-color: #818181;
 	position: absolute;
 	transform: translate(-50% , -50%);
@@ -258,7 +258,7 @@
     font-size: 15px;
 }
 
-.elementExample_forth{
+.elementHome_forth{
 	background-color: #818181;
 	position: absolute;
 	transform: translate(-50% , -50%);
@@ -276,10 +276,58 @@
 
 
 #Hist {
-	background-color: green;
+	background-color: #37164a;
 	width: 95.99vw;
 	height: 100vh;
 	margin-left: 4vw;
+}
+
+.elementStats_primary{
+	background-color: #818181;
+	position: absolute;
+	transform: translate(-50% , -50%);
+	left: 10%;
+	top: 27%;
+	width: 97vh;
+    height: 43.5vh;
+    line-height: 200px; /*deixa a altura do texto centralizado */
+    color: #fff;
+    text-transform: uppercase;
+    text-align: center;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+.elementStats_second{
+	background-color: #818181;
+	position: absolute;
+	transform: translate(-50% , -50%);
+	left: 10%;
+	top: 75%;
+	width: 97vh;
+    height: 40vh;
+    line-height: 200px; /*deixa a altura do texto centralizado */
+    color: #fff;
+    text-transform: uppercase;
+    text-align: center;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+.elementStats_third{
+	background-color: #818181;
+	position: absolute;
+	transform: translate(-50% , -50%);
+	left: 24.8%;
+	top: 50%;
+	width: 84vh;
+    height: 90vh;
+    line-height: 200px; /*deixa a altura do texto centralizado */
+    color: #fff;
+    text-transform: uppercase;
+    text-align: center;
+    cursor: pointer;
+    font-size: 15px;
 }
 
 #Perfil {

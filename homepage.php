@@ -42,7 +42,7 @@
 				<div id="Home" class="tabcontent">
 					
 
-					<div class="elementExample_second">
+					<div class="elementHome_second">
 						<div class="container"> 
 							<div id="myCarousel" class="carousel slide" data-ride="carousel">
 								<div class="carousel-inner">
@@ -73,22 +73,30 @@
 						</div>
 					</div>
 
-					<div class="elementExample_first">
-						primeiro
+					<div class="elementHome_first">
+						primary
 					</div>
 
-					<div class="elementExample_third">
+					<div class="elementHome_third">
 						terceiro
 					</div>
 
-					<div class="elementExample_forth">
+					<div class="elementHome_forth">
 						quarto
 					</div>
 				</div>
 
 				<div id="Hist" class="tabcontent">
-					<h3>News</h3>
-					<p>Some news this fine day!</p> 
+					<div class="elementStats_primary">
+						primeiro
+					</div> 
+
+					<div class="elementStats_second">
+						second
+					</div>
+					<div class="elementStats_third">
+						third
+					</div>
 				</div>
 
 				<div id="Perfil" class="tabcontent">
