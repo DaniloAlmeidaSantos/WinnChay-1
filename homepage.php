@@ -7,7 +7,7 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
-	
+
 	<link href="https://fonts.googleapis.com/css?family=Dosis|Staatliches&display=swap" rel="stylesheet">
 </head>
 <body >
@@ -40,38 +40,34 @@
 				</div>
 
 				<div id="Home" class="tabcontent">
-					
 
-					<div class="elementExample_second">
-						<div class="container"> 
-							<div id="myCarousel" class="carousel slide" data-ride="carousel">
-								<div class="carousel-inner">
-									<div class="item active">
-										<img src="" alt="Los Angeles" style="">
-									</div>
+				<div class="elementExample_second">
+					<div class="container">
+						<div id="myCarousel" class="carousel slide" data-ride="carousel">
+							<div class="carousel-inner">
+								<?php
+									include 'includes/Carousel.php';
+									$conn = new Carousel();
 
-									<div class="item">
-										<img src="img/Carrossel/Update1/fundo1.jpg" alt="Chicago">
-									</div>
-									
-									<div class="item">
-										<img src="img/Carrossel/Update1/fundo1.jpg" alt="New york" style="">
-									</div>
-								</div>
-
-								<!-- Left and right controls -->
-								<a class="left carousel-control" href="#myCarousel" data-slide="prev">
-									<span class="glyphicon glyphicon-chevron-left"></span>
-									<span class="sr-only">Previous</span>
-								</a>
-									
-								<a class="right carousel-control" href="#myCarousel" data-slide="next">
-									<span class="glyphicon glyphicon-chevron-right"></span>
-									<span class="sr-only">Next</span>
-								</a>
+									if ($conn->carousel()):
+										$conn->picture();
+									endif;
+								?>
 							</div>
+
+							<!-- Left and right controls -->
+							<a class="left carousel-control" href="#myCarousel" data-slide="prev">
+								<span class="glyphicon glyphicon-chevron-left"></span>
+								<span class="sr-only">Previous</span>
+							</a>
+
+							<a class="right carousel-control" href="#myCarousel" data-slide="next">
+								<span class="glyphicon glyphicon-chevron-right"></span>
+								<span class="sr-only">Next</span>
+							</a>
 						</div>
 					</div>
+				</div>
 
 					<div class="elementExample_first">
 						primeiro
@@ -88,7 +84,7 @@
 
 				<div id="Hist" class="tabcontent">
 					<h3>News</h3>
-					<p>Some news this fine day!</p> 
+					<p>Some news this fine day!</p>
 				</div>
 
 				<div id="Perfil" class="tabcontent">

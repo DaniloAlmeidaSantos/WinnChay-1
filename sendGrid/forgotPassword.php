@@ -8,6 +8,8 @@
       	<link href="https://fonts.googleapis.com/css?family=Dosis|Staatliches&display=swap" rel="stylesheet">
     </head>
     <body class="bodyLogin">
+      <br><br><br>
+      <center><h1 style="color: white;">REDEFINIR SENHA</h1></center>
       <div class="box" style="height: 35%;">
         <div class="container">
           <?php if (isset($_POST['btnForgot'])): ?>
@@ -18,11 +20,11 @@
                   <center><button name="btnSend">Enviar código de ativação</button></center>
                 </div>
                 <br><br>
-            </form>
           <?php elseif(isset($_POST['btnSend'])): ?>
+          </form>
                 <form action='' method='POST'>
                   <div class="inputBox">
-                      <input type="text" name="txtCodigo">
+                      <input type="text" name="txtCodigo" maxlength="4">
                       <label>Digite o código: </label>
                       <center><button name="btnRecover">Verificar</button> &nbsp;
                       <button name="btnRepeat">Reenviar código</button></center>
@@ -31,7 +33,7 @@
             <?php elseif (isset($_POST['btnRepeat'])): ?>
                 <form action='' method='POST'>
                   <div class="inputBox">
-                      <input type="text" name="txtCodigo">
+                      <input type="text" name="txtCodigo" maxlength="4">
                       <label>Digite o código: </label>
                       <center><button name="btnRecover">Verificar</button> &nbsp;
                       <button name="btnRepeat">Reenviar código</button></center>
@@ -50,7 +52,7 @@
                     require 'vendor/autoload.php';
 
                     // Definindo os parâmetros de envio da mensagem
-                    $from = new SendGrid\Email(null, "winnchay@winnchay.com");
+                    $from = new SendGrid\Email(null, "WinnChay@suporte.com");
                     $subject = "Recuperar senha.";
                     $to = new SendGrid\Email(null, "{$_SESSION['email']}");
                     $content = new SendGrid\Content("text/html", "Olá, <br><br>ative seu código de recuperação da sua senha: <br><br><b> Código: </b>{$_SESSION['cod']}.<br><br> Atenciosamente,<br><b> Equipe WinnChay. </b>");
@@ -70,7 +72,7 @@
                     require 'vendor/autoload.php';
 
                     // Definindo os parâmetros de envio da mensagem
-                    $from = new SendGrid\Email(null, "winnchay@winnchay.com");
+                    $from = new SendGrid\Email(null, "WinnChay@suporte.com");
                     $subject = "Recuperar senha.";
                     $to = new SendGrid\Email(null, "{$_SESSION['email']}");
                     $content = new SendGrid\Content("text/html", "Olá, <br><br>ative seu código de recuperação da sua senha: <br><br><b> Código: </b>{$_SESSION['cod']}.<br><br> Atenciosamente,<br><b> Equipe WinnChay. </b>");
@@ -87,6 +89,16 @@
                     // Verificando se o código digitado é o mesmo que o enviado para o email
                     if ($_SESSION['cod'] == $_POST['txtCodigo']):
                         header('location:../includes/forgotPassword.php');
+                    else:
+                      echo "<form action='' method='POST'>
+                            <div class='inputBox'>
+                                <input type='text' name='txtCodigo' maxlength='4'>
+                                <label>Digite o código: </label>
+                                <center><button name='btnRecover'>Verificar</button> &nbsp;
+                                <button name='btnRepeat'>Reenviar código</button></center>
+                            </div>
+                          </form>";
+                      echo "<br><h6 style='text-align:center;color: #925EFF;'>Código digitado incorreto</h6>";
                     endif;
                 endif;
             ?>
