@@ -88,7 +88,7 @@
 
 				<div id="Hist" class="tabcontent">
 					<div class="elementStats_primary">
-						primeiro
+						primary
 					</div> 
 
 					<div class="elementStats_second">
