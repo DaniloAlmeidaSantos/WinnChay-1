@@ -7,7 +7,7 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
-
+	
 	<link href="https://fonts.googleapis.com/css?family=Dosis|Staatliches&display=swap" rel="stylesheet">
 </head>
 <body >
@@ -39,49 +39,58 @@
 					</center>
 				</div>
 
-			<div id="Home" class="tabcontent">
-				<div class="elementExample_second">
-					<div class="container">
-						<div id="myCarousel" class="carousel slide" data-ride="carousel">
-							<div class="carousel-inner">
-								<?php
-									include 'includes/Carousel.php';
-									$conn = new Carousel();
+				<div id="Home" class="tabcontent">
+					
 
-									$conn->carousel();
-								?>
+					<div class="elementHome_second">
+						<div class="container"> 
+							<div id="myCarousel" class="carousel slide" data-ride="carousel">
+								<div class="carousel-inner">
+									<?php
+										include 'includes/Carousel.php';
+										$conn = new Carousel();
+										$conn->carousel();
+									?>
+								</div>
+
+								<!-- Left and right controls -->
+								<a class="left carousel-control" href="#myCarousel" data-slide="prev">
+									<span class="glyphicon glyphicon-chevron-left"></span>
+									<span class="sr-only">Previous</span>
+								</a>
+									
+								<a class="right carousel-control" href="#myCarousel" data-slide="next">
+									<span class="glyphicon glyphicon-chevron-right"></span>
+									<span class="sr-only">Next</span>
+								</a>
 							</div>
-
-							<!-- Left and right controls -->
-							<a class="left carousel-control" href="#myCarousel" data-slide="prev">
-								<span class="glyphicon glyphicon-chevron-left"></span>
-								<span class="sr-only">Previous</span>
-							</a>
-
-							<a class="right carousel-control" href="#myCarousel" data-slide="next">
-								<span class="glyphicon glyphicon-chevron-right"></span>
-								<span class="sr-only">Next</span>
-							</a>
 						</div>
 					</div>
-				</div>
-			</div>
-					<div class="elementExample_first">
-						primeiro
+
+					<div class="elementHome_first">
+						primary
 					</div>
 
-					<div class="elementExample_third">
+					<div class="elementHome_third">
 						terceiro
 					</div>
 
-					<div class="elementExample_forth">
+					<div class="elementHome_forth">
 						quarto
 					</div>
 				</div>
 
 				<div id="Hist" class="tabcontent">
-					<h3>News</h3>
-					<p>Some news this fine day!</p>
+					<div class="elementStats_primary">
+						primary
+					</div> 
+
+					<div class="elementStats_second">
+						second
+					</div>
+					<div class="elementStats_third">
+						third
+					</div>
 				</div>
 
 				<div id="Perfil" class="tabcontent">
