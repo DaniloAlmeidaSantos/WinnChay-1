@@ -57,6 +57,15 @@
 									<div class="item">
 										<img src="img/Carrossel/Update1/fundo1.jpg" alt="New york" style="">
 									</div>
+									<!-- Teste Carrossel php
+									<div class="carousel-inner">
+										<?php
+											include 'includes/Carousel.php';
+											$conn = new Carousel();
+
+											$conn->carousel();
+										?>
+									</div> -->
 								</div>
 
 								<!-- Left and right controls -->

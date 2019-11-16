@@ -2,16 +2,15 @@
 <html lang="pt" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>WinnChay - </title>
+    <title>WinnChay - Cadastro</title>
   	<link rel="stylesheet" href="css/style.css">
   	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
   	<link href="https://fonts.googleapis.com/css?family=Dosis|Staatliches&display=swap" rel="stylesheet">
   </head>
   <body class="bodyLogin" >
     <form action="" method="POST">
-      <div class="box" style="height: 120%;width: 45%;" >
+      <div class="box" style="height: 120%;width: 45%;margin-top: 4%" >
         <center>
-          <br><br>
           <h2 style="color: white">CADASTRO</h2>
           <div class="inputBox">
             <input type="text" name="txtName" maxlength="20" required>
@@ -26,23 +25,23 @@
             <label>Nome de usuário</label>
           </div>
           <div class="inputBox">
-            <input type="text" name="txtEmail" maxlength="30" required>
+            <input type="text" name="txtEmail" maxlength="50" required>
             <label>E-Mail</label>
           </div>
           <div class="inputBox">
-            <input type="text" name="txtCEmail" maxlength="30" required>
+            <input type="text" name="txtCEmail" maxlength="50" required>
             <label>Confirmar E-Mail</label>
           </div>
           <div class="inputBox">
-            <input type="password" name="txtPwd" required>
+            <input type="password" name="txtPwd" maxlength="16" required>
             <label>Senha</label>
           </div>
           <div class="inputBox">
-            <input type="password" name="txtCPwd" required>
+            <input type="password" name="txtCPwd" maxlength="16" required>
             <label>Confirmar senha</label>
           </div>
           <div class="inputBox">
-            <input type="text" name="txtPhone" required>
+            <input type="text" name="txtPhone" maxlength="14" required>
             <label>Telefone</label>
           </div>
           <button name="btnRegister">Cadastrar</button>

@@ -1,5 +1,5 @@
 <?php
-  class Home
+  class Stats
   {
     private $conn;
 
@@ -9,7 +9,6 @@
 
 			// Chamando o método connect da classe Database e inicializando um link de conexão
 			$this->conn = connect();
-
       // Defininodo as váriaveis de passagem de dados do gráfico
       $_SESSION['wins'] = 0;
       $_SESSION['loses'] = 0;
