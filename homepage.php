@@ -48,9 +48,7 @@
 									include 'includes/Carousel.php';
 									$conn = new Carousel();
 
-									if ($conn->carousel()):
-										$conn->picture();
-									endif;
+									$conn->carousel();
 								?>
 							</div>
 

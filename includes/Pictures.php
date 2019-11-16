@@ -59,16 +59,7 @@
 
 		// Quand este método é chamado, é realizado o retorno de informações do banco de dados
     public function imageTeam($i){
-        $validate = $this->conn->prepare('SELECT IDTEAM FROM TEAM WHERE IDPLAYER = ?');
-        $validate->bindParam(1, $i, PDO::PARAM_INT);
-        $validate->execute();
-
-        while ($row = $validate->fetch(PDO::FETCH_ASSOC)) {
-            $id = $row['IDTEAM'];
-        }
-
-        $stmt  = $this->conn->prepare('SELECT * FROM PICTURES WHERE IDTEAM = ?');
-        $stmt->bindParam(1, $id, PDO::PARAM_INT);
+        $stmt  = $this->conn->prepare('SELECT * FROM PICTURES INNER JOIN TEAM WHERE PICTURES.IDTEAM = TEAM.IDTEAM');
         $stmt->execute();
 
         while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
