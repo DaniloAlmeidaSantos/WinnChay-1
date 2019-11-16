@@ -41,6 +41,7 @@
 
 				<div id="Home" class="tabcontent">
 					
+<<<<<<< HEAD
 
 					<div class="elementHome_second">
 						<div class="container"> 
@@ -53,6 +54,35 @@
 									?>
 								</div>
 
+=======
+
+					<div class="elementHome_second">
+						<div class="container"> 
+							<div id="myCarousel" class="carousel slide" data-ride="carousel">
+								<div class="carousel-inner">
+									<div class="item active">
+										<img src="" alt="Los Angeles" style="">
+									</div>
+
+									<div class="item">
+										<img src="img/Carrossel/Update1/fundo1.jpg" alt="Chicago">
+									</div>
+									
+									<div class="item">
+										<img src="img/Carrossel/Update1/fundo1.jpg" alt="New york" style="">
+									</div>
+									<!-- Teste Carrossel php
+									<div class="carousel-inner">
+										<?php
+											include 'includes/Carousel.php';
+											$conn = new Carousel();
+
+											$conn->carousel();
+										?>
+									</div> -->
+								</div>
+
+>>>>>>> afe3f18435c0ec7360b5738526f35e25e0e05b95
 								<!-- Left and right controls -->
 								<a class="left carousel-control" href="#myCarousel" data-slide="prev">
 									<span class="glyphicon glyphicon-chevron-left"></span>
