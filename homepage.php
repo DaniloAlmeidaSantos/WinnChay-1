@@ -24,17 +24,17 @@
 							</a>
 						</div>
 						<div class="perfilHome">
-							<a href="#home" class="tablink" id="defaultOpen" onclick="openPage('Home')">
+							<a href="#home" class="tablink" onclick="openPage('Home')">
 								<img width="90%" src="open-iconic-master/svg/home.svg">
 							</a>
 						</div>
-						<div class="perfilHist">
-							<a href="#hist" class="tablink" id="defaultOpen" onclick="openPage('Hist')">
+						<div class="perfilProcurar">
+							<a href="#hist" class="tablink" id="defaultOpen" onclick="openPage('Procurar')">
 								<img width="90%" src="open-iconic-master/svg/bar-chart.svg">
 							</a>
 						</div>
 						<div class="perfilIco">
-							<a href="#perfil" class="tablink" id="defaultOpen" onclick="openPage('Perfil')">
+							<a href="#perfil" class="tablink" onclick="openPage('Perfil')">
 								<img width="90%" src="open-iconic-master/svg/cog.svg">
 							</a>
 						</div>
@@ -87,17 +87,17 @@
 					</div>
 				</div>
 
-				<div id="Hist" class="tabcontent">
-					
-					<!-- <div class="elementStats_primary">
-					
-					</div>  -->
-
-					<div class="elementStats_second">
-						second
+				<div id="Procurar" class="tabcontent">
+					<div class="elementStats_Search">
+						<h1>Procurar Campeonatos:</h1>
+						<form action="">
+							<input type="text">
+						</form>
 					</div>
 					<div class="elementStats_third">
-						third
+						<div class="elementStats_Torn">
+
+						</div>
 					</div>
 				</div>
 
@@ -129,41 +129,43 @@
 				</script>
 			</div>
 			<div class="slide Center">
-				
-			<?php
-					include 'includes/Stats.php';
-					$conn = new Stats();
-					$conn->graphics(1);
-					?>
-					<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-					<script type="text/javascript">
-						// Criando um gráfico
-						google.charts.load("current", {
-							packages: ["corechart"]
-						});
-						google.charts.setOnLoadCallback(drawChart);
-						// Determinando os valores do gráfico
-						function drawChart() {
-							var data = google.visualization.arrayToDataTable([
-								['Desempenho', 'W/D/L'],
-								['Vitórias', <?php echo $_SESSION['wins']; ?>],
-								['Derrotas', <?php echo $_SESSION['loses']; ?>],
-								['Empates', <?php echo $_SESSION['draws']; ?>]
-							]);
 
-							// Dando um nome e definindo o tipo do gráfico
-							var options = {
-								is3D: true,
-								colors: ['#925EFF', '#000', '#FFF'],
-								backgroundColor: 'transparent',
-							};
+				<?php
+				include 'includes/Stats.php';
+				$conn = new Stats();
+				$conn->graphics(1);
+				?>
+				<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+				<script type="text/javascript">
+					// Criando um gráfico
+					google.charts.load("current", {
+						packages: ["corechart"]
+					});
+					google.charts.setOnLoadCallback(drawChart);
+					// Determinando os valores do gráfico
+					function drawChart() {
+						var data = google.visualization.arrayToDataTable([
+							['Desempenho', 'W/D/L'],
+							['Vitórias', <?php echo $_SESSION['wins']; ?>],
+							['Derrotas', <?php echo $_SESSION['loses']; ?>],
+							['Empates', <?php echo $_SESSION['draws']; ?>]
+						]);
 
-							var chart = new google.visualization.PieChart(document.getElementById('piechart_3d'));
-							chart.draw(data, options);
-						}
-					</script>
-					<!-- Div de visualização do gráfico -->
-					<div id="piechart_3d"></div>
+						// Dando um nome e definindo o tipo do gráfico
+						var options = {
+							is3D: true,
+							colors: ['#925EFF', '#000', '#FFF'],
+							backgroundColor: 'transparent',
+							legend: 'none',
+						};
+
+						var chart = new google.visualization.PieChart(document.getElementById('piechart_3d'));
+						chart.draw(data, options);
+					}
+				</script>
+				<!-- Div de visualização do gráfico -->
+				<p class="titleGrafic">Gráfico de Desempenho</p>
+				<div id="piechart_3d"></div>
 
 				<div class="Perfil">
 					<img src="img/Src/perfilteste.jpg" alt="">
@@ -185,11 +187,16 @@
 					<p class="userTeam">Time de Coração:</p>
 					<p class="userTeam2"><b>Palmeiras</b></p>
 				</div>
-				<!-- <div class="centerHist">
+				<div class="centerHist">
 					<div class="contentHist">
 						dsadsadsa
 					</div>
-				</div> -->
+				</div>
+				<div class="wrapperTrophy">
+					<div class="tropy">
+						dsadsadsa
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>

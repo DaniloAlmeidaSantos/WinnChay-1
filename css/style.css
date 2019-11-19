@@ -182,7 +182,7 @@
 	margin-top: 3vw;
 }
 
-.perfilHist{
+.perfilProcurar{
 	margin-top: 2vw;
 }
 
@@ -334,7 +334,7 @@
 
 #piechart_3d{
 	margin-left: 90px;
-	margin-top: 45px;
+	margin-top: 46px;
 	width: 100vw;
 	height: 100vh;
 }
@@ -356,19 +356,46 @@
 }
 
 .elementStats_third{
-	background-color: #818181;
+	background-color: #2d133c;
 	position: absolute;
 	transform: translate(-50% , -50%);
 	left: 24.8%;
-	top: 50%;
+	top: 58%;
 	width: 84vh;
-    height: 90vh;
-    line-height: 200px; /*deixa a altura do texto centralizado */
-    color: #fff;
-    text-transform: uppercase;
-    text-align: center;
-    cursor: pointer;
-    font-size: 15px;
+	height: 79vh;
+	overflow: scroll;
+}
+
+.elementStats_Torn{
+	background-color: #471e60;
+	height: 22%;
+	width: 99%;
+	margin-top: 0.5%;
+	margin-left: 0.5%;
+}
+
+.elementStats_Search h1{
+	font-size: 2rem;
+	margin-top: 8px;
+	color: #fff;
+}
+
+.elementStats_Search input{
+	width: 70%;
+	position: relative;
+	top: 10%;
+}
+
+.elementStats_Search{
+	background-color: #220e2e;
+	position: absolute;
+	transform: translate(-50% , -50%);
+	left: 24.8%;
+	top: 10.2%;
+	width: 84vh;
+    height: 15vh;
+	text-align: center;
+	z-index: 1;
 }
 
 #Perfil {
@@ -382,8 +409,8 @@
 	width: 400px;
 	height: 400px;
 	position: absolute;
-	left: 78%;
-	top: 0%;
+	left: 76%;
+	top: -8.5%;
 
 }
 
@@ -494,11 +521,33 @@
 
 .centerHist{
 	position: absolute;
-	height: 100vh;
-	width: 50vw;
+	height: 97vh;
+	width: 40vw;
 	background-color: #fff;
-	top: 0%;
-	left: 63%;
+	top: 1.6%;
+	left: 61.5%;
+}
+
+.wrapperTrophy{
+	position: absolute;
+	height: 46vh;
+	width: 20.5vw;
+	background-color: #fff;
+	top: 52.5%;
+	left: 81.7%;
+}
+
+.titleGrafic{
+	position: absolute;
+	font-size: 2.2rem;
+	margin-left: 63.5vw;
+	margin-top: 0.7vw;
+	margin-bottom: 0;
+	color: white;
+	background-color: #37164a;
+	padding: 5px;
+	padding-left: 20px;
+	padding-right: 20px;
 }
 
 /*============================================= HOMEPAGE.php END ====================================================*/
