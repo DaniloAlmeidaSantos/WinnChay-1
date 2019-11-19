@@ -20,8 +20,8 @@
                   <center><button name="btnSend">Enviar código de ativação</button></center>
                 </div>
                 <br><br>
+            </form>
           <?php elseif(isset($_POST['btnSend'])): ?>
-          </form>
                 <form action='' method='POST'>
                   <div class="inputBox">
                       <input type="text" name="txtCodigo" maxlength="4">
@@ -30,78 +30,77 @@
                       <button name="btnRepeat">Reenviar código</button></center>
                   </div>
                 </form>
-            <?php elseif (isset($_POST['btnRepeat'])): ?>
-                <form action='' method='POST'>
-                  <div class="inputBox">
-                      <input type="text" name="txtCodigo" maxlength="4">
-                      <label>Digite o código: </label>
-                      <center><button name="btnRecover">Verificar</button> &nbsp;
-                      <button name="btnRepeat">Reenviar código</button></center>
-                  </div>
-                </form>
-            <?php endif; ?>
+          <?php elseif (isset($_POST['btnRepeat'])): ?>
+              <form action='' method='POST'>
+                <div class="inputBox">
+                    <input type="text" name="txtCodigo" maxlength="4">
+                    <label>Digite o código: </label>
+                    <center><button name="btnRecover">Verificar</button> &nbsp;
+                    <button name="btnRepeat">Reenviar código</button></center>
+                </div>
+              </form>
+          <?php endif; ?>
 
+          <?php
+              session_start();
+              if (isset($_POST["btnSend"])):
+                  $_SESSION['cod'] = rand(1000, 9999);
+                  $_SESSION['email'] = $_POST['txtEmail'];
 
-            <?php
-                session_start();
-                if (isset($_POST["btnSend"])):
-                    $_SESSION['cod'] = rand(1000, 9999);
-                    $_SESSION['email'] = $_POST['txtEmail'];
+                  // Requisitando o composer
+                  require 'vendor/autoload.php';
 
-                    // Requisitando o composer
-                    require 'vendor/autoload.php';
+                  // Definindo os parâmetros de envio da mensagem
+                  $from = new SendGrid\Email(null, "WinnChay@suporte.com");
+                  $subject = "Recuperar senha.";
+                  $to = new SendGrid\Email(null, "{$_SESSION['email']}");
+                  $content = new SendGrid\Content("text/html", "Olá, <br><br>ative seu código de recuperação da sua senha: <br><br><b> Código: </b>{$_SESSION['cod']}.<br><br> Atenciosamente,<br><b> Equipe WinnChay. </b>");
+                  $mail = new SendGrid\Mail($from, $subject, $to, $content);
 
-                    // Definindo os parâmetros de envio da mensagem
-                    $from = new SendGrid\Email(null, "WinnChay@suporte.com");
-                    $subject = "Recuperar senha.";
-                    $to = new SendGrid\Email(null, "{$_SESSION['email']}");
-                    $content = new SendGrid\Content("text/html", "Olá, <br><br>ative seu código de recuperação da sua senha: <br><br><b> Código: </b>{$_SESSION['cod']}.<br><br> Atenciosamente,<br><b> Equipe WinnChay. </b>");
-                    $mail = new SendGrid\Mail($from, $subject, $to, $content);
+                  // Ativando a chave da API no SednGrid
+                  $apiKey = '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';
+                  $sg = new \SendGrid($apiKey);
 
-                    // Ativando a chave da API no SednGrid
-                    $apiKey = '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';
-                    $sg = new \SendGrid($apiKey);
+                  //Finalizando o processo
+                  $response = $sg->client->mail()->send()->post($mail);
+                  echo "<br><h6 style='text-align:center;color: #925EFF;'>Código enviado com sucesso!</h6>";
+              elseif (isset($_POST['btnRepeat'])):
+                  $_SESSION['cod'] = rand(1000, 9999);
 
-                    //Finalizando o processo
-                    $response = $sg->client->mail()->send()->post($mail);
-                    echo "<br><h6 style='text-align:center;color: #925EFF;'>Código enviado com sucesso!</h6>";
-                elseif (isset($_POST['btnRepeat'])):
-                    $_SESSION['cod'] = rand(1000, 9999);
+                  // Requisitando o composer
+                  require 'vendor/autoload.php';
 
-                    // Requisitando o composer
-                    require 'vendor/autoload.php';
+                  // Definindo os parâmetros de envio da mensagem
+                  $from = new SendGrid\Email(null, "WinnChay@suporte.com");
+                  $subject = "Recuperar senha.";
+                  $to = new SendGrid\Email(null, "{$_SESSION['email']}");
+                  $content = new SendGrid\Content("text/html", "Olá, <br><br>ative seu código de recuperação da sua senha: <br><br><b> Código: </b>{$_SESSION['cod']}.<br><br> Atenciosamente,<br><b> Equipe WinnChay. </b>");
+                  $mail = new SendGrid\Mail($from, $subject, $to, $content);
 
-                    // Definindo os parâmetros de envio da mensagem
-                    $from = new SendGrid\Email(null, "WinnChay@suporte.com");
-                    $subject = "Recuperar senha.";
-                    $to = new SendGrid\Email(null, "{$_SESSION['email']}");
-                    $content = new SendGrid\Content("text/html", "Olá, <br><br>ative seu código de recuperação da sua senha: <br><br><b> Código: </b>{$_SESSION['cod']}.<br><br> Atenciosamente,<br><b> Equipe WinnChay. </b>");
-                    $mail = new SendGrid\Mail($from, $subject, $to, $content);
+                  // Ativando a chave da API no SednGrid
+                  $apiKey = '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';
+                  $sg = new \SendGrid($apiKey);
 
-                    // Ativando a chave da API no SednGrid
-                    $apiKey = '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';
-                    $sg = new \SendGrid($apiKey);
-
-                    //Finalizando o processo
-                    $response = $sg->client->mail()->send()->post($mail);
-                    echo "<br><h6 style='text-align:center;color: #925EFF;'>Código enviado com sucesso!</h6>";
-                elseif (isset($_POST['btnRecover'])):
-                    // Verificando se o código digitado é o mesmo que o enviado para o email
-                    if ($_SESSION['cod'] == $_POST['txtCodigo']):
-                        header('location:../includes/forgotPassword.php');
-                    else:
-                      echo "<form action='' method='POST'>
-                            <div class='inputBox'>
-                                <input type='text' name='txtCodigo' maxlength='4'>
-                                <label>Digite o código: </label>
-                                <center><button name='btnRecover'>Verificar</button> &nbsp;
-                                <button name='btnRepeat'>Reenviar código</button></center>
-                            </div>
-                          </form>";
-                      echo "<br><h6 style='text-align:center;color: #925EFF;'>Código digitado incorreto</h6>";
-                    endif;
-                endif;
-            ?>
+                  //Finalizando o processo
+                  $response = $sg->client->mail()->send()->post($mail);
+                  echo "<br><h6 style='text-align:center;color: #925EFF;'>Código enviado com sucesso!</h6>";
+              elseif (isset($_POST['btnRecover'])):
+                  // Verificando se o código digitado é o mesmo que o enviado para o email
+                  if ($_SESSION['cod'] == $_POST['txtCodigo']):
+                      header('location:../includes/forgotPassword.php');
+                  else:
+                    echo "<form action='' method='POST'>
+                          <div class='inputBox'>
+                              <input type='text' name='txtCodigo' maxlength='4'>
+                              <label>Digite o código: </label>
+                              <center><button name='btnRecover'>Verificar</button> &nbsp;
+                              <button name='btnRepeat'>Reenviar código</button></center>
+                          </div>
+                        </form>";
+                    echo "<br><h6 style='text-align:center;color: #925EFF;'>Código digitado incorreto</h6>";
+                  endif;
+              endif;
+          ?>
         </div>
       </div>
     </body>

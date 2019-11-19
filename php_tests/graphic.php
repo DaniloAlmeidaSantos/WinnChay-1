@@ -1,16 +1,12 @@
-<html>
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
   <head>
+    <meta charset="utf-8">
+    <title></title>
   </head>
   <body>
-    <script type="text/javascript" src="js/codes-ajax/jquery-3.3.1.min.js"></script>
-    <script type="text/javascript" src="js/codes-ajax/search.js"></script>
-		<h2 align="center">Busca dinâmica</h2>
-		<span>Buscar</span>
-		<input type="text" name="search" id="search" placeholder="Digite o nome" class="form-control" />
-		<div id="result"></div>
-
     <?php
-      include 'includes/Stats.php';
+      include '../includes/Stats.php';
       $conn = new Stats();
       $conn->graphics(1);
     ?>
@@ -39,7 +35,8 @@
         chart.draw(data, options);
       }
     </script>
+
     <!-- Div de visualização do gráfico -->
-    <div id="piechart_3d" style="width: 900px; height: 500px;"></div>
+    <div id="piechart_3d" style="width: 1500px; height: 1500px;"></div>
   </body>
 </html>
