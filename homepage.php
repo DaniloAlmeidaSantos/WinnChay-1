@@ -40,6 +40,10 @@
 				</div>
 
 				<div id="Home" class="tabcontent">
+<<<<<<< HEAD
+=======
+					
+>>>>>>> ea0301dc22d8e880528027521c9396f936dcccb3
 
 					<div class="elementHome_second">
 						<div class="container">
@@ -51,6 +55,10 @@
 										$conn->carousel();
 									?>
 								</div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> ea0301dc22d8e880528027521c9396f936dcccb3
 								<!-- Left and right controls -->
 								<a class="left carousel-control" href="#myCarousel" data-slide="prev">
 									<span class="glyphicon glyphicon-chevron-left"></span>
