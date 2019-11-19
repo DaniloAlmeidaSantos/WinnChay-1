@@ -22,9 +22,22 @@
 			$stmt->execute();
 
 			if ($stmt->rowCount() > 0):
-				header('location:homepage.php');
+				return true;
 			else:
 				echo "<Strong>Error:</strong> Por favor insira outro E-Mail!";
+			endif;
+		}
+
+		public function rakingFifa($i, $u){
+			$stmt = $this->conn->prepare('INSERT INTO RAKING_FIFA (IDPLAYER, USERNAME) VALUES (?,?)');
+			$stmt->bindParam(1, $i, PDO::PARAM_INT);
+			$stmt->bindParam(2, $u, PDO::PARAM_STR);
+			$stmt->execute();
+
+			if ($stmt->rowCount() > 0):
+				header('location:homepage.php');
+			else:
+				echo "<Strong>Error:</strong> Tente novamente, mais tarde!";
 			endif;
 		}
 	}

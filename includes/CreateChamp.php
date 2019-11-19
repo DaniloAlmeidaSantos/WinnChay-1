@@ -1,11 +1,11 @@
-<?php 
+<?php
 	class Championship
 	{
 		private $conn;
 
 		public function __construct()
 		{
-			require_once 'config/DbConnect.php';
+			require_once '../config/DbConnect.php';
 
 			// Chamando o método connect da classe Database e inicializando um link de conexão
 			$this->conn = connect();
@@ -19,7 +19,7 @@
 			echo $_SESSION["nChamp"];
 			$stmt = $this->conn->prepare('INSERT INTO NUMPLAYERS (NAME_CHAMP, IDADM, NUMPLAYERS) VALUES (?,?,?)');
 			$stmt->bindParam(1, $_SESSION["nChamp"], PDO::PARAM_STR);
-			$stmt->bindParam(2, $_COOKIE["id"], PDO::PARAM_INT);
+			$stmt->bindValue(2, 1, PDO::PARAM_INT);
 			$stmt->bindParam(3, $nPlayers, PDO::PARAM_INT);
 			$stmt->execute();
 
@@ -31,15 +31,24 @@
 		}
 
 		// Quando este método é chamado, é realizado o processo de inserção de dados na tabela CHAMPIONSHIPS
-		public function createChamp($ip, $a, $sd, $d, $in){
-			$stmt = $this->conn->prepare("INSERT INTO CHAMPIONSHIPS (NAME, START_DATE, IDPLATFORM, AWARDS, DESCRIPTION, IDADM, IDNUMPLAYERS) VALUES(?,?,?,?,?,?,?)");
+		public function createChamp($sd, $ip, $a, $d, $n){
+			$validate = $this->conn->prepare('SELECT IDNUMPLAYERS FROM NUMPLAYERS WHERE IDADM = ?');
+			$validate->bindValue(1, 1, PDO::PARAM_INT);
+			$validate->execute();
+
+			while ($row = $validate->fetch(PDO::FETCH_ASSOC)) {
+				$np = $row['IDNUMPLAYERS'];
+			}
+
+			$stmt = $this->conn->prepare("INSERT INTO CHAMPIONSHIPS (NAME, START_DATE, IDPLATFORM, AWARDS, DESCRIPTION, IDADM, IDNUMPLAYERS, NAME_CHAMP) VALUES(?,?,?,?,?,?,?,?)");
 			$stmt->bindParam(1, $_SESSION["nChamp"], PDO::PARAM_STR);
 			$stmt->bindParam(2, $sd, PDO::PARAM_STR);
 			$stmt->bindParam(3, $ip, PDO::PARAM_INT);
 			$stmt->bindParam(4, $a, PDO::PARAM_STR);
 			$stmt->bindParam(5, $d, PDO::PARAM_STR);
-			$stmt->bindParam(6, $_COOKIE["id"], PDO::PARAM_INT);
-			$stmt->bindParam(7, $in, PDO::PARAM_INT);
+			$stmt->bindValue(6, 1, PDO::PARAM_INT);
+			$stmt->bindParam(7, $np, PDO::PARAM_INT);
+			$stmt->bindParam(8, $n, PDO::PARAM_STR);
 			$stmt->execute();
 
 			if ($stmt->rowCount() > 0):
@@ -55,12 +64,14 @@
 			$stmt = $this->conn->prepare("CREATE TABLE ".$_SESSION["nChamp"]."(
 				IDPLAYER INT(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
 				IDCHAMP INT(11) NOT NULL,
+				IDHISTORIC INT(11),
 				USERNAME VARCHAR(16) NOT NULL,
 				PHONE CHAR(14) NOT NULL,
-				VICTORY INT(2) NOT NULL,
+				VICTORY CHAR(3) NOT NULL DEFAULT 'NO',
 				CHAMPION CHAR(3) NOT NULL DEFAULT 'NO',
 
-				CONSTRAINT FK_IDCHAMP_CHAMP_'.$_SESSION["nChamp"].'  FOREIGN KEY (IDCHAMP) REFERENCES CHAMPIONSHIPS (IDCHAMP)
+				CONSTRAINT FK_IDHISTORIC_{$_SESSION["nChamp"]} FOREIGN KEY (IDHISTORIC) REFERENCES HISTORIC (IDHISTORIC),
+				CONSTRAINT FK_IDCHAMP_CHAMP_{$_SESSION["nChamp"]}  FOREIGN KEY (IDCHAMP) REFERENCES CHAMPIONSHIPS (IDCHAMP)
 			)");
 			$stmt->execute();
 
@@ -77,10 +88,11 @@
 				$id = $row['IDCHAMP'];
 			}
 
-			$stmt = $this->conn->prepare('INSERT INTO '.$_SESSION["nChamp"].' (IDCHAMP, USERNAME, PHONE) VALUES (?,?,?)');
+			$stmt = $this->conn->prepare('INSERT INTO '.$_SESSION["nChamp"].' (IDCHAMP, IDHISTORIC, USERNAME, PHONE) VALUES (?,?,?,?)');
 			$stmt->bindParam(1, $id, PDO::PARAM_INT);
-			$stmt->bindParam(2, $u, PDO::PARAM_STR);
-			$stmt->bindParam(3, $p, PDO::PARAM_STR);
+			$stmt->bindParam(2, $i, PDO::PARAM_INT);
+			$stmt->bindParam(3, $u, PDO::PARAM_STR);
+			$stmt->bindParam(4, $p, PDO::PARAM_STR);
 			$stmt->execute();
 
 			if ($stmt->rowCount() > 0):
