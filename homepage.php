@@ -1,16 +1,18 @@
 <!DOCTYPE html>
 <html class="formatpage">
+
 <head>
 	<title>WinnChay - Página Inicial</title>
 	<meta charset="utf-8">
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
-	
+
 	<link href="https://fonts.googleapis.com/css?family=Dosis|Staatliches&display=swap" rel="stylesheet">
 </head>
-<body >
+
+<body>
 	<div class="outerWrapper">
 		<div class="Wrapper">
 			<div class="slide Home">
@@ -40,16 +42,17 @@
 				</div>
 
 				<div id="Home" class="tabcontent">
-					
+					<h3 class="h3_Nov">Novidades</h3>
+					<h3 class="h3_Mod">Modos</h3>
 
 					<div class="elementHome_second">
-						<div class="container"> 
+						<div class="container">
 							<div id="myCarousel" class="carousel slide" data-ride="carousel">
 								<div class="carousel-inner">
 									<?php
-										include 'includes/Carousel.php';
-										$conn = new Carousel();
-										$conn->carousel();
+									include 'includes/Carousel.php';
+									$conn = new Carousel();
+									$conn->carousel();
 									?>
 								</div>
 
@@ -58,7 +61,7 @@
 									<span class="glyphicon glyphicon-chevron-left"></span>
 									<span class="sr-only">Previous</span>
 								</a>
-									
+
 								<a class="right carousel-control" href="#myCarousel" data-slide="next">
 									<span class="glyphicon glyphicon-chevron-right"></span>
 									<span class="sr-only">Next</span>
@@ -67,8 +70,12 @@
 						</div>
 					</div>
 
+					<div class="elementHome_header">
+						<h1>Bem Vindo Fulano</h1>
+					</div>
+
 					<div class="elementHome_first">
-						primary
+						primaryesse que eu tenho que colocar o grafico
 					</div>
 
 					<div class="elementHome_third">
@@ -81,9 +88,10 @@
 				</div>
 
 				<div id="Hist" class="tabcontent">
-					<div class="elementStats_primary">
-						primary
-					</div> 
+					
+					<!-- <div class="elementStats_primary">
+					
+					</div>  -->
 
 					<div class="elementStats_second">
 						second
@@ -102,8 +110,8 @@
 					<h3>About</h3>
 					<p>Who we are and what we do.</p>
 				</div>
-					<script>
-						function openPage(pageName,elmnt,color) {
+				<script>
+					function openPage(pageName, elmnt, color) {
 						var i, tabcontent, tablinks;
 						tabcontent = document.getElementsByClassName("tabcontent");
 						for (i = 0; i < tabcontent.length; i++) {
@@ -114,17 +122,77 @@
 							tablinks[i].style.backgroundColor = "";
 						}
 						document.getElementById(pageName).style.display = "block";
-							elmnt.style.backgroundColor = color;
-						}
-						// Get the element with id="defaultOpen" and click on it
-						document.getElementById("defaultOpen").click();
-					</script>
-				</div>
-			<div class="slide Center">
-				Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore corporis saepe quasi ipsa, minima qui suscipit magni. Obcaecati, ad. Ea, libero ex? Repellat vero accusantium nostrum, beatae alias quis odio. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reiciendis illum veniam suscipit corporis vero sapiente quae tempore nesciunt, sed quis aspernatur enim maxime, doloremque eius aut dolores molestiae officiis nihil?
+						elmnt.style.backgroundColor = color;
+					}
+					// Get the element with id="defaultOpen" and click on it
+					document.getElementById("defaultOpen").click();
+				</script>
 			</div>
-			<div class="slide Right"></div>
+			<div class="slide Center">
+				
+			<?php
+					include 'includes/Stats.php';
+					$conn = new Stats();
+					$conn->graphics(1);
+					?>
+					<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+					<script type="text/javascript">
+						// Criando um gráfico
+						google.charts.load("current", {
+							packages: ["corechart"]
+						});
+						google.charts.setOnLoadCallback(drawChart);
+						// Determinando os valores do gráfico
+						function drawChart() {
+							var data = google.visualization.arrayToDataTable([
+								['Desempenho', 'W/D/L'],
+								['Vitórias', <?php echo $_SESSION['wins']; ?>],
+								['Derrotas', <?php echo $_SESSION['loses']; ?>],
+								['Empates', <?php echo $_SESSION['draws']; ?>]
+							]);
+
+							// Dando um nome e definindo o tipo do gráfico
+							var options = {
+								is3D: true,
+								colors: ['#925EFF', '#000', '#FFF'],
+								backgroundColor: 'transparent',
+							};
+
+							var chart = new google.visualization.PieChart(document.getElementById('piechart_3d'));
+							chart.draw(data, options);
+						}
+					</script>
+					<!-- Div de visualização do gráfico -->
+					<div id="piechart_3d"></div>
+
+				<div class="Perfil">
+					<img src="img/Src/perfilteste.jpg" alt="">
+					<div class="PerfilHover">
+						<button><img style="position: absolute;" src="img/Src/addImg.png" alt=""></button>
+						<p>Change your image</p>
+					</div>
+				</div>
+				<div class="infoUser">
+					<p class="userName"><b>user name</b></p>
+					<p class="userFirst">First name and last name</p>
+					<hr>
+					<p class="userEmail">E-mail:</p>
+					<p class="userEmail2"><b>johnatan@gmai.com</b></p>
+
+					<p class="userTel">Telefone:</p>
+					<p class="userTel2"><b>11 949432160</b></p>
+
+					<p class="userTeam">Time de Coração:</p>
+					<p class="userTeam2"><b>Palmeiras</b></p>
+				</div>
+				<!-- <div class="centerHist">
+					<div class="contentHist">
+						dsadsadsa
+					</div>
+				</div> -->
+			</div>
 		</div>
 	</div>
 </body>
+
 </html>

@@ -117,7 +117,7 @@
 .Wrapper{
 	display: flex;
 	flex-direction: row;
-	width: 300vw;
+	width: 200vw;
 	transform: rotate(90deg) translateY(-100vh);
 	transform-origin: top left;
 }
@@ -127,13 +127,9 @@
 }
 
 .Center{
-	background: #8f34ad;
-}
+	background-color: #1b0f2f;
 
-.Right{
-	background: #b543d1;
 }
-
 .outerWrapper{
 	width: 100vh;
 	height: 100vw;
@@ -155,12 +151,12 @@
 
 .sidenav {
 	height: 100%;
-	width: 4vw;
+	width: 4.2vw;
 	position: fixed;
 	z-index: 1;
 	top: 0;
 	left: 0;
-	background-color: #912291;
+	background-color: #1a1327;
 	overflow-x: hidden;
 	padding-top: 20px;
 }
@@ -196,20 +192,36 @@
 
 /* Home and home Itens */
 #Home {
-	background-color: #1a1327;
+	background-color: #472880;
 	width: 95.99vw;
 	height: 100vh;
 	margin-left: 4vw;
+}
+
+.h3_Nov{
+	color: white;
+	position: absolute;
+	top: 13%;
+	left: 11%;
+	font-size: 1.8rem;
+}
+
+.h3_Mod{
+	color: white;
+	position: absolute;
+	top: 13%;
+	left: 33%;
+	font-size: 1.8rem;
 }
 
 .elementHome_second{
     background-color: #1a1327;
     position: absolute;
     transform: translate(-50% , -50%); /*Primeiro parâmetro é o X e o segundo é o Y*/
-    left: 9.0%;
-	top: 50%;
-	width: 90vh;
-    height: 87vh;
+    left: 13.0%;
+	top: 58%;
+	width: 80vh;
+    height: 75vh;
     line-height: 200px; /*deixa a altura do texto centralizado */
     color: #fff;
     text-transform: uppercase;
@@ -220,21 +232,43 @@
 
 .carousel{
 	position: absolute;
-	width: 90vh;
-	height: 87vh;
+	width: 80vh;
+    height: 75vh;
 	left: -14px;
 	margin: 0;
 }
 
-.elementHome_first{
-	background-color: #818181;
+.elementHome_header{
+	background-color: #2d2143;
 	position: absolute;
 	transform: translate(-50% , -50%);
-	left: 24.5%;
-	top: 20.1%;
-	width: 97vh;
-    height: 27vh;
-    line-height: 200px; /*deixa a altura do texto centralizado */
+	top: 0%;
+	left: 0%;
+	width: 100%;
+    height: 25vh;
+    line-height: 40px;
+    cursor: pointer;
+}
+
+.elementHome_header h1{
+	color: #fff;
+    text-transform: uppercase;
+    text-align: center;
+	font-size: 15px;
+	position: absolute;
+	top: 58%;
+	left: 55%;
+}
+
+.elementHome_first{
+	background-color: #1a1327;
+	position: absolute;
+	transform: translate(-50% , -50%);
+	top: 31%;
+	left: 34%;
+	width: 70vh;
+    height: 20vh;
+    line-height: 40px; /*deixa a altura do texto centralizado */
     color: #fff;
     text-transform: uppercase;
     text-align: center;
@@ -243,29 +277,29 @@
 }
 
 .elementHome_third{
-	background-color: #818181;
+	background-color: #1a1327;
 	position: absolute;
 	transform: translate(-50% , -50%);
-	left: 24.5%;
-	top: 50%;
-	width: 97vh;
-    height: 27vh;
+	left: 34%;
+	top: 57%;
+	width: 70vh;
+    height: 20vh;
     line-height: 200px; /*deixa a altura do texto centralizado */
     color: #fff;
     text-transform: uppercase;
     text-align: center;
     cursor: pointer;
-    font-size: 15px;
+    font-size: 2rem;
 }
 
 .elementHome_forth{
-	background-color: #818181;
+	background-color: #1a1327;
 	position: absolute;
 	transform: translate(-50% , -50%);
-	left: 24.5%;
-	top: 80%;
-	width: 97vh;
-    height: 27vh;
+	left: 34%;
+	top: 85%;
+	width: 70vh;
+    height: 20vh;
     line-height: 200px; /*deixa a altura do texto centralizado */
     color: #fff;
     text-transform: uppercase;
@@ -296,6 +330,13 @@
     text-align: center;
     cursor: pointer;
     font-size: 15px;
+}
+
+#piechart_3d{
+	margin-left: 90px;
+	margin-top: 45px;
+	width: 100vw;
+	height: 100vh;
 }
 
 .elementStats_second{
@@ -337,8 +378,128 @@
 	margin-left: 4vw;
 }
 
+#piechart_3d{
+	width: 400px;
+	height: 400px;
+	position: absolute;
+	left: 78%;
+	top: 0%;
 
+}
 
+.Perfil{
+	width: 300px;
+	height: 300px;
+	background-color: white;
+	margin-left: 0.5vw;
+	margin-top: 0.5vw;
+}
+.Perfil img{
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.PerfilHover{
+	width: 300px;
+	height: 300px;
+	opacity: 0.0;
+	position: absolute;
+	top: 0%;
+	margin-top: 8px;
+}
+
+.PerfilHover:hover{
+	opacity: 1;
+	transition-delay: 250ms;
+	background-color: rgba(0, 0, 0, .6);
+	/* position: absolute; */
+}
+
+.PerfilHover button{
+	border: none;
+	background: transparent;
+	outline: none;
+}
+
+.PerfilHover p	{
+	margin-left: 87px;
+	color: white;
+}
+
+.infoUser hr{
+	width: 21%;
+	margin-right: 78%;
+}
+
+.userName{
+	font-size: 2.2rem;
+	margin-left: 2vw;
+	margin-top: 1vw;
+	margin-bottom: 0;
+	color: white;
+}
+
+.userFirst{
+	font-size: 1.5rem;
+	margin-left: 2vw;
+	margin-bottom: 0;
+	color: white;
+}
+
+.userEmail{
+	font-size: 1.5rem;
+	margin-left: 2vw;
+	margin-bottom: 0;
+	color: white;
+}
+
+.userTel{
+	font-size: 1.5rem;
+	margin-left: 2vw;
+	margin-bottom: 0;
+	color: white;
+}
+
+.userTeam{
+	font-size: 1.5rem;
+	margin-left: 2vw;
+	margin-bottom: 0;
+	color: white;
+}
+
+.userEmail2{
+	font-size: 1.5rem;
+	margin-left: 2vw;
+	margin-bottom: 20px;
+	margin-top: 2px;
+	color: white;
+}
+
+.userTel2{
+	font-size: 1.5rem;
+	margin-left: 2vw;
+	margin-bottom: 20px;
+	margin-top: 2px;
+	color: white;
+}
+
+.userTeam2{
+	font-size: 1.5rem;
+	margin-left: 2vw;
+	margin-bottom: 20px;
+	margin-top: 2px;
+	color: white;
+}
+
+.centerHist{
+	position: absolute;
+	height: 100vh;
+	width: 50vw;
+	background-color: #fff;
+	top: 0%;
+	left: 63%;
+}
 
 /*============================================= HOMEPAGE.php END ====================================================*/
 
