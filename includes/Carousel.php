@@ -16,14 +16,12 @@
 		public function carousel(){
 			$stmt = $this->conn->prepare('SELECT * FROM CHAMPIONSHIPS INNER JOIN PICTURES WHERE CHAMPIONSHIPS.IDPICTURE = PICTURES.IDPICTURE ORDER BY IDCHAMP DESC LIMIT 3');
 			$stmt->execute();
-
-			if ($stmt->rowCount() > 0):
-				while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
-					echo "<div class='item active'>
-							<img src='{$row['PICTURE']}' alt='Los Angeles' width='100%'>
-						</div>";
-				}
-			endif;
+			
+			while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
+				echo "<div class='item active'>
+						<img src='{$row['PICTURE']}' alt='Los Angeles' width='100%'>
+					</div>";
+			}
 		}
 
 		// Quando este método é chamado, é realizado uma consulta na tabela CHAMPIONSHIPS

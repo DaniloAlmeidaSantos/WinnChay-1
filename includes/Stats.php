@@ -27,7 +27,6 @@
         $_SESSION['loses'] = $row['LOSES'];
         $_SESSION['draws'] = $row['DRAWS'];
       }
-
     }
   }
 

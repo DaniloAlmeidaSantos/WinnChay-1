@@ -89,15 +89,17 @@
 
 				<div id="Procurar" class="tabcontent">
 					<div class="elementStats_Search">
+						<script type="text/javascript" src="js/codes-ajax/jquery-3.3.1.min.js"></script>
+   						<script type="text/javascript" src="js/codes-ajax/search.js"></script>
 						<h1>Procurar Campeonatos:</h1>
-						<form action="">
-							<input type="text">
-						</form>
+						<input type="text" name="search" id="search" placeholder="Digite o nome do campeonato...">
 					</div>
 					<div class="elementStats_third">
-						<div class="elementStats_Torn">
-
-						</div>
+						<form action="pageChamp.php" method="POST">
+							<div id='result'>
+								
+							</div>
+						</form>
 					</div>
 				</div>
 
@@ -189,7 +191,13 @@
 				</div>
 				<div class="centerHist">
 					<div class="contentHist">
-						dsadsadsa
+						<?php 
+							include 'includes/Score.php';
+
+							$conn = new Score();
+
+							$conn->viewHistoric();
+						?>
 					</div>
 				</div>
 				<div class="wrapperTrophy">

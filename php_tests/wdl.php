@@ -64,6 +64,14 @@
         $champ->insertChamp('f', '6');
         $champ->insertChamp('g', '7');
         $champ->insertChamp('h', '8');
+        $champ->insertChamp('i', '9');
+        $champ->insertChamp('j', '10');
+        $champ->insertChamp('k', '11');
+        $champ->insertChamp('l', '12');
+        $champ->insertChamp('n', '13');
+        $champ->insertChamp('m', '14');
+        $champ->insertChamp('o', '15');
+        $champ->insertChamp('p', '16');
 
         $Organize->competitors($_POST['cboNPlayers']);
       endif;

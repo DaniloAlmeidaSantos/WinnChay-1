@@ -26,9 +26,9 @@
 
         // Dando um nome e definindo o tipo do gráfico
         var options = {
-          title: 'Gráfico de desempenho',
           is3D: true,
           colors: ['#925EFF', '#000', '#FFF'],
+          backgroundColor: 'transparent',
         };
 
         var chart = new google.visualization.PieChart(document.getElementById('piechart_3d'));
@@ -37,6 +37,6 @@
     </script>
 
     <!-- Div de visualização do gráfico -->
-    <div id="piechart_3d" style="width: 1500px; height: 1500px;"></div>
+    <div id="piechart_3d" style="width: 980px; height: 500px;"></div>
   </body>
 </html>

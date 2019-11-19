@@ -5,7 +5,7 @@
 
     public function __construct()
     {
-      require_once '../config/DbConnect.php';
+      require_once 'config/DbConnect.php';
 
 			// Chamando o método connect da classe Database e inicializando um link de conexão
 			$this->conn = connect();
@@ -36,18 +36,18 @@
         $name = $row['NAME'];
       }
 
-      for ($i=1; $i <= $n; $i++) { 
-        $j = $i + 1;
+      for ($i=1; $i <= $n; $i++):
+        $count = $i + 1;
 
         // Inserindo no banco de dados as partidas que serão feitas.
         $stmt = $this->conn->prepare('INSERT INTO HISTORIC (NAME_CHAMP, PLAYER1, PLAYER2) VALUES (?,?,?)');
-        $stmt->bindParam(1, $name, PDO::PARAM_STR);
+        $stmt->bindParam(1, $_SESSION['nChamp'], PDO::PARAM_STR);
         $stmt->bindParam(2, $players[$i], PDO::PARAM_INT);
-        $stmt->bindParam(3, $players[$j], PDO::PARAM_INT);
+        $stmt->bindParam(3, $players[$count], PDO::PARAM_INT);
         $stmt->execute();
         
         $i++;
-      }
+      endfor;
     }
   }
 ?>
