@@ -174,10 +174,9 @@
 				<div class="Perfil">
 					<img src="img/Src/perfilteste.jpg" id="img" alt="">
 					<div class="PerfilHover">
-						<p>Change your image</p>
-						<input type="file" name="" id="upload" class="btn btn-default">
-							<img  style="position: absolute;" src="img/Src/addImg.png" alt="">
-						</input>
+						<input type="file" name="" id="upload">
+						<h5>Troque sua imagem</h5>
+						<h6>Tam recomendado 300px x 300px</h6>
 					</div>
 					<script>
 						$(function(){
