@@ -17,7 +17,7 @@
 			$_UP['folder'] = 'uploads/up_profile';
 			// Definindo o tamanho do arquivo
 		    $_UP['size'] = 1024*1024*2; // 2MB
-		    
+
 		    // Definindo as extensões que serão aceitas
 		    $_UP['extensions'] = array('jpg', 'png', 'jpeg');
 		    $_UP['rename'] = true;
@@ -36,11 +36,11 @@
 		        exit;
 		    else:
 				// Determinando o nome do arquivo
-		        $_SESSION["final_name"] = $file['name'];
+		        $_SESSION["finalName"] = $file['name'];
 		    endif;
 
 		    // Movendo o arquivo e renomeando o arquivo.
-		    if (move_uploaded_file($file['tmp_name'], $_UP['folder'].$_SESSION["final_name"])):
+		    if (move_uploaded_file($file['tmp_name'], $_UP['folder'].$_SESSION["finalName"])):
 				// Caso seja possível mover a imagem para a pasta destinada, é retornado verdadeiro
 		        return true;
 		    else:
@@ -52,29 +52,32 @@
 		}
 
 		// Quando este método é chamado, é realizado o processo de inserção da foto de perfil do usuário
-		public function createPicture($p, $id){
+		public function createPicture(){
 			$stmt = $this->conn->prepare('INSERT INTO PROFILE_PICTURES (PICTURE, IDPLAYER) VALUES (?, ?)');
-			$stmt->bindParam(1, $p, PDO::PARAM_STR);
-			$stmt->bindParam(2, $id, PDO::PARAM_INT);
+			$stmt->bindParam(1, $_SESSION['finalName'], PDO::PARAM_STR);
+			$stmt->bindValue(2, 1, PDO::PARAM_INT);
 			$stmt->execute();
 		}
 
 		// Quando este método é chamado, é retornado um registro do Banco de dados
-		public function image($id){
+		public function image(){
 			$stmt  = $this->conn->prepare('SELECT * FROM PROFILE_PICTURES WHERE IDPLAYER = ?');
-			$stmt->bindParam(1, $id, PDO::PARAM_INT);
+			$stmt->bindParam(1, $_COOKIE['id'], PDO::PARAM_INT);
 			$stmt->execute();
-
-			while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
-				echo $row['PICTURE'];
-			}
+			if ($stmt->rowCount() > 0):
+				while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
+					$_SESSION['picture'] = $row['PICTURE'];
+				}
+			else:
+				$_SESSION['picture'] = 'uploads/up_profile/user_default.png'
+			endif;
 		}
 
 		// Quando este método é chamado, é realizado o processo de mudança da foto de perfil
-		public function changePicture($p, $id){
+		public function changePicture($p){
 			$stmt = $this->conn->prepare('UPDATE PROFILE_PICTURES SET PICTURE = ? WHERE IDPLAYER = ?');
 			$stmt->bindParam(1, $p, PDO::PARAM_STR);
-			$stmt->bindParam(2, $id, PDO::PARAM_INT);
+			$stmt->bindParam(2, $_COOKIE['id'], PDO::PARAM_INT);
 			$stmt->execute();
 		}
 	}

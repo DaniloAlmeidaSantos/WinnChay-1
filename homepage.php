@@ -49,11 +49,13 @@
 						<div class="container">
 							<div id="myCarousel" class="carousel slide" data-ride="carousel">
 								<div class="carousel-inner">
-									<?php
-									include 'includes/Carousel.php';
-									$conn = new Carousel();
-									$conn->carousel();
-									?>
+									<div class="item-active">
+										<?php
+											include 'includes/Carousel.php';
+											$carousel = new Carousel();
+											$carousel->carousel();
+										?>
+									</div>
 								</div>
 
 								<!-- Left and right controls -->
@@ -97,7 +99,7 @@
 					<div class="elementStats_third">
 						<form action="pageChamp.php" method="POST">
 							<div id='result'>
-								
+
 							</div>
 						</form>
 					</div>
@@ -133,9 +135,9 @@
 			<div class="slide Center">
 
 				<?php
-				include 'includes/Stats.php';
-				$conn = new Stats();
-				$conn->graphics(1);
+					include 'includes/Stats.php';
+					$graphics = new Stats();
+					$graphics->graphics(1);
 				?>
 				<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 				<script type="text/javascript">
@@ -170,33 +172,45 @@
 				<div id="piechart_3d"></div>
 
 				<div class="Perfil">
-					<img src="img/Src/perfilteste.jpg" alt="">
+					<img src="img/Src/perfilteste.jpg" id="img" alt="">
 					<div class="PerfilHover">
-						<button><img style="position: absolute;" src="img/Src/addImg.png" alt=""></button>
 						<p>Change your image</p>
+						<input type="file" name="" id="upload" class="btn btn-default">
+							<img  style="position: absolute;" src="img/Src/addImg.png" alt="">
+						</input>
 					</div>
+					<script>
+						$(function(){
+							$('#upload').change(function(){
+								const file = $(this)[0].files[0]
+								const fileReader = new FileReader()
+								fileReader.onloadend = function(){
+									$('#img').attr('src', fileReader.result)
+								}
+								fileReader.readAsDataURL(file)
+							})
+						})
+					</script>
 				</div>
 				<div class="infoUser">
 					<p class="userName"><b>user name</b></p>
 					<p class="userFirst">First name and last name</p>
 					<hr>
 					<p class="userEmail">E-mail:</p>
-					<p class="userEmail2"><b>johnatan@gmai.com</b></p>
+					<p class="userEmail2"><b>messi@gmail.com</b></p>
 
 					<p class="userTel">Telefone:</p>
 					<p class="userTel2"><b>11 949432160</b></p>
 
 					<p class="userTeam">Time de Coração:</p>
-					<p class="userTeam2"><b>Palmeiras</b></p>
+					<p class="userTeam2"><b>Barcelona</b></p>
 				</div>
 				<div class="centerHist">
 					<div class="contentHist">
-						<?php 
+						<?php
 							include 'includes/Score.php';
-
-							$conn = new Score();
-
-							$conn->viewHistoric();
+							$historic = new Score();
+							$historic->viewHistoric();
 						?>
 					</div>
 				</div>

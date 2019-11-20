@@ -6,7 +6,7 @@
 </head>
 <body>
 	<?php 
-		echo $_POST['value'];
+		echo $_REQUEST['value'];
 	?>
 </body>
 </html>
