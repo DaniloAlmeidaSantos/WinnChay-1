@@ -5,7 +5,7 @@
 
 		public function __construct()
 		{
-			require_once 'config/DbConnect.php';
+			require_once '../config/DbConnect.php';
 
 			// Chamando o método connect da classe Database e inicializando um link de conexão
 			$this->conn = connect();
@@ -19,7 +19,7 @@
 			echo $_SESSION["nChamp"];
 			$stmt = $this->conn->prepare('INSERT INTO NUMPLAYERS (NAME_CHAMP, IDADM, NUMPLAYERS) VALUES (?,?,?)');
 			$stmt->bindParam(1, $_SESSION["nChamp"], PDO::PARAM_STR);
-			$stmt->bindParam(2, $_COOKIE['id'], PDO::PARAM_INT);
+			$stmt->bindValue(2, 1, PDO::PARAM_INT);
 			$stmt->bindParam(3, $nPlayers, PDO::PARAM_INT);
 			$stmt->execute();
 
@@ -33,20 +33,20 @@
 		// Quando este método é chamado, é realizado o processo de inserção de dados na tabela CHAMPIONSHIPS
 		public function createChamp($sd, $ip, $a, $d, $n){
 			$validate = $this->conn->prepare('SELECT IDNUMPLAYERS FROM NUMPLAYERS WHERE IDADM = ?');
-			$validate->bindParam(1, $_COOKIE['id'], PDO::PARAM_INT);
+			$validate->bindValue(1, 1, PDO::PARAM_INT);
 			$validate->execute();
 
 			while ($row = $validate->fetch(PDO::FETCH_ASSOC)) {
 				$np = $row['IDNUMPLAYERS'];
 			}
 
-			$stmt = $this->conn->prepare("INSERT INTO CHAMPIONSHIPS (NAME, START_DATE, IDPLATFORM, AWARDS, DESCRIPTION, IDADM, IDNUMPLAYERS, NAME_CHAMP) VALUES(?,?,?,?,?,?,?,?)");
+			$stmt = $this->conn->prepare("INSERT INTO CHAMPIONSHIPS (NAME, START_DATE, IDPLATFORM, AWARDS, DESCRIPTION, IDADM, IDNUMPLAYERS, REAL_NAME) VALUES(?,?,?,?,?,?,?,?)");
 			$stmt->bindParam(1, $_SESSION["nChamp"], PDO::PARAM_STR);
 			$stmt->bindParam(2, $sd, PDO::PARAM_STR);
 			$stmt->bindParam(3, $ip, PDO::PARAM_INT);
 			$stmt->bindParam(4, $a, PDO::PARAM_STR);
 			$stmt->bindParam(5, $d, PDO::PARAM_STR);
-			$stmt->bindParam(6, $_COOKIE['id'], PDO::PARAM_INT);
+			$stmt->bindValue(6, 1, PDO::PARAM_INT);
 			$stmt->bindParam(7, $np, PDO::PARAM_INT);
 			$stmt->bindParam(8, $n, PDO::PARAM_STR);
 			$stmt->execute();

@@ -94,7 +94,7 @@
 						<script type="text/javascript" src="js/codes-ajax/jquery-3.3.1.min.js"></script>
    						<script type="text/javascript" src="js/codes-ajax/search.js"></script>
 						<h1>Procurar Campeonatos:</h1>
-						<input type="text" name="search" id="search" placeholder="Digite o nome do campeonato...">
+						<input type="search" name="search" id="search" placeholder="Digite o nome do campeonato...">
 					</div>
 					<div class="elementStats_third">
 						<form action="pageChamp.php" method="POST">
@@ -176,8 +176,8 @@
 					$picture->image();
 				?>
 				<div class="Perfil">
-					<form action='' method="POST" enctype="multipart/form-data">
-						<img src="<?php echo $_SESSION['picture']; ?>" name='image' id="img" alt="">
+					<form style="width: 100%; height: 100%;" action='' method="POST" enctype="multipart/form-data">
+						<img src="img/Src/perfilteste.jpg" name='image' id="img" alt="">
 						<div class="PerfilHover">
 								<input type="file" id="image">
 								<h5>Troque sua imagem</h5>
@@ -236,7 +236,11 @@
 				</div>
 				<div class="wrapperTrophy">
 					<div class="tropy">
-						dsadsadsa
+						<table>
+							<li>café</li>
+							<li>leite</li>
+							<li>expresso</li>
+						</table>
 					</div>
 				</div>
 			</div>
