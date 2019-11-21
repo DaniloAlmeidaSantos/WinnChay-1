@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html class="formatpage">
-
+<?php session_start(); ?>
 <head>
 	<title>WinnChay - Página Inicial</title>
 	<meta charset="utf-8">
@@ -170,17 +170,37 @@
 				<!-- Div de visualização do gráfico -->
 				<p class="titleGrafic">Gráfico de Desempenho</p>
 				<div id="piechart_3d"></div>
-
+				<?php
+					include 'includes/ProfilePicture.php';
+					$picture = new ProfilePicture();
+					$picture->image();
+				?>
 				<div class="Perfil">
-					<img src="img/Src/perfilteste.jpg" id="img" alt="">
-					<div class="PerfilHover">
-						<input type="file" name="" id="upload">
-						<h5>Troque sua imagem</h5>
-						<h6>Tam recomendado 300px x 300px</h6>
-					</div>
+					<form action='' method="POST" enctype="multipart/form-data">
+						<img src="<?php echo $_SESSION['picture']; ?>" name='image' id="img" alt="">
+						<div class="PerfilHover">
+								<input type="file" id="image">
+								<h5>Troque sua imagem</h5>
+								<h6>Tamanho recomendado 300px x 300px</h6>
+						</div>
+						<br><br>
+						<button name="<?php echo $_SESSION['button']; ?>">Trocar foto</button>
+					</form>
+					<br>
+					<?php
+						if (isset($_POST['btnChange'])):
+							if ($picture->paramPictures()):
+								$picture->changePicture();
+							endif;
+						elseif (isset($_POST['btnInsert'])):
+							if ($picture->paramPictures()):
+								$picture->createPicture();
+							endif;
+						endif;
+					?>
 					<script>
 						$(function(){
-							$('#upload').change(function(){
+							$('#image').change(function(){
 								const file = $(this)[0].files[0]
 								const fileReader = new FileReader()
 								fileReader.onloadend = function(){
@@ -192,6 +212,7 @@
 					</script>
 				</div>
 				<div class="infoUser">
+					<br>
 					<p class="userName"><b>user name</b></p>
 					<p class="userFirst">First name and last name</p>
 					<hr>
