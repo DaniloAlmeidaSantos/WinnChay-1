@@ -6,9 +6,9 @@
 	<meta charset="utf-8">
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> 
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
-
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 	<link href="https://fonts.googleapis.com/css?family=Dosis|Staatliches&display=swap" rel="stylesheet">
 </head>
 
@@ -23,23 +23,41 @@
 								<img width="100%" src="img/Logo/logo4.png">
 							</a>
 						</div>
+						<div class="perfilBell">
+							<a onclick="sinoNotifica();">
+								<img width="90%" src="open-iconic-master/svg/home.svg">
+							</a>
+						</div>
 						<div class="perfilHome">
-							<a href="#home" class="tablink" onclick="openPage('Home')">
+							<a href="#home" class="tablink" onclick="openPage('Home', this, '#472880')">
 								<img width="90%" src="open-iconic-master/svg/home.svg">
 							</a>
 						</div>
 						<div class="perfilProcurar">
-							<a href="#hist" class="tablink" id="defaultOpen" onclick="openPage('Procurar')">
+							<a href="#procurar" class="tablink" id="defaultOpen" onclick="openPage('Procurar', this, '#37164a')">
 								<img width="90%" src="open-iconic-master/svg/bar-chart.svg">
 							</a>
 						</div>
 						<div class="perfilIco">
-							<a href="#perfil" class="tablink" onclick="openPage('Perfil')">
+							<a href="#perfil" class="tablink" onclick="openPage('Perfil', this, 'blue')">
 								<img width="90%" src="open-iconic-master/svg/cog.svg">
 							</a>
 						</div>
 					</center>
 				</div>
+
+				<div id="Bell"> 
+					<h1>olá mundo</h1>
+				</div>
+
+				<script>
+					
+					function sinoNotifica(){
+							var anima = document.getElementById("Bell");
+							anima.style.animation = 'deslizarLeft 1s';
+							anima.style.animationFillMode = "forwards";
+					}
+				</script>
 
 				<div id="Home" class="tabcontent">
 					<h3 class="h3_Nov">Novidades</h3>
@@ -114,23 +132,7 @@
 					<h3>About</h3>
 					<p>Who we are and what we do.</p>
 				</div>
-				<script>
-					function openPage(pageName, elmnt, color) {
-						var i, tabcontent, tablinks;
-						tabcontent = document.getElementsByClassName("tabcontent");
-						for (i = 0; i < tabcontent.length; i++) {
-							tabcontent[i].style.display = "none";
-						}
-						tablinks = document.getElementsByClassName("tablink");
-						for (i = 0; i < tablinks.length; i++) {
-							tablinks[i].style.backgroundColor = "";
-						}
-						document.getElementById(pageName).style.display = "block";
-						elmnt.style.backgroundColor = color;
-					}
-					// Get the element with id="defaultOpen" and click on it
-					document.getElementById("defaultOpen").click();
-				</script>
+				
 			</div>
 			<div class="slide Center">
 
@@ -235,17 +237,28 @@
 					</div>
 				</div>
 				<div class="wrapperTrophy">
-					<div class="tropy">
-						<table>
-							<li>café</li>
-							<li>leite</li>
-							<li>expresso</li>
-						</table>
-					</div>
+					
 				</div>
 			</div>
 		</div>
 	</div>
+				<script>
+					function openPage(pageName, elmnt, color) {
+						var i, tabcontent, tablinks;
+						tabcontent = document.getElementsByClassName("tabcontent");
+						for (i = 0; i < tabcontent.length; i++) {
+							tabcontent[i].style.display = "none";
+						}
+						tablinks = document.getElementsByClassName("tablink");
+						for (i = 0; i < tablinks.length; i++) {
+							tablinks[i].style.backgroundColor = "";
+						}
+						document.getElementById(pageName).style.display = "block";
+						elmnt.style.backgroundColor = "";
+					}
+					// Get the element with id="defaultOpen" and click on it
+					document.getElementById("defaultOpen").click();
+				</script>
 </body>
 
 </html>

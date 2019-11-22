@@ -153,7 +153,7 @@
 	height: 100%;
 	width: 4.2vw;
 	position: fixed;
-	z-index: 1;
+	z-index: 10000000000;
 	top: 0;
 	left: 0;
 	background-color: #1a1327;
@@ -162,7 +162,7 @@
 }
 
 .sidenav a {
-	padding: 5px 6px 5px 9px;
+	padding: 5px 9px 5px 9px;
 	text-decoration: none;
 	color: #818181;
 	display: block;
@@ -175,20 +175,41 @@
 .main {
 	margin-left: 160px; /* Same as the width of the sidenav */
 	font-size: 28px; /* Increased text to enable scrolling */
-	padding: 0px 10px;
+	padding: 5px 5px;
 }
-
-.perfilHome{
-	margin-top: 3vw;
+.perfilLogo{
+	margin-top: -10%;
 }
-
-.perfilProcurar{
+.perfilHome, .perfilProcurar, .perfilIco, .perfilBell{
 	margin-top: 2vw;
 }
 
-.perfilIco{
-	margin-top: 23vw;
+
+#Bell{
+	display: initial;
+	position: absolute;
+	transform:translate(-420px, 0px);
+	background-color: #00ff00;
+	width: 15vw;
+	height: 100vh;
+	margin-left: 4vw;
+	z-index: 1000;
 }
+
+
+
+@keyframes deslizarLeft{
+	0%   { transform:translate(-420px, 0px); }
+	100%  { transform:translate(0px, 0px); }
+}
+
+@keyframes deslizarRight{
+	0%   { transform:translate(0px, 0px); }
+	100%  { transform:translate(-420px, 0px); }
+}
+
+  
+
 
 /* Home and home Itens */
 #Home {
@@ -256,7 +277,7 @@
     text-align: center;
 	font-size: 15px;
 	position: absolute;
-	top: 58%;
+	top: 65%;
 	left: 55%;
 }
 
@@ -309,7 +330,7 @@
 }
 
 
-#Hist {
+#Procurar {
 	background-color: #37164a;
 	width: 95.99vw;
 	height: 100vh;
@@ -398,42 +419,9 @@
 	z-index: 1;
 }
 
-.elementStats_Torn img{
-	position: relative;
-	width:130px;
-	height:100px;
-	
-}
-
-.elementStats_Torn button{
-	position: absolute;
-	width:100px;
-	height:50px;
-	top: 6.5%;
-	left: 76%;
-}
-
-.elementStats_Torn h2{
-	position: absolute;
-	font-size: 1.3rem;
-	top: 3%;
-	left: 28%;
-	color: #fff;
-}
-
-.elementStats_Torn h3{
-	position: absolute;
-	font-size: 1.3rem;
-	top: 7%;
-	left: 28%;
-	color: #fff;
-}
-
-.elementStats_Torn h4{
-	position: absolute;
-	font-size: 1.3rem;
-	top: 13%;
-	left: 28%;
+.buttonTorn{
+	height: 40px;
+	background-color: #471e60;
 	color: #fff;
 }
 
@@ -593,15 +581,6 @@ input[type="file"] {
 	left: 61.5%;
 }
 
-.wrapperTrophy{
-	position: absolute;
-	height: 288px;
-	width: 280px;
-	background-color: #fff;
-	top: 52.5%;
-	left: 81.7%;
-}
-
 .titleGrafic{
 	position: absolute;
 	font-size: 2.2rem;
@@ -614,6 +593,21 @@ input[type="file"] {
 	padding-left: 20px;
 	padding-right: 20px;
 }
+
+.wrapperTrophy{
+	position: absolute;
+	height: 288px;
+	width: 280px;
+	background-color: blue;
+	top: 52.5%;
+	left: 81.7%;
+}
+
+
+
+
+
+
 
 /*============================================= HOMEPAGE.php END ====================================================*/
 
