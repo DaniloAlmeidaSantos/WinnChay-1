@@ -189,11 +189,21 @@
 	display: initial;
 	position: absolute;
 	transform:translate(-420px, 0px);
-	background-color: #00ff00;
+	background-color: #f9f5fa;
 	width: 15vw;
 	height: 100vh;
 	margin-left: 4vw;
 	z-index: 1000;
+}
+
+#Bell button{
+	position: absolute;
+	top: 0%;
+	left: 88%;
+	font-size: 2rem;
+	background: transparent;
+	border: none;
+	outline: none;
 }
 
 

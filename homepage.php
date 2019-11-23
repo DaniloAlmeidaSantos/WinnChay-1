@@ -47,14 +47,19 @@
 				</div>
 
 				<div id="Bell"> 
-					<h1>olá mundo</h1>
+					<h1>olá mundo</h1><button onclick="sinoNotifica2();"><b>X</b></button>
 				</div>
 
 				<script>
-					
 					function sinoNotifica(){
 							var anima = document.getElementById("Bell");
 							anima.style.animation = 'deslizarLeft 1s';
+							anima.style.animationFillMode = "forwards";
+					}
+
+					function sinoNotifica2(){
+							var anima = document.getElementById("Bell");
+							anima.style.animation = 'deslizarRight 1s';
 							anima.style.animationFillMode = "forwards";
 					}
 				</script>
