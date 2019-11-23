@@ -21,7 +21,7 @@
 						</div>
 						<div class='col-md-8'>
 							<div class='card-body'>
-							<h5 class='card-title'><b>".$row["REAL_NAME"]."</b></h5>
+							<h4 class='card-title'><b>".$row["REAL_NAME"]."</b></h4>
 							<p class='card-text'>Nº DE PARTICIPANTES: ".$row['NUMPLAYERS']."</p>
 							<p class='card-text'><small class='text-muted'>DATA DE ÍNICIO: ".$row["START_DATE"]."</small></p>
 							</div>

@@ -25,11 +25,13 @@
         $stmt->bindParam(1, $points, PDO::PARAM_INT);
         $stmt->bindParam(2, $i, PDO::PARAM_INT);
         $stmt->execute();
+        return true;
       else:
         $stmt = $this->conn->prepare('UPDATE PLAYERS SET POINTS = POINTS + ? WHERE IDPLAYER = ?');
         $stmt->bindParam(1, $points, PDO::PARAM_INT);
         $stmt->bindParam(2, $i, PDO::PARAM_INT);
         $stmt->execute();
+        return false;
       endif;
     }
 
@@ -48,11 +50,13 @@
         $stmt->bindParam(1, $points, PDO::PARAM_INT);
         $stmt->bindParam(2, $i, PDO::PARAM_INT);
         $stmt->execute();
+        return true;
       else:
         $stmt = $this->conn->prepare('UPDATE PLAYERS SET POINTS = POINTS + ? WHERE IDPLAYER = ?');
         $stmt->bindParam(1, $points, PDO::PARAM_INT);
         $stmt->bindParam(2, $i, PDO::PARAM_INT);
         $stmt->execute();
+        return false;
       endif;
     }
 
@@ -71,11 +75,13 @@
         $stmt->bindParam(1, $points, PDO::PARAM_INT);
         $stmt->bindParam(2, $i, PDO::PARAM_INT);
         $stmt->execute();
+        return true;
       else:
         $stmt = $this->conn->prepare('UPDATE PLAYERS SET POINTS = POINTS + ? WHERE IDPLAYER = ?');
         $stmt->bindParam(1, $points, PDO::PARAM_INT);
         $stmt->bindParam(2, $i, PDO::PARAM_INT);
         $stmt->execute();
+        return false;
       endif;
     }
 
