@@ -6,12 +6,9 @@
 </head>
 <body>
 	<center>
-	<?php 
-		include '../includes/Score.php';
-
-		$conn = new Scor();
-
-		$conn->viewHistoric();
+	<?php
+		$date = new DateTime('2019-01-01');
+		echo $date->format('Y-m-d H:i:s');
 	?>
 	</center>
 </body>

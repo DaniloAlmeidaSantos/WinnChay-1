@@ -11,6 +11,14 @@
 			$this->conn = connect();
     }
 
+    public function dateChampionship(){
+      $stmt = $this->conn->prepare('SELECT NAME FROM CHAMPIONSHIPS');
+      $stmt->execute();
+      while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
+        $validate = $this->conn->prepare()
+      }
+    }
+
     // Quando este método é chamado, é realizado o retorno de dados das notificações dos usuários
     public function viewNotification(){
       $stmt = $this->conn->prepare('SELECT * FROM NOTIFICATIONS WHERE IDPLAYER = ?');
