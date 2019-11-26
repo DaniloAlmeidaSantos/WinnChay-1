@@ -1,5 +1,4 @@
 <?php
-	session_start();
 	class Carousel
 	{
 		private $conn;
@@ -13,13 +12,35 @@
 		}
 
 		// Quando este método é chamado, é realizado uma consulta na tabela CHAMPIONSHIPS
-		public function carousel(){
+		public function liCarousel(){
+			$stmt = $this->conn->prepare('SELECT * FROM CHAMPIONSHIPS INNER JOIN PICTURES WHERE CHAMPIONSHIPS.IDPICTURE = PICTURES.IDPICTURE ORDER BY PICTURE DESC LIMIT 3');
+			$stmt->execute();
+			$count = $stmt->rowCount();
+			$count_marc = 0;
+
+			while ($count_marc < $count) {
+				echo "<li id='valor-car' data-target='#myCarousel' data-slide-to='$count_marc'></li>";
+				$count_marc++;
+			}
+		}
+
+		public function itemCarousel(){
 			$stmt = $this->conn->prepare('SELECT * FROM CHAMPIONSHIPS INNER JOIN PICTURES WHERE CHAMPIONSHIPS.IDPICTURE = PICTURES.IDPICTURE ORDER BY PICTURE DESC LIMIT 3');
 			$stmt->execute();
 
-			while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
-				echo "<img src='{$row['PICTURE']}' alt='Los Angeles' width='100%'>";
+			$count_slide = 0;
+			while( $row = $stmt->fetch(PDO::FETCH_ASSOC)){
+				$active = "";
+				if($count_slide == 0){
+					$active = "active";
+				}
+
+				echo "<div class='carousel-item $active'>";
+				echo "<img class='d-block w-100' src='{$row["PICTURE"]}'>";
+				echo "</div>";
+				$count_slide++;
 			}
 		}
+
 	}
 ?>
