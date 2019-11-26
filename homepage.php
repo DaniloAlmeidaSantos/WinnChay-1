@@ -19,42 +19,45 @@
 				<div class="sidenav">
 					<center>
 						<div class="perfilLogo">
-							<a href="#">
-								<img width="100%" src="img/Logo/logo4.png">
-							</a>
+								<img width="80%" src="img/Logo/logo3.png">
 						</div>
 						<div class="perfilBell">
 							<a onclick="sinoNotifica();">
-								<img width="90%" src="open-iconic-master/svg/home.svg">
+								<img width="120%" src="img/Logo/sino_navbar.png">
 							</a>
 						</div>
 						<div class="perfilHome">
-							<a href="#home" class="tablink" onclick="openPage('Home', this, '#472880')">
-								<img width="90%" src="open-iconic-master/svg/home.svg">
+							<a href="#home" class="tablink" id="defaultOpen" onclick="openPage('Home', this, '#472880')">
+								<img width="120%" src="img/Logo/home_navbar.png">
 							</a>
 						</div>
 						<div class="perfilProcurar">
-							<a href="#procurar" class="tablink" id="defaultOpen" onclick="openPage('Procurar', this, '#37164a')">
-								<img width="90%" src="open-iconic-master/svg/bar-chart.svg">
+							<a href="#procurar" class="tablink"  onclick="openPage('Procurar', this, '#37164a')">
+								<img width="120%" src="img/Logo/lupa_navbar.png">
 							</a>
 						</div>
 						<div class="perfilIco">
 							<a href="#perfil" class="tablink" onclick="openPage('Perfil', this, 'blue')">
-								<img width="90%" src="open-iconic-master/svg/cog.svg">
+								<img width="120%" src="img/Logo/torn_navbar.png">
 							</a>
 						</div>
 					</center>
 				</div>
 
 				<div id="Bell"> 
-					<h1>olá mundo</h1>
+					<h1>olá mundo</h1><button onclick="sinoNotifica2();"><b>X</b></button>
 				</div>
 
 				<script>
-					
 					function sinoNotifica(){
 							var anima = document.getElementById("Bell");
 							anima.style.animation = 'deslizarLeft 1s';
+							anima.style.animationFillMode = "forwards";
+					}
+
+					function sinoNotifica2(){
+							var anima = document.getElementById("Bell");
+							anima.style.animation = 'deslizarRight 1s';
 							anima.style.animationFillMode = "forwards";
 					}
 				</script>
@@ -94,16 +97,12 @@
 						<h1>Bem Vindo Fulano</h1>
 					</div>
 
-					<div class="elementHome_first">
-						primaryesse que eu tenho que colocar o grafico
-					</div>
-
 					<div class="elementHome_third">
 						terceiro
 					</div>
 
 					<div class="elementHome_forth">
-						quarto
+						quarto marcar 
 					</div>
 				</div>
 

@@ -161,6 +161,10 @@
 	padding-top: 20px;
 }
 
+.sidenav img{
+	margin-left: -4px;
+}
+
 .sidenav a {
 	padding: 5px 9px 5px 9px;
 	text-decoration: none;
@@ -169,7 +173,7 @@
 }
 
 .sidenav a:hover {
-	background-color: #fbd7fb;
+	background-color: #3a1f61;
 }
 
 .main {
@@ -178,10 +182,15 @@
 	padding: 5px 5px;
 }
 .perfilLogo{
-	margin-top: -10%;
+	margin-top: -5%;
+	margin-left: 1px;
 }
-.perfilHome, .perfilProcurar, .perfilIco, .perfilBell{
-	margin-top: 2vw;
+.perfilBell{
+	margin-top: 1.2vw;
+}
+
+.perfilHome, .perfilProcurar, .perfilIco{
+	margin-top: 40px;
 }
 
 
@@ -189,11 +198,21 @@
 	display: initial;
 	position: absolute;
 	transform:translate(-420px, 0px);
-	background-color: #00ff00;
+	background-color: #f9f5fa;
 	width: 15vw;
 	height: 100vh;
 	margin-left: 4vw;
 	z-index: 1000;
+}
+
+#Bell button{
+	position: absolute;
+	top: 0%;
+	left: 88%;
+	font-size: 2rem;
+	background: transparent;
+	border: none;
+	outline: none;
 }
 
 
@@ -222,7 +241,7 @@
 .h3_Nov{
 	color: white;
 	position: absolute;
-	top: 13%;
+	top: 14.5%;
 	left: 11%;
 	font-size: 1.8rem;
 }
@@ -230,8 +249,8 @@
 .h3_Mod{
 	color: white;
 	position: absolute;
-	top: 13%;
-	left: 33%;
+	top: 14.5%;
+	left: 31.8%;
 	font-size: 1.8rem;
 }
 
@@ -277,11 +296,11 @@
     text-align: center;
 	font-size: 15px;
 	position: absolute;
-	top: 65%;
+	top: 67%;
 	left: 55%;
 }
 
-.elementHome_first{
+/* .elementHome_first{
 	background-color: #1a1327;
 	position: absolute;
 	transform: translate(-50% , -50%);
@@ -289,22 +308,22 @@
 	left: 34%;
 	width: 70vh;
     height: 20vh;
-    line-height: 40px; /*deixa a altura do texto centralizado */
+    line-height: 40px;
     color: #fff;
     text-transform: uppercase;
     text-align: center;
     cursor: pointer;
     font-size: 15px;
-}
+} */
 
 .elementHome_third{
 	background-color: #1a1327;
 	position: absolute;
 	transform: translate(-50% , -50%);
-	left: 34%;
-	top: 57%;
-	width: 70vh;
-    height: 20vh;
+	left: 33%;
+	top: 43.5%;
+	width: 550px;
+    height: 45.8%;
     line-height: 200px; /*deixa a altura do texto centralizado */
     color: #fff;
     text-transform: uppercase;
@@ -317,10 +336,10 @@
 	background-color: #1a1327;
 	position: absolute;
 	transform: translate(-50% , -50%);
-	left: 34%;
-	top: 85%;
-	width: 70vh;
-    height: 20vh;
+	left: 33%;
+	top: 82%;
+	width: 550px;
+    height: 27%;
     line-height: 200px; /*deixa a altura do texto centralizado */
     color: #fff;
     text-transform: uppercase;
