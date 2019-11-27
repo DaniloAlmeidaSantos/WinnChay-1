@@ -12,17 +12,7 @@
 		}
 
 		// Quando este método é chamado, é realizado uma consulta na tabela CHAMPIONSHIPS
-		public function liCarousel(){
-			$stmt = $this->conn->prepare('SELECT * FROM CHAMPIONSHIPS INNER JOIN PICTURES WHERE CHAMPIONSHIPS.IDPICTURE = PICTURES.IDPICTURE ORDER BY PICTURE DESC LIMIT 3');
-			$stmt->execute();
-			$count = $stmt->rowCount();
-			$count_marc = 0;
-
-			while ($count_marc < $count) {
-				echo "<li id='valor-car' data-target='#myCarousel' data-slide-to='$count_marc'></li>";
-				$count_marc++;
-			}
-		}
+		
 
 		public function itemCarousel(){
 			$stmt = $this->conn->prepare('SELECT * FROM CHAMPIONSHIPS INNER JOIN PICTURES WHERE CHAMPIONSHIPS.IDPICTURE = PICTURES.IDPICTURE ORDER BY PICTURE DESC LIMIT 3');

@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html class="formatpage">
 <?php session_start(); ?>
+
 <head>
 	<title>WinnChay - Página Inicial</title>
 	<meta charset="utf-8">
@@ -10,16 +11,17 @@
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 	<link href="https://fonts.googleapis.com/css?family=Dosis|Staatliches&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Carter+One|Staatliches|Viga&display=swap" rel="stylesheet">
 </head>
 
-<body>
+<body class="Font">
 	<div class="outerWrapper">
 		<div class="Wrapper">
 			<div class="slide Home">
 				<div class="sidenav">
 					<center>
 						<div class="perfilLogo">
-								<img width="80%" src="img/Logo/logo3.png">
+							<img width="80%" src="img/Logo/logo3.png">
 						</div>
 						<div class="perfilBell">
 							<a onclick="sinoNotifica();">
@@ -27,17 +29,17 @@
 							</a>
 						</div>
 						<div class="perfilHome">
-							<a href="#home" class="tablink" id="defaultOpen" onclick="openPage('Home', this, '#472880')">
+							<a href="#home" class="tablink" onclick="openPage('Home', this, '#472880')">
 								<img width="120%" src="img/Logo/home_navbar.png">
 							</a>
 						</div>
 						<div class="perfilProcurar">
-							<a href="#procurar" class="tablink"  onclick="openPage('Procurar', this, '#37164a')">
+							<a href="#procurar" class="tablink" onclick="openPage('Procurar', this, '#37164a')">
 								<img width="120%" src="img/Logo/lupa_navbar.png">
 							</a>
 						</div>
 						<div class="perfilIco">
-							<a href="#perfil" class="tablink" onclick="openPage('Perfil', this, 'blue')">
+							<a href="#torneios" id="defaultOpen" class="tablink" onclick="openPage('Torneios', this, '#200b31')">
 								<img width="120%" src="img/Logo/torn_navbar.png">
 							</a>
 						</div>
@@ -49,16 +51,16 @@
 				</div>
 
 				<script>
-					function sinoNotifica(){
-							var anima = document.getElementById("Bell");
-							anima.style.animation = 'deslizarLeft 1s';
-							anima.style.animationFillMode = "forwards";
+					function sinoNotifica() {
+						var anima = document.getElementById("Bell");
+						anima.style.animation = 'deslizarLeft 1s';
+						anima.style.animationFillMode = "forwards";
 					}
 
-					function sinoNotifica2(){
-							var anima = document.getElementById("Bell");
-							anima.style.animation = 'deslizarRight 1s';
-							anima.style.animationFillMode = "forwards";
+					function sinoNotifica2() {
+						var anima = document.getElementById("Bell");
+						anima.style.animation = 'deslizarRight 1s';
+						anima.style.animationFillMode = "forwards";
 					}
 				</script>
 
@@ -68,22 +70,18 @@
 
 					<div class="elementHome_second">
 						<div class="container">
-							<div id="myCarousel" class="carousel slide" data-ride="carousel">
-								<ol class="carousel-indicators">
-			            <?php
-			              include 'includes/Carousel.php';
-			              $carousel = new Carousel();
-			              $carousel->liCarousel();
-			            ?>
-			          </ol>
+							<!-- <div id="myCarousel" class="carousel slide" data-ride="carousel">
 
-			          <div class="carousel-inner">
-			            <?php
-			              $carousel->itemCarousel();
-			            ?>
-			          </div>
 
-			          <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
+								<div class="carousel-inner">
+									<?php
+									include 'includes/Carousel.php';
+									$carousel = new Carousel();
+									$carousel->itemCarousel();
+									?>
+								</div>
+
+								<a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
 									<span class="carousel-control-prev-icon" aria-hidden="true"></span>
 									<span class="sr-only">Previous</span>
 								</a>
@@ -91,20 +89,20 @@
 									<span class="carousel-control-next-icon" aria-hidden="true"></span>
 									<span class="sr-only">Next</span>
 								</a>
-			        </div>
+							</div> -->
 						</div>
 					</div>
-					<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
-			    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
-			    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+					<!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+					<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+					<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
 					<script>
-						$(document).ready(function () {
+						$(document).ready(function() {
 							//tempo de duração do slide
 							$('.carousel').carousel({
 								interval: 7000
 							});
 
-							$('#myCarousel').on('slid.bs.carousel', function () {
+							$('#myCarousel').on('slid.bs.carousel', function() {
 								//Receber o valor do atributo data-slide-to quando estiver ativo
 								var numeroSlide = $('#valor-car.active').data('slide-to');
 								//$("#msg").html(numeroSlide);
@@ -116,7 +114,7 @@
 								//$('.imagem' + numeroSlide).show();
 							});
 						});
-					</script>
+					</script> -->
 					<div class="elementHome_header">
 						<h1>Bem Vindo Fulano</h1>
 					</div>
@@ -126,14 +124,14 @@
 					</div>
 
 					<div class="elementHome_forth">
-						quarto marcar 
+						quarto marcar
 					</div>
 				</div>
 
 				<div id="Procurar" class="tabcontent">
 					<div class="elementStats_Search">
 						<script type="text/javascript" src="js/codes-ajax/jquery-3.3.1.min.js"></script>
-   						<script type="text/javascript" src="js/codes-ajax/search.js"></script>
+						<script type="text/javascript" src="js/codes-ajax/search.js"></script>
 						<h1>Procurar Campeonatos:</h1>
 						<input type="search" name="search" id="search" placeholder="Digite o nome do campeonato...">
 					</div>
@@ -146,23 +144,41 @@
 					</div>
 				</div>
 
-				<div id="Perfil" class="tabcontent">
-					<h3>Contact</h3>
-					<p>Get in touch, or swing by for a cup of coffee.</p>
-				</div>
+				<div id="Torneios" class="tabcontent">
+					<div class="elementTorn_header">
+						<h1>Meus Campeonatos</h1>
+					</div>
 
-				<div id="About" class="tabcontent">
-					<h3>About</h3>
-					<p>Who we are and what we do.</p>
+					<div class="elementTorn_sideBar">
+						Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facilis velit id laborum fugit fuga magnam pariatur rerum illo consectetur laudantium. Reiciendis quae earum consequatur veniam recusandae molestias quis voluptatem dolorem?
+						Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facilis velit id laborum fugit fuga magnam pariatur rerum illo consectetur laudantium. Reiciendis quae earum consequatur veniam recusandae molestias quis voluptatem dolorem?
+						Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facilis velit id laborum fugit fuga magnam pariatur rerum illo consectetur laudantium. Reiciendis quae earum consequatur veniam recusandae molestias quis voluptatem dolorem?
+						Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facilis velit id laborum fugit fuga magnam pariatur rerum illo consectetur laudantium. Reiciendis quae earum consequatur veniam recusandae molestias quis voluptatem dolorem?
+						Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facilis velit id laborum fugit fuga magnam pariatur rerum illo consectetur laudantium. Reiciendis quae earum consequatur veniam recusandae molestias quis voluptatem dolorem?
+						Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facilis velit id laborum fugit fuga magnam pariatur rerum illo consectetur laudantium. Reiciendis quae earum consequatur veniam recusandae molestias quis voluptatem dolorem?
+						Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facilis velit id laborum fugit fuga magnam pariatur rerum illo consectetur laudantium. Reiciendis quae earum consequatur veniam recusandae molestias quis voluptatem dolorem?
+						Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facilis velit id laborum fugit fuga magnam pariatur rerum illo consectetur laudantium. Reiciendis quae earum consequatur veniam recusandae molestias quis voluptatem dolorem?
+						Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facilis velit id laborum fugit fuga magnam pariatur rerum illo consectetur laudantium. Reiciendis quae earum consequatur veniam recusandae molestias quis voluptatem dolorem?
+						Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facilis velit id laborum fugit fuga magnam pariatur rerum illo consectetur laudantium. Reiciendis quae earum consequatur veniam recusandae molestias quis voluptatem dolorem?
+						Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facilis velit id laborum fugit fuga magnam pariatur rerum illo consectetur laudantium. Reiciendis quae earum consequatur veniam recusandae molestias quis voluptatem dolorem?
+						Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facilis velit id laborum fugit fuga magnam pariatur rerum illo consectetur laudantium. Reiciendis quae earum consequatur veniam recusandae molestias quis voluptatem dolorem?
+					</div>
+
+					<div class="elementTorn_display">
+
+					</div>
+					<div class="elementTorn_Users">
+
+					</div>
 				</div>
 
 			</div>
 			<div class="slide Center">
 
 				<?php
-					include 'includes/Stats.php';
-					$graphics = new Stats();
-					$graphics->graphics(1);
+				include 'includes/Stats.php';
+				$graphics = new Stats();
+				$graphics->graphics(1);
 				?>
 				<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 				<script type="text/javascript">
@@ -196,39 +212,39 @@
 				<p class="titleGrafic">Gráfico de Desempenho</p>
 				<div id="piechart_3d"></div>
 				<?php
-					include 'includes/ProfilePicture.php';
-					$picture = new ProfilePicture();
-					$picture->image();
+				include 'includes/ProfilePicture.php';
+				$picture = new ProfilePicture();
+				$picture->image();
 				?>
 				<div class="Perfil">
 					<form style="width: 100%; height: 100%;" action='' method="POST" enctype="multipart/form-data">
 						<img src="img/Src/perfilteste.jpg" name='image' id="img" alt="">
 						<div class="PerfilHover">
-								<input type="file" id="image">
-								<h5>Troque sua imagem</h5>
-								<h6>Tamanho recomendado 300px x 300px</h6>
+							<input type="file" id="image">
+							<h5>Troque sua imagem</h5>
+							<h6>Tamanho recomendado 300px x 300px</h6>
 						</div>
 						<br><br>
 						<button name="<?php echo $_SESSION['button']; ?>">Trocar foto</button>
 					</form>
 					<br>
 					<?php
-						if (isset($_POST['btnChange'])):
-							if ($picture->paramPictures()):
-								$picture->changePicture();
-							endif;
-						elseif (isset($_POST['btnInsert'])):
-							if ($picture->paramPictures()):
-								$picture->createPicture();
-							endif;
+					if (isset($_POST['btnChange'])) :
+						if ($picture->paramPictures()) :
+							$picture->changePicture();
 						endif;
+					elseif (isset($_POST['btnInsert'])) :
+						if ($picture->paramPictures()) :
+							$picture->createPicture();
+						endif;
+					endif;
 					?>
 					<script>
-						$(function(){
-							$('#image').change(function(){
+						$(function() {
+							$('#image').change(function() {
 								const file = $(this)[0].files[0]
 								const fileReader = new FileReader()
-								fileReader.onloadend = function(){
+								fileReader.onloadend = function() {
 									$('#img').attr('src', fileReader.result)
 								}
 								fileReader.readAsDataURL(file)
@@ -251,13 +267,24 @@
 					<p class="userTeam2"><b>Barcelona</b></p>
 				</div>
 				<div class="centerHist">
-					<div class="contentHist">
-						<?php
+					<div class="contentHist_header">
+						Seu Histórico de partidas
+					</div>
+					<div class="contentHist_games">
+						<div class="contentHist_date">
+							<p>19/11/2019</p>
+							<p>horas</p>
+						</div>
+						<div class="contentHist_boardscore">
+							<img src="img/Logo/logo3.png" alt="">
+							<p>TimeA</p>
+						</div>
+					</div>
+					<!-- <?php
 							include 'includes/Score.php';
 							$historic = new Score();
 							$historic->viewHistoric();
-						?>
-					</div>
+							?> -->
 				</div>
 				<div class="wrapperTrophy">
 
@@ -265,23 +292,23 @@
 			</div>
 		</div>
 	</div>
-				<script>
-					function openPage(pageName, elmnt, color) {
-						var i, tabcontent, tablinks;
-						tabcontent = document.getElementsByClassName("tabcontent");
-						for (i = 0; i < tabcontent.length; i++) {
-							tabcontent[i].style.display = "none";
-						}
-						tablinks = document.getElementsByClassName("tablink");
-						for (i = 0; i < tablinks.length; i++) {
-							tablinks[i].style.backgroundColor = "";
-						}
-						document.getElementById(pageName).style.display = "block";
-						elmnt.style.backgroundColor = "";
-					}
-					// Get the element with id="defaultOpen" and click on it
-					document.getElementById("defaultOpen").click();
-				</script>
+	<script>
+		function openPage(pageName, elmnt, color) {
+			var i, tabcontent, tablinks;
+			tabcontent = document.getElementsByClassName("tabcontent");
+			for (i = 0; i < tabcontent.length; i++) {
+				tabcontent[i].style.display = "none";
+			}
+			tablinks = document.getElementsByClassName("tablink");
+			for (i = 0; i < tablinks.length; i++) {
+				tablinks[i].style.backgroundColor = "";
+			}
+			document.getElementById(pageName).style.display = "block";
+			elmnt.style.backgroundColor = "";
+		}
+		// Get the element with id="defaultOpen" and click on it
+		document.getElementById("defaultOpen").click();
+	</script>
 </body>
 
 </html>

@@ -14,7 +14,7 @@
 
 	if ($stmt->rowCount() > 0) {
 		while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
-			echo "<div class='card mb-3' style='max-width: 540px;'>
+			echo "<div class='card mb-3' style='max-width: 97%; margin-left:1.5%; margin-top:8px;'>
 						<div class='row no-gutters'>
 						<div class='col-md-4'>
 							<img src=".$row['PICTURE']." class='card-img' alt='...'>

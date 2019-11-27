@@ -105,8 +105,8 @@
 
 /*=============================================== HOMEPAGE.php ======================================================*/
 
-.html{
-	scroll-behavior: smooth;
+.Font{
+	font-family: 'Viga', sans-serif;
 }
 
 .slide{
@@ -143,7 +143,7 @@
 	overflow: -moz-scrollbars-none;
 
 }
-::-webkit-scrollbar{
+.outerWrapper::-webkit-scrollbar{
 	display: none;
 }
 
@@ -372,6 +372,18 @@
     font-size: 15px;
 }
 
+.card-body h4{
+	font-size: 2.5rem;
+}
+
+.card-body p{
+	font-size: 1.2rem;
+}
+
+.buttonTorn{
+	font-size: 1.5rem;
+}
+
 #piechart_3d{
 	margin-left: 90px;
 	margin-top: 46px;
@@ -404,6 +416,12 @@
 	width: 84vh;
 	height: 79vh;
 	overflow: scroll;
+	scrollbar-width: none;
+	-ms-overflow-style: none;
+}
+
+.elementStats_third::-webkit-scrollbar{
+	display: none;
 }
 
 .elementStats_Torn{
@@ -412,6 +430,18 @@
 	width: 97%;
 	margin-top: 1.5%;
 	margin-left: 1.5%;
+}
+
+.elementStats_Search{
+	background-color: #220e2e;
+	position: absolute;
+	/* transform: translate(-50% , -50%); */
+	left: 0vh;
+	top: 0%;
+	width: 100vw;
+    height: 15vh;
+	text-align: center;
+	z-index: 1;
 }
 
 .elementStats_Search h1{
@@ -426,29 +456,10 @@
 	top: 10%;
 }
 
-.elementStats_Search{
-	background-color: #220e2e;
-	position: absolute;
-	transform: translate(-50% , -50%);
-	left: 24.8%;
-	top: 10.2%;
-	width: 84vh;
-    height: 15vh;
-	text-align: center;
-	z-index: 1;
-}
-
 .buttonTorn{
 	height: 40px;
 	background-color: #471e60;
 	color: #fff;
-}
-
-#Perfil {
-	background-color: blue;
-	width: 95.99vw;
-	height: 100vh;
-	margin-left: 4vw;
 }
 
 #piechart_3d{
@@ -600,6 +611,51 @@ input[type="file"] {
 	left: 61.5%;
 }
 
+.contentHist_header{
+	background-color: #3f236d;
+	color: #fff;
+	width: 100%;
+	height: 7.5%;
+	font-size: 2rem;
+	text-align: center;
+	padding-top: 1.3%;
+	padding-bottom:1.3%;
+}
+
+.contentHist_games{
+	background-color:#9373d5;
+	height: 15%;
+	width: 98%;
+	margin-left: 5px;
+	margin-top: 5px;
+}
+
+.contentHist_date{
+	width: min-content;
+	margin-left: 10px;
+	position: relative;
+	transform: translate(-8% , 4%);
+	font-size: 1.4rem;
+	background-color: #e1d8f3;
+	padding: 12px;
+}
+
+.contentHist_boardscore{
+	width: min-content;
+	margin-left: 30%;
+	position: relative;
+	transform: translate(-100% , -100%);
+}
+
+.contentHist_boardscore img{
+	max-width: 150%;
+}
+
+.contentHist_boardscore p {
+	margin-left: 24%;
+	font-size: 1.22rem;
+}
+
 .titleGrafic{
 	position: absolute;
 	font-size: 2.2rem;
@@ -621,6 +677,64 @@ input[type="file"] {
 	top: 52.5%;
 	left: 81.7%;
 }
+
+#Torneios {
+	background-color: #5c208e;
+	width: 95.99vw;
+	height: 100vh;
+	margin-left: 4vw;
+}
+
+.elementTorn_header{
+	position: absolute;
+	width: 96vw;
+	height: 12vh;
+	background-color: #241131;
+	color: #fff;
+	text-align: center;
+}
+
+.elementTorn_header h1{
+	margin-top: 20px;
+	margin-right: 230px;
+}
+
+.elementTorn_sideBar{
+	position: absolute;
+	background-color: #321555;
+	width: 8%;
+	height: 88%;
+	top: 12%;
+	overflow: auto;
+	resize: horizontal;
+	scrollbar-width: none;
+	-ms-overflow-style: none;
+	z-index: 2;
+}
+
+.elementTorn_sideBar::-webkit-scrollbar{
+	display: initial;
+}
+
+.elementTorn_display{
+	position: absolute;
+	background-color: #e1d8f3;
+	width: 22%;
+	height: 88%;
+	top: 12%;
+	left: 11%;
+}
+
+.elementTorn_Users{
+	position: absolute;
+	background-color: #321555;
+	width: 9%;
+	height: 88%;
+	top: 12%;
+	left: 33.2%;
+}
+
+
 
 
 
