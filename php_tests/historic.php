@@ -6,10 +6,19 @@
 </head>
 <body>
 	<center>
-	<?php
-		$date = new DateTime('2019-01-01');
-		echo $date->format('Y-m-d H:i:s');
-	?>
+		<?php
+			$date = date('');
+			echo $date. '<br>';
+			echo date('his');
+
+			if (isset($_POST['button'])):
+				echo $_POST['date'];
+			endif;
+		?>
+		<form action="" method="post">
+			<input type="month" name="date" value="">
+			<button name="button">Enviar</button>
+		</form>
 	</center>
 </body>
 </html>

@@ -212,15 +212,22 @@
 				<p class="titleGrafic">Gráfico de Desempenho</p>
 				<div id="piechart_3d"></div>
 				<?php
+        include 'includes/ChangeInfo.php';
 				include 'includes/ProfilePicture.php';
+        include 'includes/Score.php';
+
+        $historic = new Score();
+				$info = new ChangeInfo();
 				$picture = new ProfilePicture();
+
+				$info->selectInfo();
 				$picture->image();
 				?>
 				<div class="Perfil">
 					<form style="width: 100%; height: 100%;" action='' method="POST" enctype="multipart/form-data">
-						<img src="img/Src/perfilteste.jpg" name='image' id="img" alt="">
+						<img src="<?php echo $_SESSION['picture']; ?>" name='image' id="img" alt="">
 						<div class="PerfilHover">
-							<input type="file" id="image">
+							<input type="file" name="image" id="image">
 							<h5>Troque sua imagem</h5>
 							<h6>Tamanho recomendado 300px x 300px</h6>
 						</div>
@@ -254,14 +261,14 @@
 				</div>
 				<div class="infoUser">
 					<br>
-					<p class="userName"><b>user name</b></p>
-					<p class="userFirst">First name and last name</p>
+					<p class="userName"><b><?php echo $_SESSION['user']; ?></b></p>
+					<p class="userFirst"><?php echo '<b>'.$_SESSION['l_name'].'</b>, '. $_SESSION['f_name']; ?></p>
 					<hr>
 					<p class="userEmail">E-mail:</p>
-					<p class="userEmail2"><b>messi@gmail.com</b></p>
+					<p class="userEmail2"><b><?php echo $_SESSION['email']; ?></b></p>
 
 					<p class="userTel">Telefone:</p>
-					<p class="userTel2"><b>11 949432160</b></p>
+					<p class="userTel2"><b><?php echo $_SESSION['phone']; ?></b></p>
 
 					<p class="userTeam">Time de Coração:</p>
 					<p class="userTeam2"><b>Barcelona</b></p>
@@ -271,20 +278,15 @@
 						Seu Histórico de partidas
 					</div>
 					<div class="contentHist_games">
-						<div class="contentHist_date">
-							<p>19/11/2019</p>
-							<p>horas</p>
-						</div>
-						<div class="contentHist_boardscore">
-							<img src="img/Logo/logo3.png" alt="">
-							<p>TimeA</p>
-						</div>
+						<div class='contentHist_date'>
+              <p>19/11/2019</p>
+              <p>horas</p>
+            </div>
+            <div class='contentHist_boardscore'>
+              <img src='img/Logo/logo3.png'>
+              <p>PLAYER</p>
+            </div>
 					</div>
-					<!-- <?php
-							include 'includes/Score.php';
-							$historic = new Score();
-							$historic->viewHistoric();
-							?> -->
 				</div>
 				<div class="wrapperTrophy">
 
