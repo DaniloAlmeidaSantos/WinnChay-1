@@ -22,9 +22,12 @@
 	    $_UP['extensions'] = array('jpg', 'png', 'jpeg');
 	    $_UP['rename'] = true;
 	    // Definindo a váriavel para receber a imagem
+			$file_tmp = $_FILES['image']['tmp_name'];
 	    $file = $_FILES['image'];
-
+			// Pega a extensão
 	    $extesion = pathinfo($file['name'], PATHINFO_EXTENSION);
+			// Converte o nome da extensão em minúsculo
+			$extesion = strtolower($extesion);
 
 	   	if (array_search($extesion, $_UP['extensions']) === false):
 				// Se a extensão da imagem não for a requerida, é efetuada uma mensagem de erro na tela do usuário
@@ -36,7 +39,9 @@
 	      exit;
 	    else:
 				// Determinando o nome do arquivo
-	      $_SESSION["finalName"] = $file['name'];
+				$newName = uniqid(time()) . '-' . $extesion;
+				// Determinando o nome do arquivo
+	      $_SESSION["finalName"] = $newName;
 	    endif;
 
 	    // Movendo o arquivo e renomeando o arquivo.

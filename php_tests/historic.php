@@ -7,13 +7,15 @@
 <body>
 	<center>
 		<?php
-			$date = date('');
-			echo $date. '<br>';
-			echo date('his');
-
-			if (isset($_POST['button'])):
-				echo $_POST['date'];
-			endif;
+		// router.php
+		$path = pathinfo($_SERVER["SCRIPT_FILENAME"]);
+		if ($path["extension"] == "el") {
+			header("Content-Type: text/x-script.elisp");
+			readfile($_SERVER["SCRIPT_FILENAME"]);
+		}
+		else {
+			return FALSE;
+		}
 		?>
 		<form action="" method="post">
 			<input type="month" name="date" value="">
