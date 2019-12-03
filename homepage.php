@@ -150,25 +150,165 @@
 					</div>
 
 					<div class="elementTorn_sideBar">
-						Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facilis velit id laborum fugit fuga magnam pariatur rerum illo consectetur laudantium. Reiciendis quae earum consequatur veniam recusandae molestias quis voluptatem dolorem?
-						Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facilis velit id laborum fugit fuga magnam pariatur rerum illo consectetur laudantium. Reiciendis quae earum consequatur veniam recusandae molestias quis voluptatem dolorem?
-						Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facilis velit id laborum fugit fuga magnam pariatur rerum illo consectetur laudantium. Reiciendis quae earum consequatur veniam recusandae molestias quis voluptatem dolorem?
-						Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facilis velit id laborum fugit fuga magnam pariatur rerum illo consectetur laudantium. Reiciendis quae earum consequatur veniam recusandae molestias quis voluptatem dolorem?
-						Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facilis velit id laborum fugit fuga magnam pariatur rerum illo consectetur laudantium. Reiciendis quae earum consequatur veniam recusandae molestias quis voluptatem dolorem?
-						Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facilis velit id laborum fugit fuga magnam pariatur rerum illo consectetur laudantium. Reiciendis quae earum consequatur veniam recusandae molestias quis voluptatem dolorem?
-						Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facilis velit id laborum fugit fuga magnam pariatur rerum illo consectetur laudantium. Reiciendis quae earum consequatur veniam recusandae molestias quis voluptatem dolorem?
-						Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facilis velit id laborum fugit fuga magnam pariatur rerum illo consectetur laudantium. Reiciendis quae earum consequatur veniam recusandae molestias quis voluptatem dolorem?
-						Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facilis velit id laborum fugit fuga magnam pariatur rerum illo consectetur laudantium. Reiciendis quae earum consequatur veniam recusandae molestias quis voluptatem dolorem?
-						Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facilis velit id laborum fugit fuga magnam pariatur rerum illo consectetur laudantium. Reiciendis quae earum consequatur veniam recusandae molestias quis voluptatem dolorem?
-						Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facilis velit id laborum fugit fuga magnam pariatur rerum illo consectetur laudantium. Reiciendis quae earum consequatur veniam recusandae molestias quis voluptatem dolorem?
-						Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facilis velit id laborum fugit fuga magnam pariatur rerum illo consectetur laudantium. Reiciendis quae earum consequatur veniam recusandae molestias quis voluptatem dolorem?
+						<div class="elementTorn_HeaderBar">
+							Campeonatos:
+						</div>
+						<div class="elementTorn_tornWrap">
+							<div class="elementTorn_tornImg">
+								<img src="img/Src/videogame.jpg" alt="">
+							</div>
+							<div class="elementTorn_tornName">
+								<h1>Copa favela</h1>
+							</div>
+						</div>
 					</div>
 
 					<div class="elementTorn_display">
+						<div class="elementTorn_confront_primeirafase1">
+							<p class="elementTorn_team1">
+								time <p class="elementTorn_team1_result">2</p>
+							</p>
+							<p class="elementTorn_team2">
+								time <p class="elementTorn_team2_result">1</p>
+							</p>
+						</div>
 
+						<div class="elementTorn_confront_primeirafase2">
+							<p class="elementTorn_team1">
+								time <p class="elementTorn_team1_result">2</p>
+							</p>
+							<p class="elementTorn_team2">
+								time <p class="elementTorn_team2_result">1</p>
+							</p>
+						</div>
+
+						<div class="elementTorn_confront_primeirafase3">
+							<p class="elementTorn_team1">
+								time <p class="elementTorn_team1_result">2</p>
+							</p>
+							<p class="elementTorn_team2">
+								time <p class="elementTorn_team2_result">1</p>
+							</p>
+						</div>
+
+						<div class="elementTorn_confront_primeirafase4">
+							<p class="elementTorn_team1">
+								time <p class="elementTorn_team1_result">2</p>
+							</p>
+							<p class="elementTorn_team2">
+								time <p class="elementTorn_team2_result">1</p>
+							</p>
+						</div>
+
+						<div class="elementTorn_confront_primeirafase5">
+							<p class="elementTorn_team1">
+								time <p class="elementTorn_team1_result">2</p>
+							</p>
+							<p class="elementTorn_team2">
+								time <p class="elementTorn_team2_result">1</p>
+							</p>
+						</div>
+
+						<div class="elementTorn_confront_primeirafase6">
+							<p class="elementTorn_team1">
+								time <p class="elementTorn_team1_result">2</p>
+							</p>
+							<p class="elementTorn_team2">
+								time <p class="elementTorn_team2_result">1</p>
+							</p>
+						</div>
+
+						<div class="elementTorn_confront_primeirafase7">
+							<p class="elementTorn_team1">
+								time <p class="elementTorn_team1_result">2</p>
+							</p>
+							<p class="elementTorn_team2">
+								time <p class="elementTorn_team2_result">1</p>
+							</p>
+						</div>
+
+						<div class="elementTorn_confront_primeirafase8">
+							<p class="elementTorn_team1">
+								time <p class="elementTorn_team1_result">2</p>
+							</p>
+							<p class="elementTorn_team2">
+								time <p class="elementTorn_team2_result">1</p>
+							</p>
+						</div>
+
+						<div class="elementTorn_confront_segundafase1">
+							<p class="elementTorn_team1">
+								time <p class="elementTorn_team1_result">2</p>
+							</p>
+							<p class="elementTorn_team2">
+								time <p class="elementTorn_team2_result">1</p>
+							</p>
+						</div>
+
+						<div class="elementTorn_confront_segundafase2">
+							<p class="elementTorn_team1">
+								time <p class="elementTorn_team1_result">2</p>
+							</p>
+							<p class="elementTorn_team2">
+								time <p class="elementTorn_team2_result">1</p>
+							</p>
+						</div>
+
+						<div class="elementTorn_confront_segundafase3">
+							<p class="elementTorn_team1">
+								time <p class="elementTorn_team1_result">2</p>
+							</p>
+							<p class="elementTorn_team2">
+								time <p class="elementTorn_team2_result">1</p>
+							</p>
+						</div>
+
+						<div class="elementTorn_confront_segundafase4">
+							<p class="elementTorn_team1">
+								time <p class="elementTorn_team1_result">2</p>
+							</p>
+							<p class="elementTorn_team2">
+								time <p class="elementTorn_team2_result">1</p>
+							</p>
+						</div>
+
+						<div class="elementTorn_confront_terceirafase1">
+							<p class="elementTorn_team1">
+								time <p class="elementTorn_team1_result">2</p>
+							</p>
+							<p class="elementTorn_team2">
+								time <p class="elementTorn_team2_result">1</p>
+							</p>
+						</div>
+
+						<div class="elementTorn_confront_terceirafase2">
+							<p class="elementTorn_team1">
+								time <p class="elementTorn_team1_result">2</p>
+							</p>
+							<p class="elementTorn_team2">
+								time <p class="elementTorn_team2_result">1</p>
+							</p>
+						</div>
+
+						<div class="elementTorn_confront_quartafase">
+							<p class="elementTorn_team1">
+								time <p class="elementTorn_team1_result">2</p>
+							</p>
+							<p class="elementTorn_team2">
+								time <p class="elementTorn_team2_result">1</p>
+							</p>
+						</div>
 					</div>
 					<div class="elementTorn_Users">
-
+						<div class="elementTorn_Header">
+							Participantes:
+						</div>
+						<div class="elementTorn_UserWrap">
+							<div class="elementTorn_UserImg">
+								<img src="img/Src/videogame.jpg" alt="">
+								<center><input type="checkbox"/></center>
+							</div>
+						</div>
 					</div>
 				</div>
 
@@ -211,11 +351,11 @@
 				<!-- Div de visualização do gráfico -->
 				<p class="titleGrafic">Gráfico de Desempenho</p>
 				<div id="piechart_3d"></div>
-				<?php
-				include 'includes/ProfilePicture.php';
-				$picture = new ProfilePicture();
-				$picture->image();
-				?>
+						<?php
+						include 'includes/ProfilePicture.php';
+						$picture = new ProfilePicture();
+						$picture->image();
+						?>
 				<div class="Perfil">
 					<form style="width: 100%; height: 100%;" action='' method="POST" enctype="multipart/form-data">
 						<img src="img/Src/perfilteste.jpg" name='image' id="img" alt="">
@@ -275,11 +415,23 @@
 							<p>19/11/2019</p>
 							<p>horas</p>
 						</div>
-						<div class="contentHist_boardscore">
+						<div class="contentHist_TeamHome">
+							<img src="img/Logo/logo3.png" alt="">
+							<p>TimeA</p>
+						</div>
+						<div class="contentHist_PlacarHome">
+							2
+						</div>
+						<div class="x">x</div>
+						<div class="contentHist_PlacarVisitor">
+							1
+						</div>
+						<div class="contentHist_TeamVisitor">
 							<img src="img/Logo/logo3.png" alt="">
 							<p>TimeA</p>
 						</div>
 					</div>
+
 					<!-- <?php
 							include 'includes/Score.php';
 							$historic = new Score();
