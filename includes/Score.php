@@ -168,7 +168,6 @@
 
       if ($stmt->rowCount() > 0):
         while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
-          echo "<center>".$row['P1VICTORY']." - ".$row['PLAYER1']." VS ".$row['PLAYER2']." - ".$row['P2VICTORY']."<br><br></center>";
         }
         return true;
       else:

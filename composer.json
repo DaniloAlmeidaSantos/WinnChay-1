@@ -1,0 +1,27 @@
+{
+  "name": "winnchay",
+  "description": "Um sistema de criação de campeonatsos via website",
+  "minimum-stability": "stable",
+  "license": "proprietary",
+  "authors": [
+    {
+      "name": "author's Danilo Almeida and Johnatan Accourt",
+      "email": "winnchay_support@hotmail.com",
+      "role": "Developer"
+    }
+  ],
+  "config": {
+    "vendor-dir": "vendor"
+  },
+  "autoload": {
+    "psr-4": {
+      "Source\\": "source/"
+    },
+    "files": [
+      "source/Config.php"
+    ]
+  },
+  "require": {
+    "coffeecode/datalayer": "1.1.*"
+  }
+}

@@ -5,19 +5,23 @@
 
     public function __construct()
     {
-      require_once 'config/DbConnect.php';
+        require_once 'config/DbConnect.php';
 
-			// Chamando o método connect da classe Database e inicializando um link de conexão
-			$this->conn = connect();
+        // Chamando o método connect da classe Database e inicializando um link de conexão
+        $this->conn = connect();
     }
 
-    public function selectInfo($id){
+    public function selectInfo(){
       $stmt = $this->conn->prepare('SELECT * FROM PLAYERS WHERE IDPLAYER = ?');
-      $stmt->bindParam(1, $id, PDO::PARAM_INT);
+      $stmt->bindValue(1, 1, PDO::PARAM_INT);
       $stmt->execute();
 
-      while ($row = $stmt->fetch(PDO::FECTH_ASSOC)) {
-
+      while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
+        $_SESSION['user'] = $row['USERNAME'];
+        $_SESSION['f_name'] = $row['FIRST_NAME'];
+        $_SESSION['l_name'] = $row['LAST_NAME'];
+        $_SESSION['email'] = $row['EMAIL'];
+        $_SESSION['phone'] = $row['PHONE'];
       }
     }
 

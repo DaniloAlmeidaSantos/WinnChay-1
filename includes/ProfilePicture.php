@@ -14,7 +14,7 @@
 		// Quando este método é chamado, parâmetros de inserção da imagem são definidos
 		public function paramPictures(){
 			// Definindo a pasta para upload
-			$_UP['folder'] = 'uploads/up_profile';
+			$_UP['folder'] = 'uploads/up_profile/';
 			// Definindo o tamanho do arquivo
 	    $_UP['size'] = 1024*1024*2; // 2MB
 
@@ -22,21 +22,26 @@
 	    $_UP['extensions'] = array('jpg', 'png', 'jpeg');
 	    $_UP['rename'] = true;
 	    // Definindo a váriavel para receber a imagem
+			$file_tmp = $_FILES['image']['tmp_name'];
 	    $file = $_FILES['image'];
-
+			// Pega a extensão
 	    $extesion = pathinfo($file['name'], PATHINFO_EXTENSION);
+			// Converte o nome da extensão em minúsculo
+			$extesion = strtolower($extesion);
 
 	   	if (array_search($extesion, $_UP['extensions']) === false):
 				// Se a extensão da imagem não for a requerida, é efetuada uma mensagem de erro na tela do usuário
-	      echo "<h5 style='color: red;'><b>ERROR:</b> Por favor insira nos formato .jpg, .png ou .jpeg</h6>";
+	      $_SESSION['error'] = "<h5 style='color: red;'><b>ERROR:</b> Por favor insira nos formato .jpg, .png ou .jpeg</h6>";
 	      exit;
 	    elseif ($_UP['size'] < $file['size']):
 				// Se o tamanho da imagem não for a requerida, é efetuada uma mensagem de erro na tela do usuário
-	      echo "<h5 style='color: red;'><b>ERROR:</b> Por favor insira um imagem com o tamanho menor que 2MB!</h6>";
+	      $_SESSION['error'] = "<h5 style='color: red;'><b>ERROR:</b> Por favor insira um imagem com o tamanho menor que 2MB!</h6>";
 	      exit;
 	    else:
 				// Determinando o nome do arquivo
-	      $_SESSION["finalName"] = $file['name'];
+				$newName = uniqid(time()) . '-' . $extesion;
+				// Determinando o nome do arquivo
+	      $_SESSION["finalName"] = $newName;
 	    endif;
 
 	    // Movendo o arquivo e renomeando o arquivo.
@@ -46,7 +51,7 @@
 				exit;
 	    else:
 				// Caso não seja possível mover a imagem para a pasta destinada, é efutado uma mensagem de erro na tela do usuário e retorna false
-	      echo "<h5 style='color: red;'><b>ERRO:</b>Não foi possível fazer o upload da imagem neste momento, tente mais tarde!</h6>";
+	      $_SESSION['error'] = "<h5 style='color: red;'><b>ERRO:</b>Não foi possível fazer o upload da imagem neste momento, tente mais tarde!</h6>";
 	      return false;
 	      exit;
 	    endif;
@@ -60,9 +65,7 @@
 			$stmt->execute();
 
 			if ($stmt->rowCount() > 0):
-				echo "UHUU";
-			else:
-				echo "errou";
+				exit;
 			endif;
 		}
 
@@ -74,7 +77,7 @@
 
 			if ($stmt->rowCount() > 0):
 				while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
-					$_SESSION['picture'] = $row['PICTURE'];
+					$_SESSION['picture'] = 'uploads/up_profile/'.$row['PICTURE'];
 					$_SESSION['button'] = 'btnChange';
 				}
 			else:
@@ -91,9 +94,7 @@
 			$stmt->execute();
 
 			if ($stmt->rowCount() > 0):
-				echo "UHUU";
-			else:
-				echo "errou";
+				exit;
 			endif;
 		}
 	}
