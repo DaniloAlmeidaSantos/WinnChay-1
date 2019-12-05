@@ -364,29 +364,30 @@
 				$picture->image();
 				?>
 				<div class="Perfil">
-					<form style="width: 100%; height: 100%;" action='' method="POST" enctype="multipart/form-data">
-						<img src="<?php echo $_SESSION['picture']; ?>" name='image' id="img" alt="">
+					<form style="width: 100%; height: 100%;" id='input-form' method="post" enctype="multipart/form-data" action="upload.php">
+						<img src="<?php echo $_SESSION['picture']; ?>" name='img' id="img" alt="Foto de perfil">
 						<div class="PerfilHover">
 							<input type="file" name="image" id="image">
 							<h5>Troque sua imagem</h5>
 							<h6>Tamanho recomendado 300px x 300px</h6>
 						</div>
 						<br><br>
-						<button name="<?php echo $_SESSION['button']; ?>">Trocar foto</button>
+						<div id="view"></div>
+						<?php if (empty($_SESSION['change'])): echo $_SESSION['error']; endif; ?>
 					</form>
-					<br>
-					<?php
-					if (isset($_POST['btnChange'])) :
-						if ($picture->paramPictures()) :
-							$picture->changePicture();
-						endif;
-					elseif (isset($_POST['btnInsert'])) :
-						if ($picture->paramPictures()) :
-							$picture->createPicture();
-						endif;
-					endif;
-					?>
+					<script type="text/javascript" src="js/libs/jquery.form.js"></script>
+					<script type="text/javascript" src="php_tests/jquery.min.js"></script>
 					<script>
+						$(document).ready(function(){
+							 /* #imagem é o id do input, ao alterar o conteudo do input execurará a função baixo */
+							 $('#image').live('change',function(){
+									 $('#view').html('<img src="img/gif/ajax-loader.gif" alt="aguarde..."/> <label style="color: green;">Aguarde inserindo a foto de perfil...</label>');
+									/* Efetua o Upload sem dar refresh na pagina */
+									$('#input-form').ajaxForm({
+											target:'#view' // o callback será no elemento com o id #visualizar
+									 }).submit();
+							 });
+						})
 						$(function() {
 							$('#image').change(function() {
 								const file = $(this)[0].files[0]

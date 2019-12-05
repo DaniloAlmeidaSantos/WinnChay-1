@@ -3,7 +3,7 @@
 
   use CoffeeCode\DataLayer\DataLayer;
 
-  class User extends DataLayer
+  class Players extends DataLayer
   {
 
     public function __construct()
@@ -12,5 +12,4 @@
     }
 
   }
-
 ?>
