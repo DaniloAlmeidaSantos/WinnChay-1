@@ -5,7 +5,7 @@
 
 		public function __construct()
 		{
-			require_once 'config/DbConnect.php';
+			require_once '../config/DbConnect.php';
 
 			// Chamando o método connect da classe Database e inicializando um link de conexão
 			$this->conn = connect();

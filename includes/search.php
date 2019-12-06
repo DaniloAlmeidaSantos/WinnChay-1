@@ -27,9 +27,8 @@
 							</div>
 						</div>
 						</div>
-						<button class='buttonTorn' name='btnRegister'>Inscrever-se</button>
-					</div>
-				<input type='hidden' name='value' value='".$row['NAME_CHAMP']."'>";
+						<a class='buttonTorn' href='pageChamp.php?name=".$row['NAME_CHAMP']."'>Inscrever-se</a>
+					</div>";
 		}
 	}
 	else {

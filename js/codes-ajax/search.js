@@ -12,7 +12,7 @@ function searchName(name) {
 $(document).ready(function(){
   searchName();
 
-  $('#search').keyup(function(){
+  $('#search').keydown(function(){
     var name = $(this).val();
     if (name != ''){
       searchName(name);

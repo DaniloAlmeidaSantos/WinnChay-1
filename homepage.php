@@ -130,17 +130,14 @@
 
 				<div id="Procurar" class="tabcontent">
 					<div class="elementStats_Search">
-						<script type="text/javascript" src="js/codes-ajax/jquery-3.3.1.min.js"></script>
 						<script type="text/javascript" src="js/codes-ajax/search.js"></script>
 						<h1>Procurar Campeonatos:</h1>
-						<input type="search" name="search" id="search" placeholder="Digite o nome do campeonato...">
+						<input type="text" name="search" id="search" placeholder="Digite o nome do campeonato..."/>
 					</div>
 					<div class="elementStats_third">
-						<form action="pageChamp.php" method="POST">
-							<div id='result'>
+						<div id='result'>
 
-							</div>
-						</form>
+						</div>
 					</div>
 				</div>
 
@@ -373,11 +370,25 @@
 						</div>
 						<br><br>
 						<div id="view"></div>
-						<?php if (empty($_SESSION['change'])): echo $_SESSION['error']; endif; ?>
+						<?php
+							if (empty($_SESSION['change'])):
+								echo $_SESSION['error'];
+							endif;
+					 	?>
 					</form>
 					<script type="text/javascript" src="js/libs/jquery.form.js"></script>
 					<script type="text/javascript" src="php_tests/jquery.min.js"></script>
-					<script>
+					<script type="text/javascript">
+						$(function() {
+							$('#image').change(function() {
+								const file = $(this)[0].files[0]
+								const fileReader = new FileReader()
+								fileReader.onloadend = function() {
+									$('#img').attr('src', fileReader.result)
+								}
+								fileReader.readAsDataURL(file)
+							});
+						});
 						$(document).ready(function(){
 							 /* #imagem é o id do input, ao alterar o conteudo do input execurará a função baixo */
 							 $('#image').live('change',function(){
@@ -387,16 +398,6 @@
 											target:'#view' // o callback será no elemento com o id #visualizar
 									 }).submit();
 							 });
-						})
-						$(function() {
-							$('#image').change(function() {
-								const file = $(this)[0].files[0]
-								const fileReader = new FileReader()
-								fileReader.onloadend = function() {
-									$('#img').attr('src', fileReader.result)
-								}
-								fileReader.readAsDataURL(file)
-							})
 						})
 					</script>
 				</div>

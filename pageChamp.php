@@ -5,8 +5,8 @@
 	<meta charset="utf-8">
 </head>
 <body>
-	<?php 
-		echo $_REQUEST['value'];
+	<?php
+		echo $_REQUEST['name'];
 	?>
 </body>
 </html>
