@@ -130,6 +130,7 @@
 
 				<div id="Procurar" class="tabcontent">
 					<div class="elementStats_Search">
+						<script type="text/javascript" src="../js/codes-ajax/jquery-3.3.1.min.js"></script>
 						<script type="text/javascript" src="js/codes-ajax/search.js"></script>
 						<h1>Procurar Campeonatos:</h1>
 						<input type="text" name="search" id="search" placeholder="Digite o nome do campeonato..."/>
@@ -349,36 +350,42 @@
 				<p class="titleGrafic">Gráfico de Desempenho</p>
 				<div id="piechart_3d"></div>
 				<?php
-        include 'includes/ChangeInfo.php';
-				include 'includes/ProfilePicture.php';
-        include 'includes/Score.php';
+	        include 'includes/ChangeInfo.php';
+					include 'includes/ProfilePicture.php';
+	        include 'includes/Score.php';
 
-        $historic = new Score();
-				$info = new ChangeInfo();
-				$picture = new ProfilePicture();
+	        $historic = new Score();
+					$info = new ChangeInfo();
+					$picture = new ProfilePicture();
 
-				$info->selectInfo();
-				$picture->image();
+					$info->selectInfo();
+					$picture->image();
 				?>
 				<div class="Perfil">
 					<form style="width: 100%; height: 100%;" id='input-form' method="post" enctype="multipart/form-data" action="upload.php">
 						<img src="<?php echo $_SESSION['picture']; ?>" name='img' id="img" alt="Foto de perfil">
 						<div class="PerfilHover">
-							<input type="file" name="image" id="image">
+							<input type="file" name="image" onchange="saveImages()" id="image">
 							<h5>Troque sua imagem</h5>
 							<h6>Tamanho recomendado 300px x 300px</h6>
 						</div>
 						<br><br>
-						<div id="view"></div>
 						<?php
-							if (empty($_SESSION['change'])):
+							//if (empty($_SESSION['error'])) {
 								echo $_SESSION['error'];
-							endif;
-					 	?>
+							//}
+						?>
 					</form>
-					<script type="text/javascript" src="js/libs/jquery.form.js"></script>
-					<script type="text/javascript" src="php_tests/jquery.min.js"></script>
+					<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+   				<script src="//malsup.github.io/jquery.form.js"></script>
 					<script type="text/javascript">
+						function saveImages(){
+							$('#input-form').ajaxSubmit({
+								url  : 'upload.php',
+								type : 'POST'
+							});
+						}
+
 						$(function() {
 							$('#image').change(function() {
 								const file = $(this)[0].files[0]
@@ -389,16 +396,6 @@
 								fileReader.readAsDataURL(file)
 							});
 						});
-						$(document).ready(function(){
-							 /* #imagem é o id do input, ao alterar o conteudo do input execurará a função baixo */
-							 $('#image').live('change',function(){
-									 $('#view').html('<img src="img/gif/ajax-loader.gif" alt="aguarde..."/> <label style="color: green;">Aguarde inserindo a foto de perfil...</label>');
-									/* Efetua o Upload sem dar refresh na pagina */
-									$('#input-form').ajaxForm({
-											target:'#view' // o callback será no elemento com o id #visualizar
-									 }).submit();
-							 });
-						})
 					</script>
 				</div>
 				<div class="infoUser">
