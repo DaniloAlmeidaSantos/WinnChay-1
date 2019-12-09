@@ -1159,7 +1159,7 @@ input[type="file"] {
 .box .inputBox input:focus ~ label,
 .box .inputBox input:valid ~ label
 {
-	top: -20px;
+	top: -28px;
 	left: 0;
 	color: #8f34ad;
 	font-size: 12px;
@@ -1185,5 +1185,187 @@ input[type="file"] {
 
 /*================================================= LOGIN.php END ===================================================*/
 
+/*================================================= register.php ====================================================*/
 
-/*================================================= LOGIN.php END ===================================================*/
+.elementLeft{
+	position: absolute;
+	width: 50%;
+	height: 100%;
+	/* background-color: rgba(0, 0, 0, .5); */
+	animation: fadeIn 2s 0s normal forwards 1;
+}
+
+@-webkit-keyframes fadeIn{
+	from {background-color: rgba(0, 0, 0, .0);}
+	to {background-color: rgba(0, 0, 0, .6);}
+}
+
+.elementHand{
+	position: absolute;
+	width: 45%;
+	bottom: 0%;
+	transform: translateX(50%);
+}
+
+.elementPs4{
+	position: absolute;
+	width: 35%;
+	top: 17%;
+	transform: translateX(-90%);
+	animation: ps4Right 2s 0s normal forwards, 
+			   ps4Floating 12s 2s normal infinite;
+}
+
+@-webkit-keyframes ps4Right {
+	from {transform: translateX(-50%);}
+	to{transform: translateX(40%);}
+}
+
+@-webkit-keyframes ps4Floating {
+	0% {transform: translate(40%,0%);}
+
+	30% {transform: translate(40%,-5%);}
+
+	60% {transform: translate(40%,3%);}
+
+	100% {transform: translate(40%,0%);}
+}
+
+.elementXBOX{
+	position: absolute;
+	width: 35%;
+	top: 17%;
+	transform: translateX(145%);
+	animation: xboxRight 2s 0s normal forwards,
+			   xboxFloat 12s 2s normal infinite;
+}
+
+@-webkit-keyframes xboxRight {
+	from {transform: translateX(-50%);}
+	to{transform: translateX(145%);}
+}
+
+@-webkit-keyframes xboxFloat {
+	0% {transform: translate(145%,0%);}
+
+	30% {transform: translate(145%,5%);}
+
+	60% {transform: translate(145%,-3%);}
+
+	100% {transform: translate(145%,0%);}
+}
+
+
+.elementRight{
+	position: absolute;
+	height: 90vh;
+	width: 40vw;
+	background: #fff;
+	left: 55%;
+	bottom: 5%;
+}
+
+.bodyLogin h1{
+	font-family: 'Staatliches', cursive;
+	color: #fff;
+	position: absolute;
+	font-size: 3.4rem;
+	left: 66%;
+	top: 4%;
+	animation: downH1 3s 0s normal forwards;
+}
+
+.boxCadastro{
+	position: absolute;
+	top: 55%;
+	left: 75%;
+	transform: translate(-50%,-50%);
+	width: 400px;  	
+	height: 500px;
+	padding: 40px;
+	background: rgba(0, 0, 0, .1);
+	box-sizing: border-box;
+	box-shadow: 0 15px 25px rgba(0, 0, 0, .5);
+	border-radius: 10px;
+	
+}
+
+.boxCadastro h2{
+	margin: 0 0 30px;
+	padding: 0;
+	color: #fff;
+	text-align: center;
+}
+
+.boxCadastro .inputBox{
+	position: relative;
+	opacity: 0.0;
+	animation: showInput 1s 1s normal forwards;
+}
+
+.buttonCadastro{
+	opacity: 0.0;
+	animation: showInput 1s 1s normal forwards;
+
+	border: none;
+	text-decoration: none;
+	font-size: 1rem;
+	cursor: pointer;
+
+	background-color: #220e2e;
+	color: white;
+	border-radius: 3px;
+
+	padding: 10px;
+	padding-left: 15px;
+	padding-right: 15px;
+	
+	transition: .5s;
+}
+
+.buttonCadastro:hover{
+	background-color: #22a014;
+
+	padding: 15px;
+	padding-left: 20px;
+	padding-right: 20px;
+
+	transition: .5s;
+}
+
+.boxCadastro .inputBox input{
+	width: 100%;
+	padding: 10px 0;
+	font-size: 16px;
+	color: #FFF;
+	margin-bottom: 30px;
+	border: none;
+	border-bottom: 1px solid #fff;
+	outline: none;
+	background: transparent;
+}
+
+.boxCadastro .inputBox label{
+	position: absolute;
+	top: 0;
+	left: 0;
+	padding: 10px 0;
+	font-size: 16px;
+	color: #fff;
+	pointer-events: none;
+	transition: .5s;
+}
+
+.boxCadastro .inputBox input:focus ~ label,
+.boxCadastro .inputBox input:valid ~ label
+{
+	top: -28px;
+	left: 0;
+	color: #8f34ad;
+	font-size: 12px;
+}
+
+@-webkit-keyframes showInput{
+	from{opacity: 0.0;}
+	to{opacity: 1;}
+}
