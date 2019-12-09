@@ -1,12 +1,15 @@
 <?php
-	session_start();
-	require  'includes/ProfilePicture.php';
+	require 'includes/ProfilePicture.php';
 	$pic = new ProfilePicture();
-	echo "oláa";
-	var_dump($_SESSION["change"]);
-	if ($_SESSION["change"]):
-		$pic->changePicture();
-	else:
-		$pic->createPicture();
-	endif;
+	// if (isset($_FILES['image'])):
+		if ($_SESSION["change"]):
+			$pic->changePicture();
+			$_SESSION['error'] = null;
+			header('location: homepage.php');
+		else:
+			$pic->createPicture();
+			$_SESSION['error'] = null;
+			header('location: homepage.php');
+		endif;
+	// endif;
 ?>
