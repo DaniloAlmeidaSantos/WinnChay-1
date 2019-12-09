@@ -7,48 +7,38 @@
   	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
   	<link href="https://fonts.googleapis.com/css?family=Dosis|Staatliches&display=swap" rel="stylesheet">
   </head>
-  <body class="bodyLogin" >
-    <form action="" method="POST">
-      <div class="box" style="height: 120%;width: 45%;margin-top: 4%" >
-        <center>
-          <h2 style="color: white">CADASTRO</h2>
-          <div class="inputBox">
-            <input type="text" name="txtName" maxlength="20" required>
-            <label>Nome</label>
-          </div>
-          <div class="inputBox">
-            <input type="text" name="txtLName" maxlength="20" required>
-            <label>Sobrenome</label>
-          </div>
-          <div class="inputBox">
-            <input type="text" name="txtUsername" maxlength="16" required>
-            <label>Nome de usuário</label>
-          </div>
-          <div class="inputBox">
-            <input type="text" name="txtEmail" maxlength="50" required>
-            <label>E-Mail</label>
-          </div>
-          <div class="inputBox">
-            <input type="text" name="txtCEmail" maxlength="50" required>
-            <label>Confirmar E-Mail</label>
-          </div>
-          <div class="inputBox">
-            <input type="password" name="txtPwd" maxlength="16" required>
-            <label>Senha</label>
-          </div>
-          <div class="inputBox">
-            <input type="password" name="txtCPwd" maxlength="16" required>
-            <label>Confirmar senha</label>
-          </div>
-          <div class="inputBox">
-            <input type="text" name="txtPhone" maxlength="14" required>
-            <label>Telefone</label>
-          </div>
-          <button name="btnRegister">Cadastrar</button>
-          <br>
-        </center>
-      </div>
-    </form>
+  <body class="bodyLogin">
+        <div class="elementLeft">
+            <img class="elementHand" src="img/Src/hand.png" alt="hand/mão">
+            <img class="elementPs4" src="img/Src/controlePS4.png" alt="controle ps4">
+            <img class="elementXBOX" src="img/Src/controleXBOX.png" alt="controle ps4">
+        </div>
+            <h1>Cadastre-se:</h1>
+            <form action="" method="POST">
+              <div class="boxCadastro">
+                <center>
+                  <div class="inputBox">
+                    <input type="text" name="txtEmail" maxlength="50" required>
+                    <label>E-Mail</label>
+                  </div>
+                  <div class="inputBox">
+                    <input type="text" name="txtCEmail" maxlength="50" required>
+                    <label>Confirmar E-Mail</label>
+                  </div>
+                  <div class="inputBox">
+                    <input type="password" name="txtPwd" maxlength="16" required>
+                    <label>Senha</label>
+                  </div>
+                  <div class="inputBox">
+                    <input type="password" name="txtCPwd" maxlength="16" required>
+                    <label>Confirmar senha</label>
+                  </div>
+                  <button class="buttonCadastro" name="btnRegister">Cadastrar</button>
+                  <br>
+                </center>
+              </div>
+            </form>
+    
     <?php
       if (isset($_POST['btnRegister'])):
         // Parâmetros que serão enviados
