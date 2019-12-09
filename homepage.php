@@ -47,7 +47,12 @@
 				</div>
 
 				<div id="Bell">
-					<h1>olá mundo</h1><button onclick="sinoNotifica2();"><b>X</b></button>
+					<button onclick="sinoNotifica2();"><b>X</b></button>
+					<?php
+					include 'includes/Notifications.php';
+					$notify = new Notifications();
+					$notify->viewNotification();
+					?>
 				</div>
 
 				<script>
