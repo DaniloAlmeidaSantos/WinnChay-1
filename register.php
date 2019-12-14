@@ -14,7 +14,7 @@
             <img class="elementXBOX" src="img/Src/controleXBOX.png" alt="controle ps4">
         </div>
             <h1>Cadastre-se:</h1>
-            <form action="" method="POST">
+            <form action="emailConfirmation.php" method="POST">
               <div class="boxCadastro">
                 <center>
                   <div class="inputBox">
@@ -42,12 +42,8 @@
     <?php
       if (isset($_POST['btnRegister'])):
         // Parâmetros que serão enviados
-        $fn = $_POST['txtName'];
-        $ln = $_POST['txtLName'];
-        $u = $_POST['txtUsername'];
         $e = $_POST['txtEmail'];
         $pwd = $_POST['txtPwd'];
-        $p = $_POST['txtPhone'];
 
         // Verificando se o E-Mail e a senha são correspondentes
         if ($_POST['txtEmail'] == $_POST['txtCEmail'] && $_POST['txtPwd'] == $_POST['txtCPwd']):
