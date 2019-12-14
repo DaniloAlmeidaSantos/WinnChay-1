@@ -61,7 +61,7 @@
 		// Quando este método é chamado, é realizado o processo de criação de tabelas para campeonatos
 		public function createTb(){
 			// Criando a tabela do campeonato
-			$stmt = $this->conn->prepare("CREATE TABLE ".$_SESSION["nChamp"]."(
+			$stmt = $this->conn->prepare("CREATE TABLE {$_SESSION["nChamp"]}(
 				IDPCHAMP INT(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
 				IDCHAMP INT(11) NOT NULL,
 				IDHISTORIC INT(11),
@@ -90,7 +90,7 @@
 				$id = $row['IDCHAMP'];
 			}
 
-			$stmt = $this->conn->prepare('INSERT INTO '.$_SESSION["nChamp"].' (IDPLAYER, IDCHAMP, IDHISTORIC, USERNAME, PHONE) VALUES (?,?,?,?,?)');
+			$stmt = $this->conn->prepare('INSERT INTO {$_SESSION["nChamp"]} (IDPLAYER, IDCHAMP, IDHISTORIC, USERNAME, PHONE) VALUES (?,?,?,?,?)');
 			$stmt->bindParam(1, $i, PDO::PARAM_INT);
 			$stmt->bindParam(2, $id, PDO::PARAM_INT);
 			$stmt->bindParam(3, $i, PDO::PARAM_INT);
