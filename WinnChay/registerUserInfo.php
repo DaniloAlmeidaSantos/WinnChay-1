@@ -50,7 +50,7 @@
 						<label for="tel" class="mr-sm-2">Telefone:</label>
 						<input type="text" id="tel" class="form-control mb-2 mr-sm-2">
 					</div>
-					<div class="col-md-12">
+					<div class="col-md-10">
 						<button class="element_buttonFinal">Finalizar Cadastro</button>
 					</div>
 				</form>

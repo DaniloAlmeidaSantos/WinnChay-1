@@ -1518,6 +1518,8 @@ input[type="file"] {
 	padding-right: 28px;
 	
 	transition: .5s;
+
+	text-align: center;
 }
 
 .element_buttonFinal:hover{
