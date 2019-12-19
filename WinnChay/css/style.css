@@ -338,7 +338,7 @@
 }
 
 .elementHome_forth{
-	background-color: #1a1327;
+	background-color: #00ff40;
 	position: absolute;
 	transform: translate(-50% , -50%);
 	left: 33%;
@@ -351,6 +351,16 @@
     text-align: center;
     cursor: pointer;
     font-size: 15px;
+}
+
+.element_windowCreateChamp{
+	position: absolute;
+	width: 90%;
+	height: 100%;
+	transform: translateY(100%);
+	
+	background-color: #b9a2df;
+	z-index: 1000000000000000000;
 }
 
 

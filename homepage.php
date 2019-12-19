@@ -29,7 +29,7 @@
 							</a>
 						</div>
 						<div class="perfilHome">
-							<a href="#home" class="tablink" onclick="openPage('Home', this, '#472880')">
+							<a href="#home" id="defaultOpen" class="tablink" onclick="openPage('Home', this, '#472880')">
 								<img width="120%" src="img/Logo/home_navbar.png">
 							</a>
 						</div>
@@ -39,7 +39,7 @@
 							</a>
 						</div>
 						<div class="perfilIco">
-							<a href="#torneios" id="defaultOpen" class="tablink" onclick="openPage('Torneios', this, '#200b31')">
+							<a href="#torneios"  class="tablink" onclick="openPage('Torneios', this, '#200b31')">
 								<img width="120%" src="img/Logo/torn_navbar.png">
 							</a>
 						</div>
@@ -49,9 +49,9 @@
 				<div id="Bell">
 					<button onclick="sinoNotifica2();"><b>X</b></button>
 					<?php
-					include 'includes/Notifications.php';
-					$notify = new Notifications();
-					$notify->viewNotification();
+						include 'includes/Notifications.php';
+						$notify = new Notifications();
+						$notify->viewNotification();
 					?>
 				</div>
 
@@ -75,51 +75,9 @@
 
 					<div class="elementHome_second">
 						<div class="container">
-							<!-- <div id="myCarousel" class="carousel slide" data-ride="carousel">
-
-
-								<div class="carousel-inner">
-									<?php
-									include 'includes/Carousel.php';
-									$carousel = new Carousel();
-									$carousel->itemCarousel();
-									?>
-								</div>
-
-								<a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
-									<span class="carousel-control-prev-icon" aria-hidden="true"></span>
-									<span class="sr-only">Previous</span>
-								</a>
-								<a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
-									<span class="carousel-control-next-icon" aria-hidden="true"></span>
-									<span class="sr-only">Next</span>
-								</a>
-							</div> -->
+							
 						</div>
 					</div>
-					<!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
-					<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
-					<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
-					<script>
-						$(document).ready(function() {
-							//tempo de duração do slide
-							$('.carousel').carousel({
-								interval: 7000
-							});
-
-							$('#myCarousel').on('slid.bs.carousel', function() {
-								//Receber o valor do atributo data-slide-to quando estiver ativo
-								var numeroSlide = $('#valor-car.active').data('slide-to');
-								//$("#msg").html(numeroSlide);
-
-								//Ocultar a descrição do slide anterior
-								//$('.conteudo').hide();
-
-								//Apresentar o conteúdo do slide atual
-								//$('.imagem' + numeroSlide).show();
-							});
-						});
-					</script> -->
 					<div class="elementHome_header">
 						<h1>Bem Vindo Fulano</h1>
 					</div>
@@ -127,10 +85,17 @@
 					<div class="elementHome_third">
 						terceiro
 					</div>
+					
+					<a href="#">
+						<div class="elementHome_forth">
+							quarto marcar
+						</div>
+					</a>
 
-					<div class="elementHome_forth">
-						quarto marcar
+					<div class="element_window">
+						disoajdiosjaidjsaiojdisajdis
 					</div>
+
 				</div>
 
 				<div id="Procurar" class="tabcontent">
@@ -167,7 +132,7 @@
 					</div>
 
 					<div class="elementTorn_display">
-						<div class="elementTorn_confront_primeirafase1">
+						<!-- <div class="elementTorn_confront_primeirafase1">
 							<p class="elementTorn_team1">
 								time <p class="elementTorn_team1_result">2</p>
 							</p>
@@ -300,7 +265,7 @@
 							<p class="elementTorn_team2">
 								time <p class="elementTorn_team2_result">1</p>
 							</p>
-						</div>
+						</div> -->
 					</div>
 					<div class="elementTorn_Users">
 						<div class="elementTorn_Header">
@@ -353,19 +318,19 @@
 				</script>
 				<!-- Div de visualização do gráfico -->
 				<p class="titleGrafic">Gráfico de Desempenho</p>
-				<div id="piechart_3d"></div>
-				<?php
-	        include 'includes/ChangeInfo.php';
-					include 'includes/ProfilePicture.php';
-	        include 'includes/Score.php';
+					<div id="piechart_3d"></div>
+					<?php
+						include 'includes/ChangeInfo.php';
+								include 'includes/ProfilePicture.php';
+						include 'includes/Score.php';
 
-	        $historic = new Score();
-					$info = new ChangeInfo();
-					$picture = new ProfilePicture();
+						$historic = new Score();
+								$info = new ChangeInfo();
+								$picture = new ProfilePicture();
 
-					$info->selectInfo();
-					$picture->image();
-				?>
+								$info->selectInfo();
+								$picture->image();
+					?>
 				<div class="Perfil">
 					<form style="width: 100%; height: 100%;" id='input-form' method="post" enctype="multipart/form-data" action="upload.php">
 						<img src="<?php echo $_SESSION['picture']; ?>" name='img' id="img" alt="Foto de perfil">
@@ -382,7 +347,7 @@
 						?>
 					</form>
 					<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-   				<script src="//malsup.github.io/jquery.form.js"></script>
+   					<script src="//malsup.github.io/jquery.form.js"></script>
 					<script type="text/javascript">
 						function saveImages(){
 							$('#input-form').ajaxSubmit({
