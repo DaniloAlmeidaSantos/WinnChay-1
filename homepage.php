@@ -46,8 +46,29 @@
 					</center>
 				</div>
 
+				<div id="element_window">
+					<button onclick="easeModal()"><b>X</b></button>
+					<div class="element_trophyCreateTorn">
+						<img class="element_img" src="img/Src/perfilteste.jpg" alt="img usuário">
+					</div>
+					<div class="element_titleCreateTorn">
+						<h1><b>Criar Campeonato:</b></h1>
+					</div>
+					<div class="element_formCreateTorn">
+						<form action="">
+							<label for="">Nome do Campeonato:</label>
+							<input type="text">
+							<br>
+							<label for="">Data:</label>
+							<input type="text">
+						</form>
+					</div>
+				</div>
+				<div id="element_windowBack"></div>
+
 				<div id="Bell">
-					<button onclick="sinoNotifica2();"><b>X</b></button>
+					
+				<button onclick="sinoNotifica2();"><b>X</b></button>
 					<?php
 						include 'includes/Notifications.php';
 						$notify = new Notifications();
@@ -86,15 +107,36 @@
 						terceiro
 					</div>
 					
-					<a href="#">
+					<a onclick="showModal()" href="#">
 						<div class="elementHome_forth">
 							quarto marcar
 						</div>
 					</a>
 
-					<div class="element_window">
-						disoajdiosjaidjsaiojdisajdis
-					</div>
+					<script>
+						var modalWindow = document.getElementById("element_window");
+						var modalBack = document.getElementById("element_windowBack");
+						
+						function showModal(){
+							modalWindow.style.display = "block";
+							modalBack.style.display = "initial";
+						}
+
+						function easeModal(){
+							document.addEventListener("keydown", function(event){
+								var tecla = event.keyCode;
+								if (tecla == 27) {
+									modalWindow.style.display = "none";
+									modalBack.style.display = "none";
+								}
+							});
+
+							modalWindow.style.display = "none";
+							modalBack.style.display = "none";
+						}
+					</script>
+
+					
 
 				</div>
 
@@ -102,8 +144,7 @@
 					<div class="elementStats_Search">
 						<script type="text/javascript" src="../js/codes-ajax/jquery-3.3.1.min.js"></script>
 						<script type="text/javascript" src="js/codes-ajax/search.js"></script>
-						<h1>Procurar Campeonatos:</h1>
-						<input type="text" name="search" id="search" placeholder="Digite o nome do campeonato..."/>
+						<h1>Pesquisa:</h1>
 					</div>
 					<div class="elementStats_third">
 						<div id='result'>
@@ -132,140 +173,7 @@
 					</div>
 
 					<div class="elementTorn_display">
-						<!-- <div class="elementTorn_confront_primeirafase1">
-							<p class="elementTorn_team1">
-								time <p class="elementTorn_team1_result">2</p>
-							</p>
-							<p class="elementTorn_team2">
-								time <p class="elementTorn_team2_result">1</p>
-							</p>
-						</div>
-
-						<div class="elementTorn_confront_primeirafase2">
-							<p class="elementTorn_team1">
-								time <p class="elementTorn_team1_result">2</p>
-							</p>
-							<p class="elementTorn_team2">
-								time <p class="elementTorn_team2_result">1</p>
-							</p>
-						</div>
-
-						<div class="elementTorn_confront_primeirafase3">
-							<p class="elementTorn_team1">
-								time <p class="elementTorn_team1_result">2</p>
-							</p>
-							<p class="elementTorn_team2">
-								time <p class="elementTorn_team2_result">1</p>
-							</p>
-						</div>
-
-						<div class="elementTorn_confront_primeirafase4">
-							<p class="elementTorn_team1">
-								time <p class="elementTorn_team1_result">2</p>
-							</p>
-							<p class="elementTorn_team2">
-								time <p class="elementTorn_team2_result">1</p>
-							</p>
-						</div>
-
-						<div class="elementTorn_confront_primeirafase5">
-							<p class="elementTorn_team1">
-								time <p class="elementTorn_team1_result">2</p>
-							</p>
-							<p class="elementTorn_team2">
-								time <p class="elementTorn_team2_result">1</p>
-							</p>
-						</div>
-
-						<div class="elementTorn_confront_primeirafase6">
-							<p class="elementTorn_team1">
-								time <p class="elementTorn_team1_result">2</p>
-							</p>
-							<p class="elementTorn_team2">
-								time <p class="elementTorn_team2_result">1</p>
-							</p>
-						</div>
-
-						<div class="elementTorn_confront_primeirafase7">
-							<p class="elementTorn_team1">
-								time <p class="elementTorn_team1_result">2</p>
-							</p>
-							<p class="elementTorn_team2">
-								time <p class="elementTorn_team2_result">1</p>
-							</p>
-						</div>
-
-						<div class="elementTorn_confront_primeirafase8">
-							<p class="elementTorn_team1">
-								time <p class="elementTorn_team1_result">2</p>
-							</p>
-							<p class="elementTorn_team2">
-								time <p class="elementTorn_team2_result">1</p>
-							</p>
-						</div>
-
-						<div class="elementTorn_confront_segundafase1">
-							<p class="elementTorn_team1">
-								time <p class="elementTorn_team1_result">2</p>
-							</p>
-							<p class="elementTorn_team2">
-								time <p class="elementTorn_team2_result">1</p>
-							</p>
-						</div>
-
-						<div class="elementTorn_confront_segundafase2">
-							<p class="elementTorn_team1">
-								time <p class="elementTorn_team1_result">2</p>
-							</p>
-							<p class="elementTorn_team2">
-								time <p class="elementTorn_team2_result">1</p>
-							</p>
-						</div>
-
-						<div class="elementTorn_confront_segundafase3">
-							<p class="elementTorn_team1">
-								time <p class="elementTorn_team1_result">2</p>
-							</p>
-							<p class="elementTorn_team2">
-								time <p class="elementTorn_team2_result">1</p>
-							</p>
-						</div>
-
-						<div class="elementTorn_confront_segundafase4">
-							<p class="elementTorn_team1">
-								time <p class="elementTorn_team1_result">2</p>
-							</p>
-							<p class="elementTorn_team2">
-								time <p class="elementTorn_team2_result">1</p>
-							</p>
-						</div>
-
-						<div class="elementTorn_confront_terceirafase1">
-							<p class="elementTorn_team1">
-								time <p class="elementTorn_team1_result">2</p>
-							</p>
-							<p class="elementTorn_team2">
-								time <p class="elementTorn_team2_result">1</p>
-							</p>
-						</div>
-
-						<div class="elementTorn_confront_terceirafase2">
-							<p class="elementTorn_team1">
-								time <p class="elementTorn_team1_result">2</p>
-							</p>
-							<p class="elementTorn_team2">
-								time <p class="elementTorn_team2_result">1</p>
-							</p>
-						</div>
-
-						<div class="elementTorn_confront_quartafase">
-							<p class="elementTorn_team1">
-								time <p class="elementTorn_team1_result">2</p>
-							</p>
-							<p class="elementTorn_team2">
-								time <p class="elementTorn_team2_result">1</p>
-							</p>
-						</div> -->
+						
 					</div>
 					<div class="elementTorn_Users">
 						<div class="elementTorn_Header">

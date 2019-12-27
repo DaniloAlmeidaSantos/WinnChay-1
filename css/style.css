@@ -207,7 +207,7 @@
 	width: 15vw;
 	height: 100vh;
 	margin-left: 4vw;
-	z-index: 1000;
+	z-index: 10000000;
 }
 
 #Bell button{
@@ -353,6 +353,68 @@
     font-size: 15px;
 }
 
+#element_window{
+	animation: showmodal 1.5s 0s normal forwards;
+
+	background-color: #afa3c5;
+	position: absolute;
+	width: 50px;
+	height: 50px;
+	left: 41%;
+	top: 86%;
+	z-index: 2;
+
+	display: none;
+}
+
+#element_window button{
+	position: absolute;
+	top: 3%;
+	left: 96%;
+	font-size: 2rem;
+	background: transparent;
+	border: none;
+	outline: none;
+}
+
+@-webkit-keyframes showmodal{
+	from{
+		width: 50px;
+		height: 50px;
+	}
+	to{
+		width: 1000px;
+		height: 500px;
+
+		left: 5%;
+		top: 9%;
+	}
+}
+
+#element_windowBack{
+	animation: showmodalBackground 2s 0s normal forwards;
+
+	position: absolute;
+	width: 100vw;
+	max-width: 110vw;
+	height: 100vw;
+
+	background-color: rgba(0, 0, 0, .8);
+
+	left: 0%;
+	z-index: 1;
+
+	display: none;
+}
+
+@-webkit-keyframes showmodalBackground{
+	from{
+		background-color: rgba(0, 0, 0, .0);
+	}
+	to{
+		background-color: rgba(0, 0, 0, .8);
+	}
+}
 
 #Procurar {
 	background-color: #37164a;
@@ -440,7 +502,6 @@
 .elementStats_Search{
 	background-color: #220e2e;
 	position: absolute;
-	/* transform: translate(-50% , -50%); */
 	left: 0vh;
 	top: 0%;
 	width: 100vw;
@@ -450,15 +511,8 @@
 }
 
 .elementStats_Search h1{
-	font-size: 2rem;
-	margin-top: 8px;
+	font-size: 2.5rem;
 	color: #fff;
-}
-
-.elementStats_Search input{
-	width: 70%;
-	position: relative;
-	top: 10%;
 }
 
 .buttonTorn{
@@ -865,235 +919,38 @@ input[type="file"] {
 	z-index: 1;
 }
 
-
-
-.elementTorn_confront_primeirafase1{
-	margin: 1%;
-	font-size: 1.6rem;
-	background-image: linear-gradient(to right, #471e60 70% , #201d25);
-	width: 28%;
-	height: 11%;
-	color: #FFF;
-	border-radius: 3px;
-}
-
-.elementTorn_confront_primeirafase2{
-	margin: 1%;
-	margin-bottom: 3%;
-	font-size: 1.6rem;
-	background-image: linear-gradient(to right, #471e60 70% , #201d25);
-	width: 28%;
-	height: 11%;
-	color: #FFF;
-	border-radius: 3px;
-	transform: translateY(-5%);
-}
-
-.elementTorn_confront_primeirafase3{
-	margin: 1%;
-	font-size: 1.6rem;
-	background-image: linear-gradient(to right, #471e60 70% , #201d25);
-	width: 28%;
-	height: 11%;
-	color: #FFF;
-	border-radius: 3px;
-	transform: translateY(-5%);
-}
-
-.elementTorn_confront_primeirafase4{
-	margin: 1%;
-	margin-bottom: 3%;
-	font-size: 1.6rem;
-	background-image: linear-gradient(to right, #471e60 70% , #201d25);
-	width: 28%;
-	height: 11%;
-	color: #FFF;
-	border-radius: 3px;
-	transform: translateY(-5%);
-}
-
-.elementTorn_confront_primeirafase5{
-	margin: 1%;
-	font-size: 1.6rem;
-	background-image: linear-gradient(to right, #471e60 70% , #201d25);
-	width: 28%;
-	height: 11%;
-	color: #FFF;
-	border-radius: 3px;
-	transform: translateY(-5%);
-}
-
-.elementTorn_confront_primeirafase6{
-	margin: 1%;
-	margin-bottom: 3%;
-	font-size: 1.6rem;
-	background-image: linear-gradient(to right, #471e60 70% , #201d25);
-	width: 28%;
-	height: 11%;
-	color: #FFF;
-	border-radius: 3px;
-	transform: translateY(-5%);
-}
-
-.elementTorn_confront_primeirafase7{
-	margin: 1%;
-	font-size: 1.6rem;
-	background-image: linear-gradient(to right, #471e60 70% , #201d25);
-	width: 28%;
-	height: 11%;
-	color: #FFF;
-	border-radius: 3px;
-	transform: translateY(-5%);
-}
-
-.elementTorn_confront_primeirafase8{
-	margin: 1%;
-	margin-bottom: 3%;
-	font-size: 1.6rem;
-	background-image: linear-gradient(to right, #471e60 70% , #201d25);
-	width: 28%;
-	height: 11%;
-	color: #FFF;
-	border-radius: 3px;
-	transform: translateY(-5%);
-}
-
-.elementTorn_confront_segundafase1{
-	margin: 1%;
-	margin-bottom: 3%;
-	font-size: 1.6rem;
-	background-image: linear-gradient(to right, #471e60 70% , #201d25);
-	width: 28%;
-	height: 11%;
-	color: #FFF;
-	border-radius: 3px;
+.element_img{
 	position: absolute;
-	top: 6%;
-	left: 34%;
+	width: 300px;
+	height: 300px;
+	object-fit: cover;
+	left: 28px;
+	top: 17%;
 }
 
-.elementTorn_confront_segundafase2{
-	margin: 1%;
-	margin-bottom: 3%;
-	font-size: 1.6rem;
-	background-image: linear-gradient(to right, #471e60 70% , #201d25);
-	width: 28%;
-	height: 11%;
-	color: #FFF;
-	border-radius: 3px;
+.element_imgCreateTorn{
 	position: absolute;
-	top: 32%;
-	left: 34%;
+	width: 300px;
+	height: 300px;
+	left: 10px;
+	top: 10px;
 }
 
-.elementTorn_confront_segundafase3{
-	margin: 1%;
-	margin-bottom: 3%;
-	font-size: 1.6rem;
-	background-image: linear-gradient(to right, #471e60 70% , #201d25);
-	width: 28%;
-	height: 11%;
-	color: #FFF;
-	border-radius: 3px;
+.element_titleCreateTorn{
 	position: absolute;
-	top: 58%;
-	left: 34%;
+	left: 7%;
+	top: 5%;
 }
 
-.elementTorn_confront_segundafase4{
-	margin: 1%;
-	margin-bottom: 3%;
-	font-size: 1.6rem;
-	background-image: linear-gradient(to right, #471e60 70% , #201d25);
-	width: 28%;
-	height: 11%;
-	color: #FFF;
-	border-radius: 3px;
+.element_formCreateTorn form{
+	background-color: rgba(52, 8, 61, 0.5);
+	padding: 10px;
+
+	font-size: 1.5rem;
 	position: absolute;
-	top: 83%;
-	left: 34%;
+	left: 40%;
+	top: 3%;
 }
-
-.elementTorn_confront_terceirafase1{
-	margin: 1%;
-	margin-bottom: 3%;
-	font-size: 1.6rem;
-	background-image: linear-gradient(to right, #471e60 70% , #201d25);
-	width: 28%;
-	height: 11%;
-	color: #FFF;
-	border-radius: 3px;
-	position: absolute;
-	top: 19%;
-	left: 68%;
-}
-
-.elementTorn_confront_terceirafase2{
-	margin: 1%;
-	margin-bottom: 3%;
-	font-size: 1.6rem;
-	background-image: linear-gradient(to right, #471e60 70% , #201d25);
-	width: 28%;
-	height: 11%;
-	color: #FFF;
-	border-radius: 3px;
-	position: absolute;
-	top: 71%;
-	left: 69%;
-}
-
-.elementTorn_confront_quartafase{
-	margin: 1%;
-	margin-bottom: 3%;
-	font-size: 1.6rem;
-	background-image: linear-gradient(to right, #471e60 70% , #201d25);
-	width: 28%;
-	height: 11%;
-	color: #FFF;
-	border-radius: 3px;
-	position: absolute;
-	top: 45%;
-	left: 100%;
-}
-
-.elementTorn_team1{
-	transform: translate(10%, 13%);
-}
-
-.elementTorn_team2{
-	transform: translate(10%, -140%);
-}
-
-.elementTorn_team1_result{
-	transform: translate(86%, -135%);
-	color: #fff;
-}
-
-.elementTorn_team2_result{
-	transform: translate(86%, -280%);
-	color: #fff;
-}
-
-/* .elementTorn_header input{
-	-webkit-appearance: none;
-}
-
-.elementTorn_header input:after{
-	color: #333399;
-	font-size: 1.2rem;
-	background-color: #fff;
-	border: 1px solid;
-	border-radius: 3px;
-	cursor: hand;
-} */
-
-
-
-
-
-
-
-
 
 
 
@@ -1369,9 +1226,6 @@ input[type="file"] {
 	from{opacity: 0.0;}
 	to{opacity: 1;}
 }
-
-
-
 /*================================================= END register.php ====================================================*/
 
 /*================================================= registerUserInfo.php ====================================================*/
