@@ -162,7 +162,7 @@
 						</form>
 					</div>
 					<div class="elementStats_ContainerUser">
-						<a onclick="easeSearchUser()"><div class="Element_Close">X</div></a>
+						<a onclick="easeSearchTorn()"><div class="Element_Close">X</div></a>
 						<form action="">
 							<input type="text" placeholder="Procure por USUÁRIOS aqui...">
 						</form>
@@ -172,7 +172,7 @@
 				<script>
 					var searchResult = document.getElementsByClassName("elementStats_ContainerTorn")[0];
 
-					var searchUser = document.getElementsByClassName("elementStats_ContainerUser")[0];
+					var searchResultUsu = document.getElementsByClassName("elementStats_ContainerUser")[0];
 
 					console.log(document.getElementsByClassName("elementStats_ContainerUser")[0])
 					
@@ -185,14 +185,15 @@
 								var tecla = event.keyCode;
 								if (tecla == 27) {
 									searchResult.style.display = "none";
+									searchResultUsu.style.display = "none";
 								}
 							});
-
+							searchResultUsu.style.display = "none";
 							searchResult.style.display = "none";
 						}
 
 						function searchUser(){
-							searchUser.style.display = "initial";
+							searchResultUsu.style.display = "initial";
 						}
 
 
