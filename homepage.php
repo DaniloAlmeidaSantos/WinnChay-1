@@ -29,12 +29,12 @@
 							</a>
 						</div>
 						<div class="perfilHome">
-							<a href="#home" id="defaultOpen" class="tablink" onclick="openPage('Home', this, '#472880')">
+							<a href="#home" class="tablink" onclick="openPage('Home', this, '#472880')">
 								<img width="120%" src="img/Logo/home_navbar.png">
 							</a>
 						</div>
 						<div class="perfilProcurar">
-							<a href="#procurar" class="tablink" onclick="openPage('Procurar', this, '#37164a')">
+							<a href="#procurar" id="defaultOpen" class="tablink" onclick="openPage('Procurar', this, '#37164a')">
 								<img width="120%" src="img/Logo/lupa_navbar.png">
 							</a>
 						</div>
@@ -135,9 +135,6 @@
 							modalBack.style.display = "none";
 						}
 					</script>
-
-					
-
 				</div>
 
 				<div id="Procurar" class="tabcontent">
@@ -146,12 +143,60 @@
 						<script type="text/javascript" src="js/codes-ajax/search.js"></script>
 						<h1>Pesquisa:</h1>
 					</div>
-					<div class="elementStats_third">
-						<div id='result'>
-
-						</div>
+					<div class="elementStats_Container">
+						<h5>Buscar Por:</h5>
+						<button onclick="searchTorn()" class="elementStats_SearchTorn">
+							<img src="img/Badges/trophy_badge.png" alt="">
+							<p>Torneios</p>
+						</button>
+						<button onclick="searchUser()" class="elementStats_SearchUser">
+							<img src="img/Badges/trophy_badge.png" alt="">
+							<p>Usuários</p>
+						</button>
+						<h6>Lembrando que você pode fechar a janela de pesquisa usando "ESC"</h6>
+					</div>
+					<div class="elementStats_ContainerTorn">
+						<a onclick="easeSearchTorn()"><div class="Element_Close">X</div></a>
+						<form action="">
+							<input type="text" placeholder="Procure por TORNEIOS aqui...">
+						</form>
+					</div>
+					<div class="elementStats_ContainerUser">
+						<a onclick="easeSearchUser()"><div class="Element_Close">X</div></a>
+						<form action="">
+							<input type="text" placeholder="Procure por USUÁRIOS aqui...">
+						</form>
 					</div>
 				</div>
+
+				<script>
+					var searchResult = document.getElementsByClassName("elementStats_ContainerTorn")[0];
+
+					var searchUser = document.getElementsByClassName("elementStats_ContainerUser")[0];
+
+					console.log(document.getElementsByClassName("elementStats_ContainerUser")[0])
+					
+						function searchTorn(){
+							searchResult.style.display = "block";
+						}
+
+						function easeSearchTorn(){
+							document.addEventListener("keydown", function(event){
+								var tecla = event.keyCode;
+								if (tecla == 27) {
+									searchResult.style.display = "none";
+								}
+							});
+
+							searchResult.style.display = "none";
+						}
+
+						function searchUser(){
+							searchUser.style.display = "initial";
+						}
+
+
+				</script>
 
 				<div id="Torneios" class="tabcontent">
 					<div class="elementTorn_header">
@@ -296,13 +341,13 @@
 					</div>
 					<div class="contentHist_games">
 						<div class='contentHist_date'>
-              <p>19/11/2019</p>
-              <p>horas</p>
-            </div>
-            <div class='contentHist_boardscore'>
-              <img src='img/Logo/logo3.png'>
-              <p>PLAYER</p>
-            </div>
+							<p>19/11/2019</p>
+							<p>horas</p>
+							</div>
+							<div class='contentHist_boardscore'>
+							<img src='img/Logo/logo3.png'>
+							<p>PLAYER</p>
+						</div>
 					</div>
 				</div>
 				<div class="wrapperTrophy">

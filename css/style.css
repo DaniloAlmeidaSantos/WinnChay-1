@@ -474,8 +474,8 @@
     font-size: 15px;
 }
 
-.elementStats_third{
-	background-color: #2d133c;
+/* .elementStats_third{
+	background-color: #ac88c2;
 	position: absolute;
 	transform: translate(-50% , -50%);
 	left: 24.8%;
@@ -485,6 +485,112 @@
 	overflow: scroll;
 	scrollbar-width: none;
 	-ms-overflow-style: none;
+} */
+
+.elementStats_Container{
+	width: 36%;
+	height: 80%;
+
+	margin-left: 2%;
+	margin-top: 8.7%;
+
+	background-color: #1b0f2f;
+}
+
+.elementStats_Container button{
+	border: none;
+	text-decoration: none;
+	font-size: 1rem;
+	cursor: pointer;
+}
+
+.elementStats_Container button:hover{
+	animation: borderanima 0.8s 0s normal forwards;
+	outline: 60px solid #fff;
+	outline-offset: -60px;
+}
+
+@-webkit-keyframes borderanima{
+	form { 
+		outline: 1000px solid #fff;
+		outline-offset: -1000px; 
+	}
+	to { 
+		outline: 0px solid #000;
+		outline-offset: -0px;
+		background-color: #321555;
+		color: #fff;
+	 }
+}
+
+.elementStats_Container h5{
+	width: 88%;
+
+	margin-left: 5%;
+
+	transform: translateY(30%);
+
+	color: #fff;
+	background-color: #420864;
+
+	font-size: 2rem;
+	padding: 10px;
+	text-align: center;
+}
+
+.elementStats_Container h6{
+	color: #fff;
+
+	font-size: 1.2rem;
+
+	margin-top: 90%;
+	text-align: center;
+}
+
+.elementStats_SearchTorn{
+	position: absolute;
+
+	width: 15%;
+	height: 20%;
+
+	top: 33%;
+	left: 4%;
+}
+
+.elementStats_SearchTorn img{
+	position: absolute;
+	width: 100px;
+	height: 100px;
+
+	bottom: 10%;
+	left: 5%;
+}
+
+.elementStats_SearchTorn p{
+	font-size: 2rem;
+}
+
+.elementStats_SearchUser{
+	position: absolute;
+
+	width: 15%;
+	height: 20%;
+
+	top: 60%;
+	left: 4%;
+}
+
+.elementStats_SearchUser img{
+	position: absolute;
+	width: 100px;
+	height: 100px;
+
+	bottom: 10%;
+	left: 5%;
+}
+
+.elementStats_SearchUser p{
+	font-size: 2rem;
 }
 
 .elementStats_third::-webkit-scrollbar{
@@ -511,8 +617,105 @@
 }
 
 .elementStats_Search h1{
+	margin-top: 2%;
 	font-size: 2.5rem;
 	color: #fff;
+}
+
+.elementStats_ContainerTorn{
+	animation: showtorn 1s 0s normal forwards;
+	position: absolute;
+
+	top: 45%;
+	left: 19%;
+
+	width: 1%;
+	height: 3%;
+
+	background-color: #1b0f2f;
+	display: none;
+}
+
+@-webkit-keyframes showtorn{
+	0%{
+		top: 45%;
+		left: 19%;
+		width: 1%;
+		height: 3%;
+	}
+	50%{
+		top: 45%;
+		left: 22%;
+		width: 1%;
+		height: 3%;
+	}
+	70%{
+		top: 45%;
+		left: 22%;	
+		width: 18%;
+		height: 3%;
+	}
+
+	100%{
+		top: 17.5%;
+		left: 22%;
+		width: 18%;
+		height: 80%;
+	}
+}
+
+.elementStats_ContainerTorn input{
+	width: 85%;
+
+	margin-left: 7%;
+	margin-top: -1%;
+}
+
+.Element_Close, .elementStats_ContainerTorn input{
+	animation: showform 2s 1s normal forwards;
+	opacity: 0;
+} 
+
+@-webkit-keyframes showform{
+	from { opacity: 0; }
+	to { opacity: 1; }
+}
+
+.elementStats_ContainerUser{
+	animation: showtorn 1s 0s normal forwards;
+	position: absolute;
+
+	top: 45%;
+	left: 19%;
+
+	width: 1%;
+	height: 3%;
+
+	background-color: #1b0f2f;
+	display: none;
+}
+
+.elementStats_ContainerUser input{
+	width: 85%;
+
+	margin-left: 7%;
+	margin-top: -1%;
+}
+
+.Element_Close, .elementStats_ContainerUser input{
+	animation: showform 2s 1s normal forwards;
+	opacity: 0;
+}
+
+.Element_Close{
+	background-color: #7e080a;
+	color: #FFF;
+	padding: 5px;
+	width: 30px;
+	font-size: 1.5rem;
+	text-align: center;
+	margin-left: 95%;
+	margin-top: -1%;
 }
 
 .buttonTorn{
