@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-
 <head>
 	<title>WinnChay - Login</title>
 	<meta charset="utf-8">
@@ -33,22 +32,28 @@
 			</div>
 
 			<div id="element_form">
+				<?php
+					session_start();
+					if (isset($_SESSION['errorRegister'])):
+						echo $_SESSION['errorRegister'];
+					endif;
+				?>
 				<form class="form-inline" action="" method="POST">
 					<div class="form-group col-md-7">
 						<label for="nome" class="mr-sm-2">Nome:</label>
-						<input type="text" id="nome" class="form-control mb-2 mr-sm-2">
+						<input type="text" id="nome" name="txtFirstName" class="form-control mb-2 mr-sm-2">
 					</div>
 					<div class="form-group col-md-7">
 						<label for="sobrenome" class="mr-sm-2">Sobrenome:</label>
-						<input type="text" id="sobrenome" class="form-control mb-2 mr-sm-2">
+						<input type="text" id="sobrenome" name="txtLastName" class="form-control mb-2 mr-sm-2">
 					</div>
 					<div class="form-group col-md-9">
 						<label for="nomeusu" class="mr-sm-2">Nome de Usuário:</label>
-						<input type="text" id="nomeusu" class="form-control mb-2 mr-sm-2">	
+						<input type="text" id="nomeusu" name="textUser" class="form-control mb-2 mr-sm-2">
 					</div>
 					<div class="form-group col-md-7">
 						<label for="tel" class="mr-sm-2">Telefone:</label>
-						<input type="text" id="tel" class="form-control mb-2 mr-sm-2">
+						<input type="text" id="tel" name="txtPhone" class="form-control mb-2 mr-sm-2">
 					</div>
 					<div class="col-md-12">
 						<button class="element_buttonFinal">Finalizar Cadastro</button>
@@ -59,6 +64,15 @@
 	</div>
 
 	<script src="js/registerUserInfo.js"></script>
+	<?php
+		include 'includes/Register.php';
+		$register = new Register();
 
+		if ($register->verifyUsername($_POST['txtUser'])):
+			if ($rgister->createUser($_POST['txtFirstName'],$_POST['txtLastName'],$_POST['txtUser'],$_SESSION['emailRegister'],$_SESSION['pwdRegister'],$_POST['txtPhone'])):
+				$register->rankingFifa();
+			endif;
+		endif;
+	?>
 </body>
 </html>

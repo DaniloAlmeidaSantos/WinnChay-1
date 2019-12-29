@@ -37,25 +37,25 @@
 		<?php endif; ?>
 		<?php
 			session_start();
-			$_SESSION['cod'] = rand(1000, 9999);
-			// Requisitando o composer
-			require 'vendor/autoload.php';
+			if (isset($_GET['true'])):
+				$_SESSION['cod'] = rand(1000, 9999);
+				// Requisitando o composer
+				require 'vendor/autoload.php';
 
-			// Definindo os parâmetros de envio da mensagem
-			$from = new SendGrid\Email(null, "WinnChay@suporte.com");
-			$subject = "Ativar Conta - WinnChay";
-			$to = new SendGrid\Email(null, "{$_SESSION["emailRegister"]}");
-			$content = new SendGrid\Content("text/html", "Olá, <br><br>ative seu código de ativação de conta: <br><br><b> Código: </b>{$_SESSION['cod']}.<br><br> Atenciosamente,<br><b> Equipe WinnChay. </b>");
-			$mail = new SendGrid\Mail($from, $subject, $to, $content);
+				// Definindo os parâmetros de envio da mensagem
+				$from = new SendGrid\Email(null, "WinnChay@suporte.com");
+				$subject = "Ativar Conta - WinnChay";
+				$to = new SendGrid\Email(null, "{$_SESSION["emailRegister"]}");
+				$content = new SendGrid\Content("text/html", "Olá, <br><br>Seu código de ativação de conta: <br><br><b> Código: </b>{$_SESSION['cod']}.<br><br> Atenciosamente,<br><b> Equipe WinnChay. </b>");
+				$mail = new SendGrid\Mail($from, $subject, $to, $content);
 
-			// Ativando a chave da API no SednGrid
-			$apiKey = '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';
-			$sg = new \SendGrid($apiKey);
+				// Ativando a chave da API no SednGrid
+				$apiKey = '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';
+				$sg = new \SendGrid($apiKey);
 
-			//Finalizando o processo
-			$response = $sg->client->mail()->send()->post($mail);
-
-			if (isset($_POST['btnRepeat'])):
+				//Finalizando o processo
+				$response = $sg->client->mail()->send()->post($mail);
+			elseif (isset($_POST['btnRepeat'])):
 				$_SESSION['cod'] = rand(1000, 9999);
 
 				// Requisitando o composer
@@ -65,7 +65,7 @@
 				$from = new SendGrid\Email(null, "WinnChay@suporte.com");
 				$subject = "Ativar Conta - WinnChay";
 				$to = new SendGrid\Email(null, "{$_SESSION["emailRegister"]}");
-				$content = new SendGrid\Content("text/html", "Olá, <br><br>ative seu código de ativação de conta: <br><br><b> Código: </b>{$_SESSION['cod']}.<br><br> Atenciosamente,<br><b> Equipe WinnChay. </b>");
+				$content = new SendGrid\Content("text/html", "Olá, <br><br>Seu código de ativação de conta: <br><br><b> Código: </b>{$_SESSION['cod']}.<br><br> Atenciosamente,<br><b> Equipe WinnChay. </b>");
 				$mail = new SendGrid\Mail($from, $subject, $to, $content);
 
 				// Ativando a chave da API no SednGrid
