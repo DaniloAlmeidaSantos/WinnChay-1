@@ -1,10 +1,10 @@
 function searchName(name) {
   $.ajax({
-    url: "includes/search.php",
+    url: "includes/searchPlayers.php",
     method: "POST",
     data: {name:name},
     success: function(data){
-      $('#result').html(data);
+      $('#resultPlayers').html(data);
     }
   });
 }
@@ -12,7 +12,7 @@ function searchName(name) {
 $(document).ready(function(){
   searchName();
 
-  $('#search').keydown(function(){
+  $('#searchPlayers').keydown(function(){
     var name = $(this).val();
     if (name != ''){
       searchName(name);

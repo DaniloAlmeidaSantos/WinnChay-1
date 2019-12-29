@@ -6,6 +6,7 @@
 	<title>WinnChay - Página Inicial</title>
 	<meta charset="utf-8">
 	<link rel="stylesheet" href="css/style.css">
+	<script type="text/javascript" src="js/codes-ajax/jquery-3.3.1.min.js"></script>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
@@ -67,7 +68,7 @@
 				<div id="element_windowBack"></div>
 
 				<div id="Bell">
-					
+
 				<button onclick="sinoNotifica2();"><b>X</b></button>
 					<?php
 						include 'includes/Notifications.php';
@@ -96,7 +97,7 @@
 
 					<div class="elementHome_second">
 						<div class="container">
-							
+
 						</div>
 					</div>
 					<div class="elementHome_header">
@@ -106,7 +107,7 @@
 					<div class="elementHome_third">
 						terceiro
 					</div>
-					
+
 					<a onclick="showModal()" href="#">
 						<div class="elementHome_forth">
 							quarto marcar
@@ -116,7 +117,7 @@
 					<script>
 						var modalWindow = document.getElementById("element_window");
 						var modalBack = document.getElementById("element_windowBack");
-						
+
 						function showModal(){
 							modalWindow.style.display = "block";
 							modalBack.style.display = "initial";
@@ -155,17 +156,21 @@
 						</button>
 						<h6>Lembrando que você pode fechar a janela de pesquisa usando "ESC"</h6>
 					</div>
+					<script type="text/javascript" src="js/codes-ajax/searchTorneios.js"></script>
 					<div class="elementStats_ContainerTorn">
 						<a onclick="easeSearchTorn()"><div class="Element_Close">X</div></a>
-						<form action="">
-							<input type="text" placeholder="Procure por TORNEIOS aqui...">
-						</form>
+						<input type="text" id="searchTorneios" placeholder="Procure por TORNEIOS aqui..." />
+						<div id="resultTorneios">
+
+						</div>
 					</div>
+					<script type="text/javascript" src="js/codes-ajax/searchPlayers.js"></script>
 					<div class="elementStats_ContainerUser">
 						<a onclick="easeSearchTorn()"><div class="Element_Close">X</div></a>
-						<form action="">
-							<input type="text" placeholder="Procure por USUÁRIOS aqui...">
-						</form>
+						<input type="text" id="searchPlayers" placeholder="Procure por USUÁRIOS aqui...">
+						<div id="resultPlayers">
+
+						</div>
 					</div>
 				</div>
 
@@ -175,7 +180,7 @@
 					var searchResultUsu = document.getElementsByClassName("elementStats_ContainerUser")[0];
 
 					console.log(document.getElementsByClassName("elementStats_ContainerUser")[0])
-					
+
 						function searchTorn(){
 							searchResult.style.display = "block";
 						}
@@ -219,7 +224,7 @@
 					</div>
 
 					<div class="elementTorn_display">
-						
+
 					</div>
 					<div class="elementTorn_Users">
 						<div class="elementTorn_Header">

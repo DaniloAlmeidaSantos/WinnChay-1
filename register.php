@@ -18,8 +18,8 @@
       <div class="boxCadastro">
         <?php
           session_start();
-          if ($_SESSION['error'] != ''):
-            echo $_SESSION['error'];
+          if (isset($_SESSION['errorRegister'])):
+            echo $_SESSION['errorRegister']."<br>";
           endif;
         ?>
         <center>
@@ -46,16 +46,18 @@
     </form>
 
     <?php
+      include 'includes/Register.php';
+      $register = new Register();
       if (isset($_POST['btnRegister'])):
-        // Parâmetros que serão enviados
-        $_SESSION['emailRegister']  = $_POST['txtEmail'];
-        $_SESSION['pwdRegister']    = $_POST['txtPwd'];
-        // Verificando se o E-Mail e a senha são correspondentes
-        if ($_POST['txtEmail'] == $_POST['txtCEmail'] && $_POST['txtPwd'] == $_POST['txtCPwd']):
-          header('location: sendGrid/emailConfirmation.php?true=true');
-        else:
-          // Caso a estrutura de decisão não for verdadeira, esta linha retorna um erro
-          $_SESSION['error'] = "<h6 style='color: red;'> Senha ou E-Mail não correspondentes </h6><br>";
+        if ($register->verifyEmail($_POST['txtEmail'])):
+          // Parâmetros que serão enviados
+          $_SESSION['emailRegister']  = $_POST['txtEmail'];
+          $_SESSION['pwdRegister']    = $_POST['txtPwd'];
+          // Verificando se o E-Mail e a senha são correspondentes
+          if ($_POST['txtEmail'] == $_POST['txtCEmail'] && $_POST['txtPwd'] == $_POST['txtCPwd']):
+            $_SESSION['errorRegister'] = '';
+            header('location: sendGrid/emailConfirmation.php?true=true');
+          endif;
         endif;
       endif;
     ?>
