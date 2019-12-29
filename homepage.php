@@ -173,8 +173,6 @@
 					var searchResult = document.getElementsByClassName("elementStats_ContainerTorn")[0];
 
 					var searchResultUsu = document.getElementsByClassName("elementStats_ContainerUser")[0];
-
-					console.log(document.getElementsByClassName("elementStats_ContainerUser")[0])
 					
 						function searchTorn(){
 							searchResult.style.display = "block";

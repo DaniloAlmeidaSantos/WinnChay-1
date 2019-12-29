@@ -105,6 +105,46 @@
 
 /*=============================================== HOMEPAGE.php ======================================================*/
 
+/* Apenas Edge */
+@supports (-ms-ime-align:auto)
+and (-webkit-text-stroke:initial) {
+	html, body{
+		overflow: hidden;
+	}
+	.slide{
+		height: 100px;
+		width: 100px;
+	}
+	
+	.Wrapper{
+		display: flex;
+		flex-direction: row;
+		width: 200px;
+		transform: rotate(90deg) translateY(-100%);
+		transform-origin: top left;
+	}
+	
+	.Home{
+		background: #37164a;
+	}
+	
+	.Center{
+		background-color: #1b0f2f;
+	}
+	.outerWrapper{
+		width: 100px;
+		height: 10px;
+		transform: rotate(-90deg) translateX(-100%);
+		transform-origin: top left;
+		overflow-y: scroll;
+		overflow-x: hidden;
+		position: absolute;
+		scrollbar-width: none;
+	}
+	
+}
+/* Apenas Edge END */
+
 .Font{
 	font-family: 'Viga', sans-serif;
 }
@@ -131,7 +171,6 @@
 
 .Center{
 	background-color: #1b0f2f;
-
 }
 .outerWrapper{
 	width: 100px;
@@ -146,13 +185,11 @@
 	scrollbar-width: none;
 	-ms-overflow-style: none;
 	overflow: -moz-scrollbars-none;
-
 }
+
 .outerWrapper::-webkit-scrollbar{
 	display: none;
 }
-
-/* Page Home */
 
 .sidenav {
 	height: 100%;
@@ -198,7 +235,6 @@
 	margin-top: 40px;
 }
 
-
 #Bell{
 	display: initial;
 	position: absolute;
@@ -220,8 +256,6 @@
 	outline: none;
 }
 
-
-
 @keyframes deslizarLeft{
 	0%   { transform:translate(-420px, 0px); }
 	100%  { transform:translate(0px, 0px); }
@@ -232,10 +266,6 @@
 	100%  { transform:translate(-420px, 0px); }
 }
 
-
-
-
-/* Home and home Itens */
 #Home {
 	background-color: #472880;
 	width: 95.99vw;
@@ -617,6 +647,7 @@
 }
 
 .elementStats_Search h1{
+	transform: translateX(-7%);
 	margin-top: 2%;
 	font-size: 2.5rem;
 	color: #fff;
@@ -657,10 +688,40 @@
 	}
 
 	100%{
-		top: 17.5%;
+		top: 18.33%;
 		left: 22%;
-		width: 18%;
+		width: 17.8%;
 		height: 80%;
+	}
+}
+
+@-moz-document url-prefix() {
+    @-webkit-keyframes showtorn{
+		0%{
+			top: 45%;
+			left: 19%;
+			width: 1%;
+			height: 3%;
+		}
+		50%{
+			top: 45%;
+			left: 22%;
+			width: 1%;
+			height: 3%;
+		}
+		70%{
+			top: 45%;
+			left: 22%;	
+			width: 18%;
+			height: 3%;
+		}
+	
+		100%{
+			top: 17.5%;
+			left: 22%;
+			width: 17.8%;
+			height: 80%;
+		}
 	}
 }
 
@@ -697,6 +758,7 @@
 
 .elementStats_ContainerUser input{
 	width: 85%;
+	height: 5000px;
 
 	margin-left: 7%;
 	margin-top: -1%;
@@ -716,6 +778,7 @@
 	text-align: center;
 	margin-left: 95%;
 	margin-top: -1%;
+	cursor: pointer;
 }
 
 .buttonTorn{
