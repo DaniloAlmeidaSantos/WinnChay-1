@@ -727,6 +727,8 @@ and (-webkit-text-stroke:initial) {
 
 .elementStats_ContainerTorn input{
 	width: 85%;
+	height: 30px;
+	font-size: 1.2rem;
 
 	margin-left: 7%;
 	margin-top: -1%;
@@ -758,7 +760,8 @@ and (-webkit-text-stroke:initial) {
 
 .elementStats_ContainerUser input{
 	width: 85%;
-	height: 5000px;
+	height: 30px;
+	font-size: 1.2rem;
 
 	margin-left: 7%;
 	margin-top: -1%;
