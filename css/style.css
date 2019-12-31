@@ -1,6 +1,10 @@
 
 /*================================================= INDEX.php =====================================================*/
 
+.container{
+	color: black;
+}
+
 /* Header/Parallax */
 .parallax{
 	width: 100%;
@@ -21,8 +25,17 @@
 }
 /* Sections */
 .maxAlt{
-	margin-top: 20px;
+	margin-top: 10px;
 }
+
+.containerContent{
+	position: relative;
+	z-index: -2;
+	background-color: rgb(19, 10, 34);
+	width: 100vw;
+	height: 97vh;
+}
+
 .maxAlt h1{
 	text-align: center;
 	font-family: 'Staatliches', cursive;
@@ -35,31 +48,6 @@
 	font-kerning: auto;
 }
 
-.Fading::after{
-	content  : "";
-	position : absolute;
-	z-index  : 1;
-	bottom   : 0;
-	left     : 0;
-	pointer-events   : none;
-	background-image : linear-gradient(to bottom, rgba(255,255,255, 0), rgba(255,255,255, 1) 70%);
-	width    : 100%;
-	height   : 4em;
-}
-.imgFade::after{
-	content  : "";
-	position : absolute;
-	z-index  : 1;
-
-	bottom   : 0;
-	left     : 0;
-	width: 100%;
-	height: 100%;
-
-	box-sizing: border-box;
-	box-shadow: inset 40px 0 20px 20px #FFF;
-}
-
 .sizeText{
 	font-family: 'Dosis' bold;
 }
@@ -69,12 +57,131 @@
 	transform: translateY(50%);
 }
 
-.sizeText_S2{
-	font-size: 40px;
+.buttonPrimary{
+	z-index: 3;
+	border: none;
+	text-decoration: none;
+	font-size: 2rem;
+	cursor: pointer;
+	border-radius: 4px;
+
+	position: absolute;
+	transform: translate(40%, 950%);
+
+	background-color: #0f963c;
+	color: white;
+
+	padding: 10px;
+	padding-left: 28px;
+	padding-right: 28px;
+	
+	width: 20%;
 }
 
-.p{
-	font-size: 20px;
+.maxAlt .imgLogo{
+	z-index: 6;
+	position: absolute;
+	bottom: 82%;
+	left: 92%;
+
+	width: 6%; 
+	height: 11%;
+}
+
+.maxAlt img{
+	z-index: 6;
+	transform: translateY(-33%);
+	left: 50%;
+	position: absolute;
+	width: 39%;
+	height: 80%;
+}
+
+.sizeText_S2{
+	position: relative;
+	z-index: 4;
+	padding-left: 30px;
+	padding-top: 10px;
+	width: 50%;
+	height: 50%;
+	font-size: 40px;
+	color: #fff;
+}
+
+.containerContent div{
+	height: 80%;
+}
+
+div .Triangle:nth-child(1){
+	position: relative;
+	z-index: -3;
+	width: 0;
+	height: 0;
+	transform: rotate(90deg) translate(-68% , 30%);
+    border-left: 290px solid transparent;
+    border-right: 290px solid transparent;  
+    border-bottom: 400px solid #321555;
+}
+
+div .Triangle:nth-child(2){
+	position: relative;
+	z-index: -3;
+	width: 0;
+	height: 0;
+	transform:rotate(-90deg) translate(138% , 140%);
+    border-left: 300px solid transparent;
+    border-right: 300px solid transparent;  
+    border-bottom: 460px solid rgba(50, 4, 88, 1);
+}
+
+div .Triangle:nth-child(3){
+	position: relative;
+	z-index: -3;
+	width: 0;
+	height: 0;
+	transform:rotate(-180deg) translate(-30% , 232%);
+    border-left: 300px solid transparent;
+    border-right: 300px solid transparent;  
+    border-bottom: 600px solid rgba(50, 4, 88, 0.5);
+}
+
+div .Triangle:nth-child(4){
+	position: absolute;
+	bottom: 20%;
+	left: 45%;
+	z-index: 5;
+	width: 0;
+	height: 0;
+	transform: rotate(-40deg);
+    border-left: 200px solid transparent;
+    border-right: 200px solid transparent;  
+    border-bottom: 340px solid rgba(151, 77, 236, 0.2);
+}
+
+div .Triangle:nth-child(5){
+	position: absolute;
+	bottom: -2%;
+	left: 15%;
+	z-index: -3;
+	width: 0;
+	height: 0;
+	transform: rotate(0deg);
+    border-left: 100px solid transparent;
+    border-right: 100px solid transparent;  
+    border-bottom: 140px solid rgba(151, 77, 236, 0.2);
+}
+
+.maxAlt .p{
+	position: absolute;
+	top: 25%;
+	text-align: left;
+	font-size: 1.5rem;
+	z-index: 2;
+
+	width: 40%;
+	height: 50%;
+	
+	margin-left: 3%;
 }
 
 .sizeImagem img{
@@ -101,6 +208,150 @@
 	height: 75px;
 	border-radius: 50%;
 }
+
+.row small p{
+	text-align: left;
+	color: #0f0520;
+}
+
+.login{
+	position: fixed;
+	z-index: 100000;
+	width: 0;
+	height: 0;
+	transform: rotate(-44deg) translate(-18%, -53%);
+
+	border-left: 50px solid transparent;
+    border-right: 50px solid transparent;  
+	border-bottom: 50px solid rgba(151, 77, 236, 0.2);
+	transition: 0.8s;
+}
+
+.login:hover{
+	
+	position: fixed;
+	z-index: 100000;
+	width: 50px;
+	height: 80px;
+	background-color: rgb(163, 7, 7);
+	transform: translate(-18%, 0%);
+}
+
+.login a img{
+	width: 50px;
+	height: 50px;
+	position: absolute;
+	transform: translate(-30%, 10%);
+	opacity: 0;
+	transition: 0.6s;
+}
+
+.login h1{
+	font-size: 1.6rem;
+	position: absolute;
+	left: -16px;
+	top: 5px;
+	color: #fff;
+
+	-webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    cursor: default;
+}
+
+.login:hover.login h1:nth-child(1){
+	font-size: 0;
+}
+
+.login:hover.login a:nth-child(2) img{
+	opacity: 1;
+	transition: 0.6s;
+}
+
+.login:hover::after{
+	transition: 0.6s;
+	content: 'Entrar';
+	position: absolute;
+	top: 55px;
+	right: -30px;
+	color: #fff;
+}
+
+
+
+
+.register{
+	position: fixed;
+	z-index: 100000;
+	width: 0;
+	height: 0;
+	top: -1%;
+	left: 94.7%;
+	transform: rotate(44deg) ;
+
+	border-left: 50px solid transparent;
+    border-right: 50px solid transparent;  
+	border-bottom: 50px solid rgba(151, 77, 236, 0.2);
+	transition: 0.8s;
+}
+
+.register:hover{
+	
+	position: fixed;
+	z-index: 100000;
+	width: 50px;
+	height: 80px;
+	background-color: rgb(163, 7, 7);
+	transform: translate(-18%, 6%);
+}
+
+.register a img{
+	width: 50px;
+	height: 50px;
+	position: absolute;
+	transform: translate(-56%, 10%);
+	opacity: 0;
+	transition: 0.6s;
+}
+
+.register h1{
+	font-size: 1.5rem;
+	position: absolute;
+	left: -26px;
+	top: 5px;
+	color: #fff;
+
+	-webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    cursor: default;
+}
+
+.register:hover.register h1:nth-child(1){
+	font-size: 0;
+}
+
+.register:hover.register a:nth-child(2) img{
+	opacity: 1;
+	transition: 0.6s;
+}
+
+.register:hover::after{
+	transition: 0.6s;
+	white-space: nowrap;
+	content: 'Cadastre-se';
+	position: absolute;
+	top: 55px;
+	right: -33px;
+	color: #fff;
+}
+
 /*=============================================== INDEX.php END ====================================================*/
 
 /*=============================================== HOMEPAGE.php ======================================================*/
@@ -938,6 +1189,7 @@ input[type="file"] {
 	top: 1.6%;
 	left: 61.5%;
 	overflow: auto;
+	overflow-x: hidden;
 	scrollbar-width: none;
 	-ms-overflow-style: none;
 }
@@ -969,6 +1221,60 @@ input[type="file"] {
 	font-size: 1.4rem;
 	background-color: #e1d8f3;
 	padding: 12px;
+}
+
+.contentHist_boardscore img{
+	width: 11%;
+	transform: translate(140px, -130%);
+}
+
+.contentHist_boardscore p{
+	text-align: center;
+	padding-left: 26%;
+	padding-right: 64%;
+	transform: translate(0px, -480%);
+}
+
+.contentHist_score{
+	background-color: #5c208e;
+	padding: 2.5%;
+	line-height: 50px;
+	font-size: 4rem;
+	margin: 0%;
+	width: 45px;
+	height: 80px;
+	transform: translate(220px, -207%);
+}
+
+.contentHist_vs{
+	width: 3%;
+	margin-right: 1px;
+	padding: 0px;
+	font-size: 2rem;
+	transform: translate(270px, -730%);
+}
+
+.contentHist_scoreVisitor{
+	background-color: #5c208e;
+	padding: 2.5%;
+	line-height: 50px;
+	font-size: 4rem;
+	margin: 0%;
+	width: 45px;
+	height: 80px;
+	transform: translate(290px, -344%);
+}
+
+.contentHist_boardscoreVisitor img{
+	width: 11%;
+	transform: translate(355px, -592%);
+}
+
+.contentHist_boardscoreVisitor p{
+	text-align: center;
+	padding-left: 64%;
+	padding-right: 26%;
+	transform: translate(0px, -2300%);
 }
 
 .contentHist_TeamHome{

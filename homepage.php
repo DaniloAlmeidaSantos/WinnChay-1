@@ -346,11 +346,22 @@
 						<div class='contentHist_date'>
 							<p>19/11/2019</p>
 							<p>horas</p>
-							</div>
-							<div class='contentHist_boardscore'>
-							<img src='img/Logo/logo3.png'>
-							<p>PLAYER</p>
 						</div>
+
+						<div class='contentHist_boardscore'>
+							<img src='img/Logo/logo3.png'>
+							<p>guadalaja</p>
+						</div>
+
+						<div class="contentHist_score">1</div>
+						<div class="contentHist_vs">X</div>
+						<div class="contentHist_scoreVisitor">1</div>
+
+						<div class='contentHist_boardscoreVisitor'>
+							<img src='img/Logo/logo3.png'>
+							<p>PLAYER pc</p>
+						</div>
+
 					</div>
 				</div>
 				<div class="wrapperTrophy">

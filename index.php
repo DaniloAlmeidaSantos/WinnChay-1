@@ -11,6 +11,17 @@
 <script src="js/parallax.js"></script>
 </head>
 <body>
+	<div class="login">
+		<h1>Login</h1>
+		<a href="login.php"><img style="" src="img/Logo/logo3.png" alt=""></a>
+	</div>
+
+	<div class="register">
+		<h1>Cadastro</h1>
+		<a href="register.php"><img style="" src="img/Logo/logo3.png" alt=""></a>
+	</div>
+
+
 	<center>
     <div class="parallax">
 		<ul id="scene" style="margin:0;">
@@ -37,26 +48,31 @@
 		var parallax = new Parallax(scene);
 	</script>
 
-	<div class="container">
+	<div class="container" style="color: black;">
 		<section>
 			<div class="maxAlt">
-				<h1>Gerador de Campeonatos E-Sports:</h1>
+				<h1>Gerador de Torneiros para FIFA e PES:</h1>
 				<h5>Já possui cadastro? não!? então <a href="login.php">cadastre-se</a></h5>
 				<hr>
 			</div>
 		</section>
 		<br>
 		<section>
+		<a href="register.php"><button class="buttonPrimary">Cadastre-se Aqui</button></a>
 			<div class="row">
-				<div class="col-md-5">
+				<div class="containerContent">
 					<div class="maxAlt">
-						<h3 class="sizeText_S2">Crie Campeonatos e faça disputas épicas com seus amigos:</h3>
-						<p class="sizeText_S2 p">Com a plataforma da WinnChay você poderá desafiar seus amigos e pessoas de todo o Brasil a entrarem em campeonatos altamente competitivos para que você prove o seu valor.</p>
+						<h3 class="sizeText_S2"><b>Crie Campeonatos e faça disputas épicas com seus amigos:</b></h3>
+						<p class="p">Com a plataforma da WinnChay você poderá desafiar seus amigos e pessoas de todo o Brasil a entrarem em campeonatos altamente competitivos para que você prove o seu valor. <br><br> Cadastre-se abaixo e conheça a nossa plataforma em desenvolvimento.</p>
+						<img src="img/Src/playingVG.png" alt="Jogando VídeoGame">
+						<img class="imgLogo" src="img/Logo/logo3.png" alt="logo winnchay" >
 					</div>
-				</div>
-				<div class="col-md-7">
-					<div class="imgFade">
-						<center><img width="" src="img/Src/videogame.jpg"></center>
+					<div>
+						<div class="Triangle"></div>
+						<div class="Triangle"></div>
+						<div class="Triangle"></div>
+						<div class="Triangle"></div>
+						<div class="Triangle"></div>
 					</div>
 				</div>
 			</div>
@@ -159,10 +175,10 @@
 		</section>
 		<section class="disclaimer bg-light border">
 			<div class="container">
-				<div class="row ">
+				<div class="row">
 					<div class="col-md-12 py-2">
 						<small>
-							<p>Disponibilizamos nossa plataforma de forma gratuita para afins estudantis por esse fato pode ser que tenhamos bugs e alguns problemas no sistema que deve ser informado a nós o mais rápido possível para que possamos solucionar e dar uma experiência bacana com nosso projeto, é importante que os usuários nos dê feedbacks do que podemos implementar para que fica cada vez mais confortável o uso no cotidiano corrícuo, agradecemos por todos que vem nos apoiando através de doações e clicando nos anuncios com isso vocês estão nos ajudando a manter o site no ar e nos motivando para melhorar a plataforma.</p>
+							<p>Disponibilizamos nossa plataforma de forma gratuita para afins estudantis por esse fato pode ser que tenhamos bugs e alguns problemas no sistema que deve ser informado a nós o mais rápido possível para que possamos solucionar e dar uma experiência bacana com nosso projeto, é importante que os usuários nos dê feedbacks do que podemos implementar para que fique cada vez mais confortável o uso no cotidiano corrícuo.</p>
 						</small>
 					</div>
 				</div>
