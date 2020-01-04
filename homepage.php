@@ -5,7 +5,9 @@
 <head>
 	<title>WinnChay - Página Inicial</title>
 	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/1680x1050_Desktop.css">
 	<script type="text/javascript" src="js/codes-ajax/jquery-3.3.1.min.js"></script>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -16,6 +18,7 @@
 </head>
 
 <body class="Font">
+	<div class="deviceOnly"></div>
 	<div class="outerWrapper">
 		<div class="Wrapper">
 			<div class="slide Home">
@@ -30,12 +33,12 @@
 							</a>
 						</div>
 						<div class="perfilHome">
-							<a href="#home" class="tablink" onclick="openPage('Home', this, '#472880')">
+							<a href="#home" class="tablink" id="defaultOpen" onclick="openPage('Home', this, '#472880')">
 								<img width="120%" src="img/Logo/home_navbar.png">
 							</a>
 						</div>
 						<div class="perfilProcurar">
-							<a href="#procurar" id="defaultOpen" class="tablink" onclick="openPage('Procurar', this, '#37164a')">
+							<a href="#procurar"  class="tablink" onclick="openPage('Procurar', this, '#37164a')">
 								<img width="120%" src="img/Logo/lupa_navbar.png">
 							</a>
 						</div>
@@ -215,7 +218,7 @@
 								<img src="img/Src/videogame.jpg" alt="">
 							</div>
 							<div class="elementTorn_tornName">
-								<h1>Copa favela</h1>
+								<h1>Copa Nome</h1>
 							</div>
 						</div>
 					</div>

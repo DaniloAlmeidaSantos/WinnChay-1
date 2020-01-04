@@ -3,7 +3,9 @@
 <head>
 	<meta charset="utf-8">
 	<title>Winnchay</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/1680x1050_Desktop.css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 	<link href="https://fonts.googleapis.com/css?family=Dosis|Staatliches&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
@@ -13,23 +15,23 @@
 <body>
 	<div class="login">
 		<h1>Login</h1>
-		<a href="login.php"><img style="" src="img/Logo/logo3.png" alt=""></a>
+		<a href="login.php"><img src="img/Logo/logo3.png" alt=""></a>
 	</div>
 
 	<div class="register">
 		<h1>Cadastro</h1>
-		<a href="register.php"><img style="" src="img/Logo/logo3.png" alt=""></a>
+		<a href="register.php"><img src="img/Logo/logo3.png" alt=""></a>
 	</div>
 
 
 	<center>
     <div class="parallax">
 		<ul id="scene" style="margin:0;">
-			<li class="layer" data-depth=".1"><img class="img-fluid" src="img/Logo/logo.png"></li>
+			<li class="layer" data-depth=".1"><img class="imgz imgztitle" src="img/Logo/logo.png"></li>
 
-			<li class="layer" data-depth="1"><img class="img-fluid" src="img/Src/margin2.png"></li>
-			<li class="layer" data-depth="-1"><img class="img-fluid" src="img/Src/margin1.png"></li>
-			<li class="layer" data-depth=".1"><img class="img-fluid" src="img/Src/margin.png"></li>
+			<li class="layer" data-depth="1"><img class="imgz" src="img/Src/margin2.png"></li>
+			<li class="layer" data-depth="-1"><img class="imgz" src="img/Src/margin1.png"></li>
+			<li class="layer" data-depth=".1"><img class="imgz" src="img/Src/margin.png"></li>
 
 			<!-- <li class="layer" data-depth="1"><img class="img-fluid" src="img/teste/planet1.png"></li>
 			<li class="layer" data-depth="-1"><img class="img-fluid" src="img/teste/planet2.png"></li>
@@ -37,7 +39,7 @@
 			<li class="layer" data-depth="0.5"><img class="img-fluid" src="img/teste/rocket.png"></li> -->
 
 
-			<li class="layer" data-depth=".0"><img class="img-fluid" class="tamImg" src="img/Src/light.png"></li>
+			<li class="layer" data-depth=".0"><img class="imgz" class="tamImg" src="img/Src/light.png"></li>
 		</ul>
 	</div>
 	</center>
