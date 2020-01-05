@@ -1,6 +1,12 @@
 <!DOCTYPE html>
 <html class="formatpage">
-<?php session_start(); ?>
+<?php
+	session_start();
+	include 'includes/verifyUser.php';
+	include 'includes/ChangeInfo.php';
+	include 'includes/Historic.php';
+	$historic = new Historic();
+?>
 
 <head>
 	<title>WinnChay - Página Inicial</title>
@@ -61,10 +67,38 @@
 					<div class="element_formCreateTorn">
 						<form action="">
 							<label for="">Nome do Campeonato:</label>
-							<input type="text">
+							<input type="text" name="txtName" maxlength="50" required>
 							<br>
 							<label for="">Data:</label>
-							<input type="text">
+							<input type="datetime-local" name="date" required>
+							<br>
+							<label>Número de jogadores:</label>
+				      <select name='cboNPlayers' required>
+				    		<option value='8'>
+				    			8 - Jogadores
+				    		</option>
+				    		<option value='16'>
+				    			16 - Jogadores
+				    		</option>
+				    	</select>
+							<br>
+							<label>Plataforma:</label>
+				      <select name='cboPlatform' required>
+				    		<option value='1'>
+				    	    PC
+				    		</option>
+				    		<option value='2'>
+				    			PS4
+				    		</option>
+				        <option value='3'>
+				    			XBOX ONE
+				    		</option>
+				    	</select>
+							<br>
+							<label>Premiações:</label>
+				      <input type="text" name="txtAwards" maxlength="100" required><br>
+							<label>Descrição:</label><br>
+				      <textarea name="txtDesc" rows="8" cols="40" maxlength="160"></textarea>
 						</form>
 					</div>
 				</div>
@@ -73,6 +107,7 @@
 				<div id="Bell">
 
 				<button onclick="sinoNotifica2();"><b>X</b></button>
+					<center><h1 style="color: black;">Notificações</h1></center>
 					<?php
 						include 'includes/Notifications.php';
 						$notify = new Notifications();
@@ -104,7 +139,7 @@
 						</div>
 					</div>
 					<div class="elementHome_header">
-						<h1>Bem Vindo Fulano</h1>
+						<h1>Bem Vindo <?=$_SESSION['user'];?></h1>
 					</div>
 
 					<div class="elementHome_third">
@@ -209,33 +244,18 @@
 						<h1>Meus Campeonatos</h1>
 					</div>
 
-					<div class="elementTorn_sideBar">
-						<div class="elementTorn_HeaderBar">
+					<div class='elementTorn_sideBar'>
+						<div class='elementTorn_HeaderBar'>
 							Campeonatos:
 						</div>
-						<div class="elementTorn_tornWrap">
-							<div class="elementTorn_tornImg">
-								<img src="img/Src/videogame.jpg" alt="">
-							</div>
-							<div class="elementTorn_tornName">
-								<h1>Copa Nome</h1>
-							</div>
-						</div>
+
+						<?php
+							$historic->myChamp();
+						?>
 					</div>
 
 					<div class="elementTorn_display">
 
-					</div>
-					<div class="elementTorn_Users">
-						<div class="elementTorn_Header">
-							Participantes:
-						</div>
-						<div class="elementTorn_UserWrap">
-							<div class="elementTorn_UserImg">
-								<img src="img/Src/videogame.jpg" alt="">
-								<center><input type="checkbox"/></center>
-							</div>
-						</div>
 					</div>
 				</div>
 
@@ -245,7 +265,7 @@
 				<?php
 				include 'includes/Stats.php';
 				$graphics = new Stats();
-				$graphics->graphics(1);
+				$graphics->graphics($_COOKIE['id']);
 				?>
 				<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 				<script type="text/javascript">
@@ -258,9 +278,9 @@
 					function drawChart() {
 						var data = google.visualization.arrayToDataTable([
 							['Desempenho', 'W/D/L'],
-							['Vitórias', <?php echo $_SESSION['wins']; ?>],
-							['Derrotas', <?php echo $_SESSION['loses']; ?>],
-							['Empates', <?php echo $_SESSION['draws']; ?>]
+							['Vitórias', 	<?= $_SESSION['wins']; ?>],
+							['Derrotas', 	<?= $_SESSION['loses']; ?>],
+							['Empates', 	<?= $_SESSION['draws']; ?>]
 						]);
 
 						// Dando um nome e definindo o tipo do gráfico
@@ -279,16 +299,15 @@
 				<p class="titleGrafic">Gráfico de Desempenho</p>
 					<div id="piechart_3d"></div>
 					<?php
-						include 'includes/ChangeInfo.php';
-								include 'includes/ProfilePicture.php';
-						include 'includes/Score.php';
+							include 'includes/ProfilePicture.php';
+							include 'includes/Score.php';
 
-						$historic = new Score();
-								$info = new ChangeInfo();
-								$picture = new ProfilePicture();
+							$historic = new Score();
+							$info = new ChangeInfo();
+							$picture = new ProfilePicture();
 
-								$info->selectInfo();
-								$picture->image();
+							$info->selectInfo();
+							$picture->image();
 					?>
 				<div class="Perfil">
 					<form style="width: 100%; height: 100%;" id='input-form' method="post" enctype="multipart/form-data" action="upload.php">
@@ -300,9 +319,9 @@
 						</div>
 						<br><br>
 						<?php
-							//if (empty($_SESSION['error'])) {
+							if (isset($_SESSION['error'])) {
 								echo $_SESSION['error'];
-							//}
+							}
 						?>
 					</form>
 					<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
@@ -329,14 +348,14 @@
 				</div>
 				<div class="infoUser">
 					<br>
-					<p class="userName"><b><?php echo $_SESSION['user']; ?></b></p>
-					<p class="userFirst"><?php echo '<b>'.$_SESSION['l_name'].'</b>, '. $_SESSION['f_name']; ?></p>
+					<p class="userName"><b><?= $_SESSION['user']; ?></b></p>
+					<p class="userFirst"><?= '<b>'.$_SESSION['l_name'].'</b>, '. $_SESSION['f_name']; ?></p>
 					<hr>
 					<p class="userEmail">E-mail:</p>
-					<p class="userEmail2"><b><?php echo $_SESSION['email']; ?></b></p>
+					<p class="userEmail2"><b><?= $_SESSION['email']; ?></b></p>
 
 					<p class="userTel">Telefone:</p>
-					<p class="userTel2"><b><?php echo $_SESSION['phone']; ?></b></p>
+					<p class="userTel2"><b><?= $_SESSION['phone']; ?></b></p>
 
 					<p class="userTeam">Time de Coração:</p>
 					<p class="userTeam2"><b>Barcelona</b></p>
