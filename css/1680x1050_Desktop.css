@@ -1,0 +1,1325 @@
+/* @media screen and (max-height: 900px){
+    .deviceOnly{
+        display: initial;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+		background-color: rgba(0, 0, 0, 0.5);
+		z-index: 999999999999999999;
+    }
+} */
+
+@media screen and (max-width: 1680px)/*Desktop*/{
+
+    /* index page */
+
+    .parallax{
+        width: 100%;
+        height: 100vh;
+    }
+
+    .containerContent{
+        position: relative;
+        z-index: -2;
+        background-color: rgb(19, 10, 34);
+        width: 100vw;
+        height: 80vh;
+    }
+
+    .buttonPrimary{
+        transform: translate(25%, 900%);
+    }
+
+    .maxAlt img{
+        z-index: 6;
+        transform: translate(-10% ,-33%);
+        left: 50%;
+        position: absolute;
+        width: 580px;
+        height: 590px;
+    }
+
+    div .Triangle:nth-child(2){
+        transform:rotate(-90deg) translate(150% , 150%);
+        border-left: 300px solid transparent;
+        border-right: 300px solid transparent;  
+        border-bottom: 430px solid rgba(50, 4, 88, 1);
+    }
+
+    div .Triangle:nth-child(3){
+        transform:rotate(-180deg) translate(-30% , 243%);
+        border-left: 300px solid transparent;
+        border-right: 300px solid transparent;  
+        border-bottom: 600px solid rgba(50, 4, 88, 0.5);
+    }
+
+    .register{
+        left: 95.5%;
+    }
+
+    .login{
+        left: 1.2%;
+    }
+
+    /* index page */
+
+    /* Home Tab */
+    .elementHome_second{
+        left: 13.5%;
+        width: 21%;
+    }
+
+    .elementHome_header{
+        background-color: #2d2143;
+        position: absolute;
+        transform: translate(-50% , -50%);
+        top: 0%;
+        left: 0%;
+        width: 100%;
+        height: 25vh;
+        line-height: 40px;
+        cursor: pointer;
+    }
+    
+    .elementHome_header h1{
+        font-size: 2rem;
+    }
+
+    .Perfil{
+        width: 350px;
+        height: 350px;
+        background-color: white;
+        margin-left: 0.5vw;
+        margin-top: 0.5vw;
+    }
+    
+    .PerfilHover{
+        width: 350px;
+        height: 350px;
+    }
+    
+    input[type="file"] {
+        opacity: 0;
+        height: 350px;
+        width: 350px;
+    }
+
+    #piechart_3d{
+        left: 77%;
+        margin-top: 100px;
+    }
+
+    .wrapperTrophy{
+        height: 450px;
+        background-color: rgb(75, 23, 72);
+        top: 49%;
+    }
+
+    /* Home Tab END */
+    /* Search Tab */
+
+    .elementStats_Search h1{
+        margin-top: 2.5%;
+        font-size: 3rem;
+    }
+
+    .elementStats_Container{
+        margin-top: 10%;
+    }
+
+    .elementStats_Container h5{
+        position: relative;
+        height: 10%;
+        font-size: 2.7rem;
+        transform: translateY(40%);
+    }
+    
+    .elementStats_Container h6{
+        font-size: 1.3rem;
+        margin-top: 95%;
+        text-align: center;
+    }
+    
+    .elementStats_SearchTorn img{
+        width: 140px;
+        height: 140px;
+    }
+    
+    .elementStats_SearchTorn p{
+        transform: translateX(3%);
+        font-size: 3rem;
+    }
+    
+    .elementStats_SearchUser img{
+        width: 140px;
+        height: 140px;
+    }
+    
+    .elementStats_SearchUser p{
+        transform: translateX(3%);
+        font-size: 3rem;
+    }
+
+    /* Search Tab END */
+    /* Campeonatos Tab */
+
+    .elementTorn_header h1{
+        margin-top: 35px;
+        margin-right: 220px;
+        font-size: 3rem;
+    }
+
+    .elementTorn_HeaderBar{
+        width: 100%;
+        height: 6%;
+        font-size: 1.7rem;
+        line-height: 250%;
+    }
+
+    .elementTorn_tornWrap{
+        height: 10%;
+        transform: translate(-0%, 70%);
+    }
+
+    .elementTorn_Header{
+        line-height: 250%;
+    }
+
+    .elementTorn_UserImg{
+        width: 130px;
+        height: 130px;
+    }
+
+    .elementTorn_UserWrap{
+        height: 23%;
+    }
+
+    /* Campeonatos Tab END */
+    
+}
+
+@media screen and (max-width: 1440px)/*Laptop/Desktop*/{
+
+    /* index page */
+
+    .parallax{
+        width: 100%;
+        height: 100vh;
+    }
+
+    .containerContent{
+        position: relative;
+        z-index: -2;
+        background-color: rgb(19, 10, 34);
+        width: 100vw;
+        height: 80vh;
+    }
+
+    .buttonPrimary{
+        transform: translate(35%, 900%);
+    }
+
+    .maxAlt img{
+        z-index: 6;
+        transform: translate(-10% ,-33%);
+        left: 50%;
+        position: absolute;
+        width: 480px;
+        height: 490px;
+    }
+
+    div .Triangle:nth-child(2){
+        transform:rotate(-90deg) translate(160% , 163%);
+        border-left: 250px solid transparent;
+        border-right: 250px solid transparent;  
+        border-bottom: 430px solid rgba(50, 4, 88, 1);
+    }
+
+    div .Triangle:nth-child(3){
+        transform:rotate(-180deg) translate(-30% , 227%);
+        border-left: 300px solid transparent;
+        border-right: 300px solid transparent;  
+        border-bottom: 600px solid rgba(50, 4, 88, 0.5);
+    }
+
+    .register{
+        left: 94.8%;
+    }
+
+    .login{
+        left: 0%;
+    }
+
+    /* index page */
+
+    /* Home Tab */
+    .elementHome_second{
+        left: 13%;
+        width: 19%;
+    }
+
+    .Perfil{
+        width: 310px;
+        height: 310px;
+    }
+    
+    .PerfilHover{
+        width: 310px;
+        height: 310px;
+    }
+    
+    input[type="file"] {
+        height: 310px;
+        width: 310px;
+    }
+
+    #piechart_3d{
+        left: 79.3%;
+        margin-top: 55px;
+    }
+
+    .wrapperTrophy{
+        height: 360px;
+        background-color: rgb(50, 8, 63);
+        top: 52.4%;
+    }
+
+    /* Home Tab END */
+    /* Search Tab */
+
+    .elementStats_Search h1{
+        margin-top: 2.5%;
+        font-size: 3rem;
+    }
+
+    .elementStats_Container{
+        margin-top: 10%;
+    }
+
+    .elementStats_Container h5{
+        position: relative;
+        height: 10%;
+        font-size: 2.7rem;
+        transform: translateY(40%);
+    }
+    
+    .elementStats_SearchTorn img{
+        width: 130px;
+        height: 130px;
+    }
+    
+    .elementStats_SearchUser img{
+        width: 130px;
+        height: 130px;
+    }
+
+    /* Search Tab END */
+    /* Campeonatos Tab */
+
+    .elementTorn_header h1{
+        margin-top: 28px;
+        margin-right: 220px;
+        font-size: 3rem;
+    }
+    .elementTorn_UserImg{
+        width: 111px;
+        height: 111px;
+    }
+
+    .elementTorn_tornWrap{
+        width: 100%;
+        height: 11%;
+        transform: translate(-0%, 65%);
+        background-color: #471e60;
+    }
+
+    /* Campeonatos Tab END */
+}
+
+@media screen and (max-width: 1370px)/*Laptop/Desktop*/{
+
+    /* index page */
+
+    .containerContent{
+        height: 100vh;
+    }
+    /* index page */
+    
+
+    /* Home Tab */
+    .elementHome_second{
+        left: 13%;
+        width: 19%;
+    }
+
+    .elementHome_third{
+        transform: translate(-50% , -50%);
+        left: 33%;
+        top: 43.5%;
+        width: 20%;
+        height: 45.8%;
+    }
+    
+    .elementHome_forth{
+        transform: translate(-50% , -50%);
+        left: 33%;
+        top: 82%;
+        width: 20%;
+        height: 27%;
+    }
+
+    .Perfil{
+        width: 300px;
+        height: 300px;
+    }
+    
+    .PerfilHover{
+        width: 300px;
+        height: 300px;
+    }
+    
+    input[type="file"] {
+        height: 300px;
+        width: 300px;
+    }
+
+    #piechart_3d{
+        left: 79.2%;
+        margin-top: 40px;
+    }
+
+    .wrapperTrophy{
+        height: 279px;
+        background-color: rgb(50, 8, 63);
+        top: 52.4%;
+    }
+
+    /* Home Tab END */
+    /* Search Tab */
+
+    .elementStats_Search h1{
+        margin-top: 2%;
+        font-size: 2.5rem;
+    }
+
+    .elementStats_Container{
+        margin-top: 8.5%;
+    }
+
+    .elementStats_Container h5{
+        position: relative;
+        height: 10%;
+        font-size: 2rem;
+        transform: translateY(40%);
+    }
+
+    .elementStats_SearchTorn p{
+        font-size: 2.3rem;
+    }
+
+    .elementStats_SearchUser p{
+        font-size: 2.3rem;
+    }
+    
+    .elementStats_SearchTorn img{
+        width: 100px;
+        height: 100px;
+    }
+    
+    .elementStats_SearchUser img{
+        width: 100px;
+        height: 100px;
+    }
+
+    .elementStats_Container h6{
+        color: #fff;
+    
+        font-size: 1.2rem;
+    
+        margin-top: 80%;
+        text-align: center;
+    }
+
+    /* Search Tab END */
+    /* Campeonatos Tab */
+
+    .elementTorn_header h1{
+        margin-top: 28px;
+        margin-right: 220px;
+        font-size: 3rem;
+    }
+    .elementTorn_UserImg{
+        width: 111px;
+        height: 111px;
+    }
+
+    .elementTorn_tornWrap{
+        width: 100%;
+        height: 11%;
+        transform: translate(-0%, 65%);
+        background-color: #471e60;
+    }
+
+    /* Campeonatos Tab END */
+}
+
+@media screen and (max-width: 1024px)/*Ipad*/{
+
+    /* index page */
+
+    .parallax{
+        width: 100%;
+        height: 75vh;
+    }
+
+    .containerContent{
+        position: relative;
+        z-index: -2;
+        background-color: rgb(19, 10, 34);
+        width: 100vw;
+        height: 80vh;
+    }
+
+    .buttonPrimary{
+        transform: translate(40%, 650%);
+    }
+
+    .maxAlt img{
+        z-index: 6;
+        transform: translate(-10% ,-33%);
+        left: 50%;
+        position: absolute;
+        width: 480px;
+        height: 490px;
+    }
+
+    div .Triangle:nth-child(2){
+        transform:rotate(-90deg) translate(160% , 120%);
+        border-left: 250px solid transparent;
+        border-right: 250px solid transparent;  
+        border-bottom: 430px solid rgba(50, 4, 88, 1);
+    }
+
+    div .Triangle:nth-child(3){
+        transform:rotate(-180deg) translate(-30% , 227%);
+        border-left: 300px solid transparent;
+        border-right: 300px solid transparent;  
+        border-bottom: 600px solid rgba(50, 4, 88, 0.5);
+    }
+
+    .register{
+        width: 0;
+        height: 0;
+        top: -1%;
+        left: 92.9%;
+        transform: rotate(44deg) ;
+    
+        border-left: 50px solid transparent;
+        border-right: 50px solid transparent;  
+        border-bottom: 50px solid rgba(151, 77, 236, 0.2);
+        transition: 0.8s;
+    }
+
+    /* index page */
+
+    /* Home Tab */
+    .sidenav {
+        height: 100%;
+        width: 5.5vw;
+        position: fixed;
+        z-index: 10000000000;
+        top: 0;
+        left: 0;
+        background-color: #1a1327;
+        overflow-x: hidden;
+        padding-top: 20px;
+    }
+
+    .elementHome_second{
+        transform: translate(-50% , -50%);
+        left: 15.5%;
+        top: 58%;
+        width: 430px;
+        height: 75vh;
+    }
+
+    .elementHome_third{
+        transform: translate(-50% , -50%);
+        left: 37%;
+        top: 43.5%;
+        width: 430px;
+        height: 45.8%;
+    }
+    
+    .elementHome_forth{
+        transform: translate(-50% , -50%);
+        left: 37%;
+        top: 82%;
+        width: 430px;
+        height: 27%;
+    }
+
+    .h3_Nov{
+        left: 13%;
+    }
+    
+    .h3_Mod{
+        left: 35.5%;
+    }
+
+    #Bell{
+        width: 20vw;
+    }
+
+    .centerHist{
+        height: 50vh;
+        width: 60vw;
+        top: 1.6%;
+        left: 67%;
+    }
+
+    .contentHist_header{
+        background-color: #3f236d;
+        color: #fff;
+        width: 100%;
+        height: 12%;
+        font-size: 2rem;
+        text-align: center;
+        padding-top: 1.3%;
+        padding-bottom:1.3%;
+    }
+
+    #piechart_3d{
+        left: 79.3%;
+        margin-top: 22%;
+    }
+
+    .wrapperTrophy{
+        height: 300px;
+        width: 300px;
+        top: 56%;
+        left: 67%;
+    }
+
+    .titleGrafic{
+        display: none;
+    }
+
+    .Perfil{
+        width: 330px;
+        height: 330px;
+        background-color: white;
+        margin-left: 0.5vw;
+        margin-top: 0.5vw;
+    }
+    #img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    
+    .PerfilHover{
+        width: 330px;
+        height: 330px;
+        opacity: 0.0;
+        position: absolute;
+        top: 0%;
+        margin-top: 8px;
+        background: url(../img/Src/addImg.png);
+    }
+    
+    input[type="file"] {
+        opacity: 0;
+        height: 330px;
+        width: 330px;
+    }
+
+    /* Home Tab END*/
+    /* Search Tab */
+
+    .elementStats_Search h1{
+        transform: translateX(4.1%);
+        margin-top: 3.5%;
+        font-size: 2.9rem;
+    }
+
+    .elementStats_Container{
+        width: 48%;
+        height: 80%;
+    
+        margin-left: 3.5%;
+        margin-top: 13%;
+    }
+    .elementStats_SearchTorn{
+        width: 20.3%;
+        left: 4.8%;
+    }
+
+    .elementStats_SearchUser{
+        width: 20.3%;
+        left: 4.8%;
+    }
+
+    @-webkit-keyframes showtorn{
+        0%{
+            top: 45%;
+            left: 19%;
+            width: 1%;
+            height: 3%;
+        }
+        50%{
+            top: 45%;
+            left: 22%;
+            width: 1%;
+            height: 3%;
+        }
+        70%{
+            top: 45%;
+            left: 22%;	
+            width: 18%;
+            height: 3%;
+        }
+    
+        100%{
+            top: 16.7%;
+            left: 27%;
+            width: 22%;
+            height: 80%;
+        }
+    }
+
+    /* Search Tab END */
+
+    /* Campeonato Tab */
+
+
+
+    /* Campeonato Tab END*/
+}
+
+@media screen and (max-width: 800px)/*Iphone 6,7,8*/{
+    /* Home Tab */
+    .sidenav {
+        width: 7vw;
+    }
+
+    .sidenav a {
+        padding: 3px 9px 5px 9px;
+    }
+
+    .elementHome_header{
+        height: 33vh;
+    }
+
+    .elementHome_header h1{
+        font-size: 1.4rem;
+    }
+
+    .elementHome_second{
+        transform: translate(-50% , -50%);
+        left: 15.5%;
+        top: 60%;
+        width: 280px;
+        height: 75vh;
+    }
+
+    .elementHome_third{
+        transform: translate(-50% , -50%);
+        left: 37%;
+        top: 45.5%;
+        width: 280px;
+        height: 45.8%;
+    }
+    
+    .elementHome_forth{
+        transform: translate(-50% , -50%);
+        left: 37%;
+        top: 84%;
+        width: 280px;
+        height: 27%;
+    }
+
+    .h3_Nov{
+        left: 13%;
+        font-size: 1.2rem;
+        top: 17.6%;
+    }
+    
+    .h3_Mod{
+        left: 35.5%;
+        font-size: 1.2rem;
+        top: 17.6%;
+    }
+
+    #Bell{
+        width: 20vw;
+    }
+
+    .centerHist{
+        height: 56.5vh;
+        width: 40vw;
+        top: 1.6%;
+        left: 67%;
+    }
+
+    #piechart_3d{
+        display: none;
+    }
+
+    .wrapperTrophy{
+        height: 100vh;
+        width: 160px;
+        top: 1.5%;
+        left: 87.5%;
+    }
+
+    .titleGrafic{
+        display: none;
+    }
+
+    .Perfil{
+        width: 215px;
+        height: 215px;
+    }
+    
+    .PerfilHover{
+        width: 215px;
+        height: 215px;
+        background: url(../img/Src/addImg.png);
+    }
+    
+    input[type="file"] {
+        height: 215px;
+        width: 215px;
+    }
+
+    .userName{
+        font-size: 1.3rem;
+    }
+
+    .userFirst{
+        font-size: 1.3rem;
+    }
+    
+    .userEmail{
+        font-size: 1.3rem;
+    }
+    
+    .userTel{
+        font-size: 1.3rem;
+        position: absolute;
+        top: 64%;
+        left: 66.5%;
+    }
+    
+    .userTeam{
+        font-size: 1.3rem;
+        position: absolute;
+        top: 80%;
+        left: 66.5%;
+    }
+    
+    .userEmail2{
+        font-size: 1.2rem;
+    }
+    
+    .userTel2{
+        font-size: 1.3rem;
+        position: absolute;
+        top: 69%;
+        left: 66.5%;
+    }
+    
+    .userTeam2{
+        font-size: 1.3rem;
+        position: absolute;
+        top: 85%;
+        left: 66.5%;
+    }
+
+    /* Home Tab END*/
+    /* Search Tab */
+
+    .elementStats_Search{
+        background-color: #220e2e;
+        position: absolute;
+        left: 0vh;
+        top: 0%;
+        width: 100vw;
+        height: 17vh;
+        text-align: center;
+        z-index: 1;
+    }
+
+    .elementStats_Search h1{
+        transform: translateX(4.1%);
+        margin-top: 3.5%;
+        font-size: 2rem;
+    }
+
+    .elementStats_Container{
+        width: 48%;
+        height: 80%;
+    
+        margin-left: 3.5%;
+        margin-top: 11%;
+    }
+
+    .elementStats_Container h5{
+        font-size: 1.5rem;
+    }
+
+    .elementStats_SearchTorn{
+        width: 20.3%;
+        left: 4.8%;
+    }
+
+    .elementStats_SearchUser{
+        width: 20.3%;
+        left: 4.8%;
+    }
+
+    .elementStats_SearchTorn img{
+        position: absolute;
+        width: 67px;
+        height: 67px;
+    
+        bottom: 7%;
+        left: 5%;
+    }
+    
+    .elementStats_SearchTorn p{
+        font-size: 1.7rem;
+        margin-right: 5%;
+        margin-top: 3%;
+    }
+
+    .elementStats_SearchUser img{
+        position: absolute;
+        width: 67px;
+        height: 67px;
+    
+        bottom: 7%;
+        left: 5%;
+    }
+    
+    .elementStats_SearchUser p{
+        font-size: 1.7rem;
+        margin-right: 5%;
+        margin-top: 3%;
+    }
+
+    .elementStats_Container h6{
+        color: #fff;
+    
+        font-size: 1rem;
+    
+        margin-top: 74%;
+        text-align: center;
+    }
+
+    @-webkit-keyframes showtorn{
+        0%{
+            top: 45%;
+            left: 19%;
+            width: 1%;
+            height: 3%;
+        }
+        50%{
+            top: 45%;
+            left: 22%;
+            width: 1%;
+            height: 3%;
+        }
+        70%{
+            top: 45%;
+            left: 22%;	
+            width: 18%;
+            height: 3%;
+        }
+    
+        100%{
+            top: 18.7%;
+            left: 27%;
+            width: 22%;
+            height: 80%;
+        }
+    }
+
+    /* Search Tab END */
+
+    /* Campeonato Tab */
+
+
+
+    /* Campeonato Tab END*/
+}
+
+@media screen and (max-width: 650px)/*Iphone 6,7,8*/{
+
+    /* index page */
+
+    .parallax{
+        width: 100%;
+        height: 30vh;
+    }
+
+    .containerContent{
+        align-items: center;
+        align-content: center;
+        position: relative;
+        transform: translateX(5%);
+        z-index: -2;
+        background-image: radial-gradient(rgb(32, 12, 51), rgb(42, 12, 77), rgb(25, 14, 39) );
+        width: 90vw;
+        height: 95vh;
+    }
+
+    .buttonPrimary{
+        font-size: 2rem;
+        transform: translate(-2%, 1050%);
+
+        padding: 10px;
+        padding-left: 28px;
+        padding-right: 28px;
+        
+        width: 94vw;
+    }
+
+    .maxAlt h1{
+        font-size: 5rem;
+    }
+
+    .maxAlt .imgLogo{
+        display: none;
+    }
+
+    .maxAlt h3{
+        font-size: 2.5rem;
+        width: 94%;
+        margin-left: 2%;
+    }
+
+    .maxAlt .p{
+        font-size: 1.2rem;
+        width: 80%;
+        text-align: center;
+        margin-left: 10%;
+        margin-top: 5%;
+    }
+
+    .maxAlt img{
+        z-index: 6;
+        transform: translate(-55% ,20%);
+        left: 50%;
+        position: absolute;
+        width: 220px;
+        height: 230px;
+    }
+
+    .parallax #scene:nth-child(1) li{
+        transform: translateX(-100%);
+    }
+
+    .imgztitle{
+        transform: translateX(-10%);
+    }
+
+    div .Triangle:nth-child(1){
+        display: none;
+    }
+    
+    div .Triangle:nth-child(2){
+        display: none;
+    }
+    
+    div .Triangle:nth-child(3){
+        display: none;
+    }
+    
+    div .Triangle:nth-child(4){
+        display: none;
+    }
+    
+    div .Triangle:nth-child(5){
+        display: none;
+    }
+
+    .register{
+        display: none;
+    }
+
+    /* index page */
+
+    /* Home Tab */
+    .sidenav img{
+        width: 28px;
+        margin-left: -4px;
+    }
+
+    .perfilLogo{
+        margin-top: -16%;
+        margin-left: 1px;
+    }
+
+    .sidenav a {
+        padding: 3px 9px 5px 9px;
+        text-decoration: none;
+        color: #818181;
+        display: block;
+    }
+
+    .elementHome_header h1{
+        font-size: 1.4rem;
+    }
+
+    .elementHome_second{
+        transform: translate(-50% , -50%);
+        left: 15.5%;
+        top: 60%;
+        width: 240px;
+        height: 75vh;
+    }
+
+    .elementHome_third{
+        transform: translate(-50% , -50%);
+        left: 37%;
+        top: 45.5%;
+        width: 240px;
+        height: 45.8%;
+    }
+    
+    .elementHome_forth{
+        transform: translate(-50% , -50%);
+        left: 37%;
+        top: 84%;
+        width: 240px;
+        height: 27%;
+    }
+
+    .h3_Nov{
+        left: 13%;
+        font-size: 1.2rem;
+        top: 17.6%;
+    }
+    
+    .h3_Mod{
+        left: 35.5%;
+        font-size: 1.2rem;
+        top: 17.6%;
+    }
+
+    #Bell{
+        width: 20vw;
+    }
+
+    .centerHist{
+        height: 56.5vh;
+        width: 40vw;
+        top: 1.6%;
+        left: 67%;
+    }
+
+    .contentHist_header{
+        font-size: 1.2rem;
+        text-align: center;
+        padding-top: 1.3%;
+        padding-bottom:1.3%;
+    }
+
+    #piechart_3d{
+        display: none;
+    }
+
+    .wrapperTrophy{
+        height: 97vh;
+        width: 135px;
+        top: 1.5%;
+        left: 87.5%;
+    }
+
+    .titleGrafic{
+        display: none;
+    }
+
+    .Perfil{
+        width: 184px;
+        height: 184px;
+    }
+    
+    .PerfilHover{
+        width: 184px;
+        height: 184px;
+        background: url(../img/Src/addImg.png);
+    }
+    
+    input[type="file"] {
+        height: 184px;
+        width: 184px;
+    }
+
+    .userName{
+        font-size: 1.3rem;
+    }
+
+    .userFirst{
+        font-size: 1.3rem;
+    }
+    
+    .userEmail{
+        font-size: 1.3rem;
+    }
+
+    .userEmail2{
+        font-size: 1.2rem;
+    }
+    
+    .userTel{
+        font-size: 1.3rem;
+        position: absolute;
+        top: 64%;
+        left: 66.5%;
+    }
+    
+    .userTeam{
+        font-size: 1.3rem;
+        position: absolute;
+        top: 80%;
+        left: 66.5%;
+    }
+    
+    .userEmail2{
+        font-size: 1.2rem;
+    }
+    
+    .userTel2{
+        font-size: 1.3rem;
+        position: absolute;
+        top: 69%;
+        left: 66.5%;
+    }
+    
+    .userTeam2{
+        font-size: 1.3rem;
+        position: absolute;
+        top: 85%;
+        left: 66.5%;
+    }
+
+    /* Home Tab END*/
+    /* Search Tab */
+
+    .elementStats_Search{
+        background-color: #220e2e;
+        position: absolute;
+        left: 0vh;
+        top: 0%;
+        width: 100vw;
+        height: 17vh;
+        text-align: center;
+        z-index: 1;
+    }
+
+    .elementStats_Search h1{
+        transform: translateX(4.1%);
+        margin-top: 3.5%;
+        font-size: 2rem;
+    }
+
+    .elementStats_Container{
+        width: 48%;
+        height: 80%;
+    
+        margin-left: 3.5%;
+        margin-top: 11%;
+    }
+
+    .elementStats_Container h5{
+        font-size: 1.5rem;
+    }
+
+    .elementStats_SearchTorn{
+        width: 20.3%;
+        left: 4.8%;
+    }
+
+    .elementStats_SearchUser{
+        width: 20.3%;
+        left: 4.8%;
+    }
+
+    .elementStats_SearchTorn img{
+        position: absolute;
+        width: 67px;
+        height: 67px;
+    
+        bottom: 7%;
+        left: 5%;
+    }
+    
+    .elementStats_SearchTorn p{
+        font-size: 1.7rem;
+        margin-right: 5%;
+        margin-top: 3%;
+    }
+
+    .elementStats_SearchUser img{
+        position: absolute;
+        width: 67px;
+        height: 67px;
+    
+        bottom: 7%;
+        left: 5%;
+    }
+    
+    .elementStats_SearchUser p{
+        font-size: 1.7rem;
+        margin-right: 5%;
+        margin-top: 3%;
+    }
+
+    .elementStats_Container h6{
+        color: #fff;
+    
+        font-size: 1rem;
+    
+        margin-top: 74%;
+        text-align: center;
+    }
+
+    @-webkit-keyframes showtorn{
+        0%{
+            top: 45%;
+            left: 19%;
+            width: 1%;
+            height: 3%;
+        }
+        50%{
+            top: 45%;
+            left: 22%;
+            width: 1%;
+            height: 3%;
+        }
+        70%{
+            top: 45%;
+            left: 22%;	
+            width: 18%;
+            height: 3%;
+        }
+    
+        100%{
+            top: 18.7%;
+            left: 27%;
+            width: 22%;
+            height: 80%;
+        }
+    }
+
+    /* Search Tab END */
+
+    /* Campeonato Tab */
+
+
+
+    /* Campeonato Tab END*/
+}
