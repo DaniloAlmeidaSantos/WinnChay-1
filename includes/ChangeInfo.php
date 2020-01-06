@@ -13,7 +13,7 @@
 
     public function selectInfo(){
       $stmt = $this->conn->prepare('SELECT * FROM PLAYERS WHERE IDPLAYER = ?');
-      $stmt->bindValue(1, 1, PDO::PARAM_INT);
+      $stmt->bindParam(1, $_COOKIE['id'], PDO::PARAM_INT);
       $stmt->execute();
 
       while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {

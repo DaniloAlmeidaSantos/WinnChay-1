@@ -18,7 +18,7 @@
 			->> Quando chamado, este método retorna um registro no BD
 		*/
 		public function select($em, $pass){
-			$stmt = $this->conn->prepare("SELECT EMAIL,PASSWORD FROM PLAYERS WHERE EMAIL=? AND PASSWORD=?");
+			$stmt = $this->conn->prepare("SELECT EMAIL,PASSWORD,IDPLAYER FROM PLAYERS WHERE EMAIL=? AND PASSWORD=?");
 			$stmt->bindValue(1, $em, PDO::PARAM_STR);
 			$stmt->bindValue(2, $pass, PDO::PARAM_STR);
 			$stmt->execute();
