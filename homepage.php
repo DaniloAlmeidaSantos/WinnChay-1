@@ -342,30 +342,20 @@
 					<p class="userTeam2"><b>Barcelona</b></p>
 				</div>
 				<div class="centerHist">
-					<div class="contentHist_header">
-						Seu Histórico de partidas
+					
+					<div class="row">
+						<div class="col col-xs-1">dosodaso</div>
+						<div class="col col-xs-1">
+							<img src="img/Logo/logo3.png" class="img-fluid" alt="team logo">
+						</div>
+						<div class="col col-xs-1"><p>1</p></div>
+						<div class="col col-xs-1"><p>X</p></div>
+						<div class="col col-xs-1"><p>1</p></div>
+						<div class="col col-xs-1">
+							<img src="img/Logo/logo3.png" class="img-fluid" alt="team logo">
+						</div>
 					</div>
-					<div class="contentHist_games">
-						<div class='contentHist_date'>
-							<p>19/11/2019</p>
-							<p>horas</p>
-						</div>
 
-						<div class='contentHist_boardscore'>
-							<img src='img/Logo/logo3.png'>
-							<p>guadalaja</p>
-						</div>
-
-						<div class="contentHist_score">1</div>
-						<div class="contentHist_vs">X</div>
-						<div class="contentHist_scoreVisitor">1</div>
-
-						<div class='contentHist_boardscoreVisitor'>
-							<img src='img/Logo/logo3.png'>
-							<p>PLAYER pc</p>
-						</div>
-
-					</div>
 				</div>
 				<div class="wrapperTrophy">
 
