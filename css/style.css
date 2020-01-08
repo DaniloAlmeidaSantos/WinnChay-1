@@ -308,7 +308,7 @@ div .Triangle:nth-child(5){
 	z-index: 100000;
 	width: 50px;
 	height: 80px;
-	background-color: rgb(163, 7, 7);
+	background-color: rgb(19, 107, 7);
 	transform: translate(-18%, 6%);
 }
 
@@ -355,6 +355,14 @@ div .Triangle:nth-child(5){
 	right: -33px;
 	color: #fff;
 }
+
+/* .section_features{
+	margin-top: 50%;
+}
+
+.footers{
+	margin-top: 30%;
+} */
 
 /*=============================================== INDEX.php END ====================================================*/
 
@@ -1184,58 +1192,64 @@ input[type="file"] {
 }
 
 .row{
-	transform: translate(3.3%, 3.5%);
+	/* transform: translate(3.3%, 3.5%);
+	width: 99%;
+	height: 17vh; */
+}
+
+.rowColor{
 	background-color: #471e60;
+	transform: translate(3.3%, 3.5%);
 	width: 99%;
 	height: 17vh;
 }
 
-.row .col:nth-child(1){
+.rowColor .col:nth-child(1){
 	transform: translate(5%, 5%);
 	width: 1%;
 	height: 90%;
 	background-color: #925bf7;
 }
 
-.row .col:nth-child(2) img{
+.rowColor .col:nth-child(2) img{
 	max-width: 95%;
 	height: auto;
 	transform: translate(15%, 29%);
 }
 
-.row .col:nth-child(3){
+.rowColor .col:nth-child(3){
 	transform: translate(15%, 5%);
 	padding: 0;
 	height: 90%;
 	background-color: #925bf7;
 }
 
-.row .col:nth-child(3) p{
+.rowColor .col:nth-child(3) p{
 	color: #fff;
 	transform: translate(30%, 5%);
 	font-size: 6rem;
 }
 
-.row .col:nth-child(4) p{
+.rowColor .col:nth-child(4) p{
 	color: #fff;
 	transform: translate(4%, 70%);
 	font-size: 3rem;
 }
 
-.row .col:nth-child(5){
+.rowColor .col:nth-child(5){
 	transform: translate(-77%, 5%);
 	padding: 0;
 	height: 90%;
 	background-color: #925bf7;
 }
 
-.row .col:nth-child(5) p{
+.rowColor .col:nth-child(5) p{
 	color: #fff;
 	transform: translate(30%, 5%);
 	font-size: 6rem;
 }
 
-.row .col:nth-child(6) img{
+.rowColor .col:nth-child(6) img{
 	max-width: 95%;
 	height: auto;
 	transform: translate(-75%, 29%);

@@ -1049,6 +1049,14 @@
         display: none;
     }
 
+    .sizeText h1{
+        font-size: 1em;
+    }
+    
+    .sizeImagem img{
+        width: 60%;
+    }
+
     /* index page */
 
     /* Home Tab */

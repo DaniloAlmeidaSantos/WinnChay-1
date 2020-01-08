@@ -3,6 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<title>Winnchay</title>
+	<link rel="shortcut icon" href="img/Logo/logo3.png">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="css/1680x1050_Desktop.css">
@@ -54,7 +55,7 @@
 		<section>
 			<div class="maxAlt">
 				<h1>Gerador de Torneiros para FIFA e PES:</h1>
-				<h5>Já possui cadastro? não!? então <a href="login.php">cadastre-se</a></h5>
+				<h5>Já possui cadastro? se não <a href="register.php">cadastre-se</a></h5>
 				<hr>
 			</div>
 		</section>
@@ -64,8 +65,8 @@
 			<div class="row">
 				<div class="containerContent">
 					<div class="maxAlt">
-						<h3 class="sizeText_S2"><b>Crie Campeonatos e faça disputas épicas com seus amigos:</b></h3>
-						<p class="p">Com a plataforma da WinnChay você poderá desafiar seus amigos e pessoas de todo o Brasil a entrarem em campeonatos altamente competitivos para que você prove o seu valor. <br><br> Cadastre-se abaixo e conheça a nossa plataforma em desenvolvimento.</p>
+						<h3 class="sizeText_S2"><b>Crie Campeonatos e faça disputas memoráveis com seus amigos:</b></h3>
+						<p class="p">Com a plataforma da WinnChay você poderá desafiar seus amigos e pessoas de todo o Brasil a entrarem em campeonatos competitivos para que você prove o seu valor. <br><br> Cadastre-se abaixo e conheça a nossa plataforma em desenvolvimento.</p>
 						<img src="img/Src/playingVG.png" alt="Jogando VídeoGame">
 						<img class="imgLogo" src="img/Logo/logo3.png" alt="logo winnchay" >
 					</div>
@@ -79,15 +80,17 @@
 				</div>
 			</div>
 		</section>
-		<br><br><br>
-		<section>
+
+<br><br><br>
+
+		<section class="section_features">
 			<div class="row">
-				<div class="col-md-8">
+				<div class="col-md-8 col-xs-12">
 					<div class="sizeText">
 						<h1>Com a nossa plataforma você vai ser capaz de criar campeonatos e participar de campeonatos </h1>
 					</div>
 				</div>
-				<div class="col-md-4">
+				<div class="col-md-4 col-xs-12">
 					<div class="sizeImagem">
 						<center><img src="img/Badges/table_badge.png"></center>
 					</div>
@@ -99,12 +102,12 @@
 
 		<section>
 		<div class="row">
-			<div class="col-md-4">
+			<div class="col-md-4 col-xs-12">
 				<div class="sizeImagem">
 					<center><img src="img/Badges/trophy_badge.png"></center>
 				</div>
 			</div>
-			<div class="col-md-8">
+			<div class="col-md-8 col-xs-12">
 				<div class="sizeText">
 					<h1>Com a nossa plataforma você vai ser capaz de criar campeonatos e participar de campeonatos </h1>
 				</div>
@@ -115,7 +118,7 @@
 
 <br><br><br>
 
-	<section class="footers pt-5 pb-3 CorBack1">
+<section class="footers pt-5 pb-3 CorBack1">
 		<div class="container">
 			<div class="row">
 				<div class="col-xs-12 col-sm-6 col-md-4 footers-one">
@@ -123,7 +126,7 @@
 							<img src="img/Logo/logo1.png" alt="Logo" style="width:300px;">
 						</div>
 						<div class="footers-info mt-3 CorText">
-							<p>Somos a Students Developers, e provemos o desenvolvimento de aplicações para web com o uso dos recursos mais populares nos tempos comtemporâneos. Temos muita vontade de aprender, mas também aplicar tudo isso em nossos projetos da melhor forma possível.</p>
+							<p>Somos um grupo que tem muita vontade de aprender, mas também aplicar tudo isso em nossos projetos da melhor forma possível.</p>
 						</div>
 						<div class="social-icons">
 							<a href="https://www.facebook.com/"><i id="social-fb" class="fa fa-facebook-square fa-2x social"></i></a>
@@ -132,46 +135,17 @@
 							<a href="mailto:bootsnipp@gmail.com"><i id="social-em" class="fa fa-envelope-square fa-2x social"></i></a>
 						</div>
 					</div>
-				<div class="col-xs-12 col-sm-6 col-md-2 footers-two CorText">
+				<div class="col-xs-12 col-sm-6 col-md-8 footers-two CorText">
 						<h5>Essentials</h5>
 						<ul class="list-unstyled">
-							<li><a href="maintenance.html">Search</a></li>
-							<li><a href="contact.html">Sell your Car</a></li>
-							<li><a href="about.html">Advertise with us</a></li>
-							<li><a href="about.html">Dealers Portal</a></li>
-							<li><a href="about.html">Post Requirements</a></li>
+							<li><a href="maintenance.html">a definir</a></li>
+							<li><a href="contact.html">a definir</a></li>
+							<li><a href="about.html">a definir</a></li>
+							<li><a href="about.html">a definir</a></li>
+							<li><a href="about.html">a definir</a></li>
 						</ul>
 				</div>
-				<div class="col-xs-12 col-sm-6 col-md-2 footers-three CorText">
-						<h5>Information </h5>
-						<ul class="list-unstyled">
-							<li><a href="maintenance.html">Register Now</a></li>
-							<li><a href="contact.html">Advice</a></li>
-							<li><a href="about.html">Videos</a></li>
-							<li><a href="about.html">Blog</a></li>
-							<li><a href="about.html">Services</a></li>
-						</ul>
-				</div>
-				<div class="col-xs-12 col-sm-6 col-md-2 footers-four CorText">
-						<h5>Explore </h5>
-						<ul class="list-unstyled">
-							<li><a href="maintenance.html">News</a></li>
-							<li><a href="contact.html">Sitemap</a></li>
-							<li><a href="about.html">Testimonials</a></li>
-							<li><a href="about.html">Feedbacks</a></li>
-							<li><a href="about.html">User Agreement</a></li>
-						</ul>
-				</div>
-				<div class="col-xs-12 col-sm-6 col-md-2 footers-five CorText">
-						<h5>Company </h5>
-						<ul class="list-unstyled">
-							<li><a href="maintenance.html">Career</a></li>
-							<li><a href="about.html">For Parters</a></li>
-							<li><a href="about.html">Terms</a></li>
-							<li><a href="about.html">Policy</a></li>
-							<li><a href="contact.html">Contact Us</a></li>
-						</ul>
-				</div>
+				
 			</div>
 		</div>
 		</section>
@@ -180,7 +154,7 @@
 				<div class="row">
 					<div class="col-md-12 py-2">
 						<small>
-							<p>Disponibilizamos nossa plataforma de forma gratuita para afins estudantis por esse fato pode ser que tenhamos bugs e alguns problemas no sistema que deve ser informado a nós o mais rápido possível para que possamos solucionar e dar uma experiência bacana com nosso projeto, é importante que os usuários nos dê feedbacks do que podemos implementar para que fique cada vez mais confortável o uso no cotidiano corrícuo.</p>
+							<p>Disponibilizamos nossa plataforma de forma gratuita para afins estudantism, por esse fato pode ser que tenhamos bugs e alguns problemas no sistema que deve ser informado <b>winnchay20@gmail.com</b> a nós o mais rápido possível para que possamos solucionar e dar uma experiência bacana com nosso projeto, é importante que os usuários nos dê feedbacks do que podemos implementar para que fique confortável conforme o uso cotidiano corrícuo.</p>
 						</small>
 					</div>
 				</div>
@@ -194,6 +168,6 @@
 					</div>
 				</div>
 			</div>
-		</section>
+</section>
 </body>
 </html>

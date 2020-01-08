@@ -10,6 +10,7 @@
 
 <head>
 	<title>WinnChay - Página Inicial</title>
+	<link rel="shortcut icon" href="img/Logo/logo3.png">
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="css/style.css">
@@ -362,7 +363,7 @@
 				</div>
 				<div class="centerHist">
 					
-					<div class="row">
+					<div class="row rowColor">
 						<div class="col col-xs-1">dosodaso</div>
 						<div class="col col-xs-1">
 							<img src="img/Logo/logo3.png" class="img-fluid" alt="team logo">
