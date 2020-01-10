@@ -40,5 +40,33 @@
 				echo "<Strong>Error:</strong> Tente novamente, mais tarde!";
 			endif;
 		}
+
+		public function verifyEmail($email){
+			$stmt = $this->conn->prepare('SELECT * FROM PLAYERS WHERE EMAIL = ?');
+			$stmt->bindParam(1, $email, PDO::PARAM_STR);
+			$stmt->execute();
+
+			if ($stmt->rowCount() > 0):
+				$_SESSION['errorRegister'] = "<h6 style='color:red;'><strong>Error: </strong>Por favor insira outro e-mail, esse já está sendo utilizado</h6>";
+				header('location: register.php');
+			else:
+				$_SESSION['errorRegister'] = null;
+				return false;
+			endif;
+		}
+
+		public function verifyUser($user){
+			$stmt = $this->conn->prepare('SELECT * FROM PLAYERS WHERE USERNAME = ?');
+			$stmt->bindParam(1, $user, PDO::PARAM_STR);
+			$stmt->execute();
+
+			if ($stmt->rowCount() > 0):
+				$_SESSION['errorRegister'] = "<h6 style='color:red;'><strong>Error: </strong>Por favor insira outro Nome de usuário, esse já está sendo utilizado</h6>";
+				header('location: registerUserInfo.php');
+			else:
+				$_SESSION['errorRegister'] = null;
+				return false;
+			endif;
+		}
 	}
 ?>

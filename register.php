@@ -50,14 +50,13 @@
       include 'includes/Register.php';
       $register = new Register();
       if (isset($_POST['btnRegister'])):
-        if ($register->verifyEmail($_POST['txtEmail'])):
+        if ($register->verifyEmail($_POST['txtEmail']) == false):
           // Parâmetros que serão enviados
           $_SESSION['emailRegister']  = $_POST['txtEmail'];
           $_SESSION['pwdRegister']    = $_POST['txtPwd'];
           // Verificando se o E-Mail e a senha são correspondentes
           if ($_POST['txtEmail'] == $_POST['txtCEmail'] && $_POST['txtPwd'] == $_POST['txtCPwd']):
-            $_SESSION['errorRegister'] = '';
-            header('location: sendGrid/emailConfirmation.php?true=true');
+            header('location: registerUserInfo.php');
           endif;
         endif;
       endif;

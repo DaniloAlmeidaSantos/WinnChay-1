@@ -17,7 +17,7 @@
 			<div class="element_confirmEmail">
 				<form class="" action="" method="post">
 					<p>Digite o Codigo que foi enviado em seu E-mail:</p>
-					<input type="text" name="txtCodigo">
+					<input type="text" name="txtCodigo" maxlength="4">
 					<br><br>
 					<button name="btnRecover" class="buttonCadastro">Confirmar</button>
 					<button name="btnRepeat" class="buttonCadastro">Reenviar Código</button>
@@ -28,7 +28,7 @@
 				<form action="" method="post">
 					<p>Código reenviado</p>
 					<p>Digite o Codigo que foi enviado em seu E-mail:</p>
-					<input type="text" name="txtCodigo">
+					<input type="text" name="txtCodigo" maxlength="4">
 					<br><br>
 					<button name="btnRecover" class="buttonCadastro">Confirmar</button>
 					<button name="btnRepeat" class="buttonCadastro">Reenviar Código</button>
@@ -38,6 +38,7 @@
 		<?php
 			session_start();
 			if (isset($_GET['true'])):
+				$_GET['true'] = false;
 				$_SESSION['cod'] = rand(1000, 9999);
 				// Requisitando o composer
 				require 'vendor/autoload.php';
