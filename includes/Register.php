@@ -28,10 +28,18 @@
 			endif;
 		}
 
-		public function rakingFifa($i, $u){
+		public function rakingFifa($user){
+			$validate = $thies->conn->prepare('SELECT IDPLAYER FROM PLAYERS WHERE USERNAME = ?');
+			$validate->bindParam(1, $user, PDO::PARAM_INT);
+			$validate->execute();
+
+			while ($row = $validate->fetch(PDO::FETCH_ASSOC)){
+				$id = $row['IDPLAYER'];
+			}
+
 			$stmt = $this->conn->prepare('INSERT INTO RAKING_FIFA (IDPLAYER, USERNAME) VALUES (?,?)');
 			$stmt->bindParam(1, $i, PDO::PARAM_INT);
-			$stmt->bindParam(2, $u, PDO::PARAM_STR);
+			$stmt->bindParam(2, $user, PDO::PARAM_STR);
 			$stmt->execute();
 
 			if ($stmt->rowCount() > 0):

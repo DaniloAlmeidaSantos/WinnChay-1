@@ -1,12 +1,20 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>WinnChay - Login</title>
+	<title>WinnChay - Cadastro</title>
 	<meta charset="utf-8">
 	<link rel="shortcut icon" href="img/Logo/logo3.png">
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 	<link href="https://fonts.googleapis.com/css?family=Dosis|Staatliches&display=swap" rel="stylesheet">
+	<?php
+		session_start();
+		if (isset($_SESSION['emailRegister'])):
+			$verify = true;
+		else:
+			header('location: register.php');
+		endif;
+	?>
 </head>
 
 <body class="bodyLogin">
@@ -14,27 +22,9 @@
 		Preencha suas Informações:
 	</header>
 	<div class="container">
-		<p id="p">Deseja inserir uma imagem de perfil agora?</p>
 		<center>
-			<div id="element_button">
-				<!-- <button onclick="showImg()" class="button_sim">Sim</button> -->
-				<button onclick="changeImgLater()" class="button_nao">Não</button>
-			</div>
-			<!-- <br>
-			<div id="imgUsu">
-				<img src="img/Src/perfilteste.jpg" alt="img usuário">
-				<br><br>
-				<button class="btnUsu">escolher imagem</button>
-			</div>
-
-			<div id="element_button2">
-				<button onclick="showForm()" class="button2_sim">Mais tarde</button>
-				<button onclick="showForm()" class="button2_nao">Prosseguir</button>
-			</div> -->
-
 			<div id="element_form">
 				<?php
-					session_start();
 					if (isset($_SESSION['errorRegister'])):
 						echo $_SESSION['errorRegister'];
 					endif;
@@ -50,12 +40,13 @@
 					</div>
 					<div class="form-group col-md-9">
 						<label for="nomeusu" class="mr-sm-2">Nome de Usuário:</label>
-						<input type="text" id="nomeusu" name="textUser" maxlength="16" class="form-control mb-2 mr-sm-2">
+						<input type="text" id="nomeusu" name="txtUser" maxlength="16" class="form-control mb-2 mr-sm-2">
 					</div>
 					<div class="form-group col-md-7">
 						<label for="tel" class="mr-sm-2">Telefone:</label>
 						<input type="text" id="tel" name="txtPhone" maxlength="14"  class="form-control mb-2 mr-sm-2">
 					</div>
+					<br>
 					<div class="col-md-12">
 						<button class="element_buttonFinal" name="btnRegister">Finalizar Cadastro</button>
 					</div>
@@ -63,8 +54,6 @@
 			</div>
 		</center>
 	</div>
-
-	<script src="js/registerUserInfo.js"></script>
 	<?php
 		include 'includes/Register.php';
 		$register = new Register();

@@ -6,6 +6,8 @@
 	include 'includes/ChangeInfo.php';
 	include 'includes/Historic.php';
 	$historic = new Historic();
+	$info = new ChangeInfo();
+	$info->selectInfo();
 ?>
 
 <head>
@@ -264,9 +266,9 @@
 			<div class="slide Center">
 
 				<?php
-				include 'includes/Stats.php';
-				$graphics = new Stats();
-				$graphics->graphics($_COOKIE['id']);
+					include 'includes/Stats.php';
+					$graphics = new Stats();
+					$graphics->graphics($_COOKIE['id']);
 				?>
 				<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 				<script type="text/javascript">
@@ -300,15 +302,12 @@
 				<p class="titleGrafic">Gráfico de Desempenho</p>
 					<div id="piechart_3d"></div>
 					<?php
-							include 'includes/ProfilePicture.php';
-							include 'includes/Score.php';
+						include 'includes/ProfilePicture.php';
+						include 'includes/Score.php';
 
-							$historic = new Score();
-							$info = new ChangeInfo();
-							$picture = new ProfilePicture();
-
-							$info->selectInfo();
-							$picture->image();
+						$historic = new Score();
+						$picture = new ProfilePicture();
+						$picture->image();
 					?>
 				<div class="Perfil">
 					<form style="width: 100%; height: 100%;" id='input-form' method="post" enctype="multipart/form-data" action="upload.php">
@@ -357,9 +356,6 @@
 
 					<p class="userTel">Telefone:</p>
 					<p class="userTel2"><b><?= $_SESSION['phone']; ?></b></p>
-
-					<p class="userTeam">Time de Coração:</p>
-					<p class="userTeam2"><b>Barcelona</b></p>
 				</div>
 				<div class="centerHist">
 					

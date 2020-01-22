@@ -1873,9 +1873,8 @@ input[type="file"] {
 }
 
 #element_form{
-	width: 23%;
+	width: 20%;
 	height: 100%;
-	display: none;
 }
 
 /*================================================= END registerUserInfo.php ====================================================*/

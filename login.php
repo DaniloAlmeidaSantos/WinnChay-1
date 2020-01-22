@@ -27,7 +27,7 @@
 		<form action="SendGrid/forgotPassword.php" method="POST" style="text-align: center;">
 			<button class="buttonLogin" name="btnForgot" style="">Esqueceu a Senha?</button>
 			<br>
-			<button class="buttonLogin"><a href="#" class="textDec">Cadastre-se</a></button>
+			<button class="buttonLogin"><a href="register.php" class="textDec">Cadastre-se</a></button>
 		</form>
 
 		<?php
